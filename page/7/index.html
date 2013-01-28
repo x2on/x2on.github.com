@@ -9,7 +9,8 @@
   <meta name="author" content="Felix Schulze">
 
   
-  <meta name="description" content="Dieses How-To beschreibt wie man das UnionFs von seinem Eee-PC entfernt. Standardmäßig hat der Eee-PC 4 Partition, wobei die erste das Betriebssystem &hellip;">
+  <meta name="description" content="Dieses How-To beschreibt wie man mit seinem Eee-PC über einen Windows Mobile PDA (mit Telefonfunktion) ins Internet kommt.
+(Diese Sache hat mir &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -93,6 +94,111 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2008/01/27/eee-pc-gprs-uber-bluetooth-pocketpc/">Eee-PC: GPRS über Bluetooth-PocketPC</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-01-27T18:33:41+01:00" pubdate data-updated="true">Jan 27<span>th</span>, 2008</time>
+        
+         | <a href="/2008/01/27/eee-pc-gprs-uber-bluetooth-pocketpc/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Dieses How-To beschreibt wie man mit seinem Eee-PC über einen Windows Mobile PDA (mit Telefonfunktion) ins Internet kommt.
+(Diese Sache hat mir einige schlaflose Stunden beschert.)</p>
+
+<p>Disclaimer: Ich übernehme keine Garantie für Schäden am System, Verlust von Daten oder sonst irgendwas. Jeder der diesen Schritt macht muss selber wissen ob er das Risiko eingehen will.
+DU MACHST DIE ÄNDERUNG AUF DEIN RISIKO</p>
+
+<p>Benötigte Hardware:</p>
+
+<ul>
+<li>Bluetooth USB Stick</li>
+<li>Windows Mobile PDA (Mit Telefonfunktion und Bluetooth)</li>
+</ul>
+
+
+<p>Teil 1: Bluetooth einrichten</p>
+
+<p>Um eine Verbindung mit unserem PDA herstellen zu können, benötigen wir zuerst einen Pinhelper, um beim Pairing mit dem PDA eine Pin eingeben zu können.</p>
+
+<ol>
+<li>Konsole mit &#8220;Alt+Strg+T&#8221; öffnen und folgendes eingeben:
+sudo apt-get install bluez-gnome</li>
+<li>Bluetooth Stick anstecken und mit sudo hciconfig überprüfen ob dieser aktiviert ist. (Normalerweise nicht &#8211;> DOWN)</li>
+<li>Nun passen wir die Bluetooth-Einstellungen an:</li>
+<li>sudo nano /etc/bluetooth/hcid.conf</li>
+<li>Dort muss folgendes stehen:
+autoinit yes;
+security auto;
+pairing multi;
+passkey &#8220;4673&#8221;;
+(der Passkey ist natürlich frei wählbar)</li>
+<li>Nun noch Bluetooth neustarten:
+/etc/init.d/bluetooth restart</li>
+</ol>
+
+
+<p>Teil 2: PDA und Eee-PC miteinander verbinden</p>
+
+<p>Damit sich der PDA und der Eee-PC kennen, muss man sie einmal pairen.</p>
+
+<ol>
+<li>bluetooth-applet um den Bluetooth Pinhelper den wir vorhin installiert haben zu starten.</li>
+<li>Rechts unten neben der Uhr ist nun ein neues Symbol.</li>
+<li>Rechtsklick darauf und auf &#8220;Einstellungen&#8221; klicken.</li>
+<li>Bei &#8220;Visible and connectable for other devices&#8221; klicken und unten bei Class of device &#8220;Laptop computer&#8221; auswählen</li>
+<li>Auf dem PDA nach Bluetooth Geräten suchen und die vorhin vergebene Pin eingeben (muss man eventuell nochmal am Eee-PC in einem Fenster eingeben)</li>
+<li>Nun kann man das Programm wieder schließen</li>
+<li>&#8220;Strg+C&#8221; drücken</li>
+<li>hcitool scan eingeben und die Mac-Adresse des PDA aufschreiben</li>
+</ol>
+
+
+<p>Teil 3: Internetverbindung einrichten</p>
+
+<p>So nun der letzte Teil</p>
+
+<ol>
+<li>Am PDA das Programm &#8220;Internetfreigabe&#8221; starten und bei &#8220;PC-Verbindung&#8221; &#8220;Bluetooth-PAN&#8221; auswählen und auf &#8220;Verbinden&#8221; klicken.</li>
+<li>Kurz warten bis sich der PDA ins Internet eingewählt hat</li>
+<li>Mittels sudo pand &#8211;connect 00:00:00:00:00:00 &#8211;service NAP &#8211;autozap (wobei die Nullen durch die Mac-Adresse zu ersetzen ist) stellen wir eine PAN-verbindung zum PDA her.</li>
+<li>sudo dhclient3 bnep0</li>
+<li>weißt unserer Bluetooth-Schnitstelle eine IP zu und auf dem PDA sollte nun &#8220;Verbunden&#8221; stehen.</li>
+<li>Viel Spaß beim surfen&#8230;</li>
+</ol>
+
+
+<p>Sollte der Gnome-Blutoothhelper nicht starten, hilft es das Tool 3eGPRS zu installieren.</p>
+
+<p>Dieser Werk oder Inhalt ist unter einer <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/de/">Creative Commons-Lizenz</a> lizenziert.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -418,6 +524,10 @@ umount /mnt-user</li>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/2013/01/24/why-you-should-use-continuous-integration-for-ios-development/">Why you should use Continuous Integration for iOS Development?</a>
+      </li>
+    
+      <li class="post">
         <a href="/2012/07/11/weak-delegate-and-ocmock/">Weak delegate and OCMock</a>
       </li>
     
@@ -431,10 +541,6 @@ umount /mnt-user</li>
     
       <li class="post">
         <a href="/2012/01/29/supertux-0-3-3-for-mac-os-x-lion-download/">SuperTux 0.3.3 for Mac OS X Lion Download</a>
-      </li>
-    
-      <li class="post">
-        <a href="/2012/01/28/tutorial-building-supertux-0-3-3-on-mac-os-x-lion/">Tutorial: Building SuperTux 0.3.3 on Mac OS X Lion</a>
       </li>
     
   </ul>

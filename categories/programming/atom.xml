@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Programming | x2on.de]]></title>
   <link href="http://x2on.github.com/categories/programming/atom.xml" rel="self"/>
   <link href="http://x2on.github.com/"/>
-  <updated>2013-01-28T22:46:38+01:00</updated>
+  <updated>2013-01-28T22:55:58+01:00</updated>
   <id>http://x2on.github.com/</id>
   <author>
     <name><![CDATA[Felix Schulze]]></name>
@@ -12,6 +12,23 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Why you should use Continuous Integration for iOS Development?]]></title>
+    <link href="http://x2on.github.com/2013/01/24/why-you-should-use-continuous-integration-for-ios-development/"/>
+    <updated>2013-01-24T22:34:00+01:00</updated>
+    <id>http://x2on.github.com/2013/01/24/why-you-should-use-continuous-integration-for-ios-development</id>
+    <content type="html"><![CDATA[<p><strong>Because every change in your code can break your app!</strong></p>
+
+<!-- more -->
+
+
+<p>Have a look at my slides from the <a href="http://www.b-mobile.info/2013/01/14/b-mobile-v-loc-at-yoc/">B-Mobile</a> event in January 2013 for a short introduction:</p>
+
+<script async class="speakerdeck-embed" data-id="e55533b04b7d0130e2a022000a9f1069" data-ratio="1.33333333333333" src="http://x2on.github.com//speakerdeck.com/assets/embed.js"></script>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Weak delegate and OCMock]]></title>
@@ -131,26 +148,6 @@ You can also download the precompiled PolarSSL-library (0.14.3).</p>
 <p>You can get the scripts and the sourcecode here: <a href="https://github.com/x2on/PolarSSL-for-iOS">https://github.com/x2on/PolarSSL-for-iOS</a></p>
 
 <p><a href="http://www.x2on.de/wp-content/uploads/2011/04/PolarSSL-for-iOS.png"><img src="http://www.x2on.de/wp-content/uploads/2011/04/PolarSSL-for-iOS-159x300.png" alt="" /></a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[GnuTLS for iOS (iPhone and iPad)]]></title>
-    <link href="http://x2on.github.com/2011/02/01/gnutls-for-ios-iphone-and-ipad/"/>
-    <updated>2011-02-01T15:28:27+01:00</updated>
-    <id>http://x2on.github.com/2011/02/01/gnutls-for-ios-iphone-and-ipad</id>
-    <content type="html"><![CDATA[<p>This is a tutorial for using self-compiled builds of the GnuTLS-library for iOS. You can build apps with XCode and the official SDK from Apple with this. I also made a small example-app for using the libraries with XCode and the iPhone/iPhone-Simulator. You can also download the precompiled GnuTLS-library (2.10.4).</p>
-
-<!--more-->
-
-
-<p>Enjoy GnuTLS on the iPhone!</p>
-
-<p>I have made an iOS 4.2 XCode Project with GnuTLS 2.10.4 Libaries. The examples uses the MD5-algorithm to calculate an md5 from an UITextfield.</p>
-
-<p>You can get the scripts and the sourcecode here: <a href="https://github.com/x2on/GnuTLS-for-iOS">https://github.com/x2on/GnuTLS-for-iOS</a></p>
-
-<p><a href="http://www.x2on.de/wp-content/uploads/2011/02/GnuTLS.png"><img src="http://www.x2on.de/wp-content/uploads/2011/02/GnuTLS-159x300.png" alt="" /></a></p>
 ]]></content>
   </entry>
   

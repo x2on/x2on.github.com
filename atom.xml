@@ -4,7 +4,7 @@
   <title><![CDATA[x2on.de]]></title>
   <link href="http://x2on.github.com/atom.xml" rel="self"/>
   <link href="http://x2on.github.com/"/>
-  <updated>2013-01-28T22:46:38+01:00</updated>
+  <updated>2013-01-28T22:55:58+01:00</updated>
   <id>http://x2on.github.com/</id>
   <author>
     <name><![CDATA[Felix Schulze]]></name>
@@ -12,6 +12,23 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Why you should use Continuous Integration for iOS Development?]]></title>
+    <link href="http://x2on.github.com/2013/01/24/why-you-should-use-continuous-integration-for-ios-development/"/>
+    <updated>2013-01-24T22:34:00+01:00</updated>
+    <id>http://x2on.github.com/2013/01/24/why-you-should-use-continuous-integration-for-ios-development</id>
+    <content type="html"><![CDATA[<p><strong>Because every change in your code can break your app!</strong></p>
+
+<!-- more -->
+
+
+<p>Have a look at my slides from the <a href="http://www.b-mobile.info/2013/01/14/b-mobile-v-loc-at-yoc/">B-Mobile</a> event in January 2013 for a short introduction:</p>
+
+<script async class="speakerdeck-embed" data-id="e55533b04b7d0130e2a022000a9f1069" data-ratio="1.33333333333333" src="http://x2on.github.com//speakerdeck.com/assets/embed.js"></script>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Weak delegate and OCMock]]></title>
@@ -928,20 +945,6 @@ echo &quot;Building done.&quot;
     <updated>2010-11-16T19:30:44+01:00</updated>
     <id>http://x2on.github.com/2010/11/16/update-openssl-1-0-0b-libraries-for-iphone-ipod-touch-ipad</id>
     <content type="html"><![CDATA[<p>OpenSSL 1.0.0b is released and i updated the OpenSSL-Libraries for iPhone/iPod Touch. You can get it at <a href="http://github.com/x2on/OpenSSL-for-iPhone">http://github.com/x2on/OpenSSL-for-iPhone</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Twitter wordpress integration for marketing]]></title>
-    <link href="http://x2on.github.com/2010/10/31/twitter-wordpress-integration-for-marketing/"/>
-    <updated>2010-10-31T11:33:03+01:00</updated>
-    <id>http://x2on.github.com/2010/10/31/twitter-wordpress-integration-for-marketing</id>
-    <content type="html"><![CDATA[<p>There are many wordpress plugins for automatic twitter post and show the last tweets in a widget.
-I tested a few of these, but only &#8220;Twitter Tools&#8221; worked as expected.</p>
-
-<p>You can get it here: <a href="http://wordpress.org/extend/plugins/twitter-tools/">http://wordpress.org/extend/plugins/twitter-tools/</a></p>
-
-<p>Uses anybody an other plugin?</p>
 ]]></content>
   </entry>
   

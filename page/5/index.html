@@ -9,7 +9,8 @@
   <meta name="author" content="Felix Schulze">
 
   
-  <meta name="description" content="StartCom bietet mit StartSSL kostenlose digitale Zertifikate an (S/MIME, X.509, SSL/TLS). Class1 Zertifikate können jederzeit mit einer kostenlosen &hellip;">
+  <meta name="description" content="Die neue Version GnuPG 2 ist schwieriger zu kompilieren als die alte 1.4er Version.
+Desweiteren wird ein Pinentry Programm benötigt, um die &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -93,6 +94,133 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2009/11/24/tutorial-gnupg-2-0-13-unter-mac-os-x-10-6/">Tutorial: GnuPG 2.0.13 Unter Mac OS X 10.6</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-11-24T18:38:50+01:00" pubdate data-updated="true">Nov 24<span>th</span>, 2009</time>
+        
+         | <a href="/2009/11/24/tutorial-gnupg-2-0-13-unter-mac-os-x-10-6/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Die neue Version GnuPG 2 ist schwieriger zu kompilieren als die alte 1.4er Version.
+Desweiteren wird ein Pinentry Programm benötigt, um die Passphrase des verwendeten PGP-Schlüssels abzufragen.
+Ich verwende hierfür eine angepasste Version aus dem MacGPG-Bundle (basierend auf pinentry 0.7.6)
+Um GnuPG2 kompilieren zu können, muss XCode installiert sein.</p>
+
+<p><strong>UPDATE:</strong> Libcrypt 1.4.5 wurde veröffentlicht und wird in dem Tutorial nun berücksichtigt.
+<strong>UPDATE 2:</strong> GnuPG 2.0.14 wurde veröffentlicht, die vorgehensweise ist analog zu der Version 2.0.13</p>
+
+<p><strong>1. Die für GnuPG2 benötigten Libaries kompilieren:</strong></p>
+
+<pre><code>mkdir -p ~/gnupg/lib
+cd ~/gnupg/lib
+wget ftp://ftp.gnupg.org/gcrypt/libgpg-error/libgpg-error-1.7.tar.bz2
+tar xfvj libgpg-error-1.7.tar.bz2
+cd libgpg-error-1.7
+mkdir build
+./configure CC="gcc -arch i386" --prefix=~/gnupg/lib/libgpg-error-1.7/build/
+make &amp;&amp; make install
+cd ..
+
+wget ftp://ftp.gnupg.org/gcrypt/libgcrypt/libgcrypt-1.4.5.tar.bz2
+tar xfvj libgcrypt-1.4.5.tar.bz2
+cd libgcrypt-1.4.5
+mkdir build
+./configure CC="gcc -arch i386" --prefix=~/gnupg/lib/libgcrypt-1.4.5/build/ --with-gpg-error-prefix=~/gnupg/lib/libgpg-error-1.7/build/
+make &amp;&amp; make install
+cd ..
+
+wget ftp://ftp.gnupg.org/gcrypt/libksba/libksba-1.0.7.tar.bz2
+tar xfvj libksba-1.0.7.tar.bz2
+cd libksba-1.0.7
+mkdir build
+./configure CC="gcc -arch i386"  --prefix=~/gnupg/lib/libksba-1.0.7/build/ --with-gpg-error-prefix=~/gnupg/lib/libgpg-error-1.7/build/
+make &amp;&amp; make install
+cd ..
+
+wget ftp://ftp.gnu.org/gnu/pth/pth-2.0.7.tar.gz
+tar xvfz pth-2.0.7.tar.gz
+cd pth-2.0.7
+mkdir build
+./configure CC="gcc -arch i386"  --prefix=~/gnupg/lib/pth-2.0.7/build/
+make &amp;&amp; make install
+cd ..
+
+wget ftp://ftp.gnupg.org/gcrypt/libassuan/libassuan-1.0.5.tar.bz2
+tar xfvj libassuan-1.0.5.tar.bz2
+cd libassuan-1.0.5
+mkdir build
+./configure  CC="gcc -arch i386" --prefix=~/gnupg/lib/libassuan-1.0.5/build/ --with-pth-prefix=~/gnupg/lib/pth-2.0.7/build/
+make &amp;&amp; make install
+cd ..
+</code></pre>
+
+<p><strong>2. GnuPG2 kompilieren:</strong></p>
+
+<pre><code>cd ..
+wget ftp://ftp.gnupg.org/gcrypt/gnupg/gnupg-2.0.13.tar.bz2
+tar xfvji gnupg-2.0.13.tar.bz2
+cd gnupg-2.0.13
+./configure CC="gcc -arch i386" --prefix=/opt/gnupg --with-gpg-error-prefix=~/gnupg/lib/libgpg-error-1.7/build/ --with-libgcrypt-prefix=~/gnupg/lib/libgcrypt-1.4.5/build/ --with-libassuan-prefix=~/gnupg/lib/libassuan-1.0.5/build/ --with-ksba-prefix=/~/gnupg/lib/libksba-1.0.7/build/ --with-pth-prefix=~/gnupg/lib/pth-2.0.7/build/
+make
+sudo make install
+echo "export PATH=/opt/gnupg/bin:$PATH" &gt;&gt; ~/.profile
+</code></pre>
+
+<p><strong>3. Pinentry installieren:</strong></p>
+
+<pre><code>wget http://www.x2on.de/dl/pinentry-mac-binary_0-2.tar.gz
+tar xvfz pinentry-mac-binary_0-2.tar.gz
+cd pinentry-mac-binary_0-2
+sudo cp pinentry-mac.app /opt/gnupg/
+</code></pre>
+
+<p><strong>4. Einstellungen für Pinentry vornehmen:</strong></p>
+
+<pre><code>echo "pinentry-program /opt/gnupg/pinentry-mac.app/Contents/MacOS/pinentry-mac" &gt; ~/.gnupg/gpg-agent.conf
+</code></pre>
+
+<p><img src="http://localhost/wordpress/wp-content/uploads/2009/11/pinentry-mac.png" alt="pinentry-mac Dialog" /></p>
+
+<p><strong>Sourcecode pinentry-mac:</strong> <a href="http://www.x2on.de/dl/pinentry-mac_0-2.tar.gz">Download</a></p>
+
+<p><strong>Links:</strong></p>
+
+<ul>
+<li><p><a href="http://sourceforge.net/projects/macgpg/">http://sourceforge.net/projects/macgpg/</a></p></li>
+<li><p><a href="http://www.gnupg.org/">http://www.gnupg.org/</a></p></li>
+<li><p><a href="ftp://ftp.gnupg.org/gcrypt/pinentry/">ftp://ftp.gnupg.org/gcrypt/pinentry/</a></p></li>
+</ul>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -597,49 +725,6 @@ Man sollte aber unbedingt vorher ein Backup seiner Datenbank anlegen.</p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/2008/04/15/xampp-apache2-mit-integriertem-tomcat6-unter-mac-os-x/">XAMPP Apache2 Mit Integriertem Tomcat6 Unter Mac OS X</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2008-04-15T14:39:19+02:00" pubdate data-updated="true">Apr 15<span>th</span>, 2008</time>
-        
-         | <a href="/2008/04/15/xampp-apache2-mit-integriertem-tomcat6-unter-mac-os-x/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Dieses Tutorial richtet sich an alle die auf unter Mac OS X für Entwicklungszwecke gerne einen XAMPP Apache2 Webserver mit integriertem TomCat 6 haben würden. Für Windows gibt es ja ein TomCat Addon, aber leider nicht für Mac! Also habe ich es selbst mit mod_jk integriert.</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/2008/04/15/xampp-apache2-mit-integriertem-tomcat6-unter-mac-os-x/">Read more &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/page/6/">&larr; Older</a>
@@ -657,6 +742,10 @@ Man sollte aber unbedingt vorher ein Backup seiner Datenbank anlegen.</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/2013/01/24/why-you-should-use-continuous-integration-for-ios-development/">Why you should use Continuous Integration for iOS Development?</a>
+      </li>
+    
+      <li class="post">
         <a href="/2012/07/11/weak-delegate-and-ocmock/">Weak delegate and OCMock</a>
       </li>
     
@@ -670,10 +759,6 @@ Man sollte aber unbedingt vorher ein Backup seiner Datenbank anlegen.</p>
     
       <li class="post">
         <a href="/2012/01/29/supertux-0-3-3-for-mac-os-x-lion-download/">SuperTux 0.3.3 for Mac OS X Lion Download</a>
-      </li>
-    
-      <li class="post">
-        <a href="/2012/01/28/tutorial-building-supertux-0-3-3-on-mac-os-x-lion/">Tutorial: Building SuperTux 0.3.3 on Mac OS X Lion</a>
       </li>
     
   </ul>

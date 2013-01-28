@@ -4,7 +4,7 @@
   <title><![CDATA[Category: iOS | x2on.de]]></title>
   <link href="http://x2on.github.com/categories/ios/atom.xml" rel="self"/>
   <link href="http://x2on.github.com/"/>
-  <updated>2013-01-28T22:46:38+01:00</updated>
+  <updated>2013-01-28T22:55:58+01:00</updated>
   <id>http://x2on.github.com/</id>
   <author>
     <name><![CDATA[Felix Schulze]]></name>
@@ -12,6 +12,23 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Why you should use Continuous Integration for iOS Development?]]></title>
+    <link href="http://x2on.github.com/2013/01/24/why-you-should-use-continuous-integration-for-ios-development/"/>
+    <updated>2013-01-24T22:34:00+01:00</updated>
+    <id>http://x2on.github.com/2013/01/24/why-you-should-use-continuous-integration-for-ios-development</id>
+    <content type="html"><![CDATA[<p><strong>Because every change in your code can break your app!</strong></p>
+
+<!-- more -->
+
+
+<p>Have a look at my slides from the <a href="http://www.b-mobile.info/2013/01/14/b-mobile-v-loc-at-yoc/">B-Mobile</a> event in January 2013 for a short introduction:</p>
+
+<script async class="speakerdeck-embed" data-id="e55533b04b7d0130e2a022000a9f1069" data-ratio="1.33333333333333" src="http://x2on.github.com//speakerdeck.com/assets/embed.js"></script>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Weak delegate and OCMock]]></title>
@@ -129,31 +146,6 @@ With this workaround you can test</code>__weak` delegates with OCMock.</p>
 
 
 <p><a href="/images/2011-04-28-secure-mail-is-ready-for-download-on-apple-app-store/1.png"><img src="/images/2011-04-28-secure-mail-is-ready-for-download-on-apple-app-store/1-159x300.png" alt="" /></a><a href="/images/2011-04-28-secure-mail-is-ready-for-download-on-apple-app-store/2.png"><img src="/images/2011-04-28-secure-mail-is-ready-for-download-on-apple-app-store/2-159x300.png" alt="" /></a><a href="/images/2011-04-28-secure-mail-is-ready-for-download-on-apple-app-store/3.png"><img src="/images/2011-04-28-secure-mail-is-ready-for-download-on-apple-app-store/3-159x300.png" alt="" /></a><a href="/images/2011-04-28-secure-mail-is-ready-for-download-on-apple-app-store/4.png"><img src="/images/2011-04-28-secure-mail-is-ready-for-download-on-apple-app-store/4-159x300.png" alt="" /></a><a href="/images/2011-04-28-secure-mail-is-ready-for-download-on-apple-app-store/5.png"><img src="/images/2011-04-28-secure-mail-is-ready-for-download-on-apple-app-store/5-159x300.png" alt="" /></a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Secure-Mail: Waiting for Review]]></title>
-    <link href="http://x2on.github.com/2011/04/24/secure-mail-waiting-for-review/"/>
-    <updated>2011-04-24T17:30:29+02:00</updated>
-    <id>http://x2on.github.com/2011/04/24/secure-mail-waiting-for-review</id>
-    <content type="html"><![CDATA[<p>With Secure-Mail you can read S/MIME encrypted mails directly from Mail.app and send encrypted S/MIME mails with SMTP.</p>
-
-<p>The Version 1.0 is now submitted to the App Store.
-<strong>Current Status:</strong> Waiting for Review</p>
-
-<p><strong>UPDATE 2011-04-28:</strong> The App is now ready for download: <a href="http://www.x2on.de/2011/04/28/secure-mail-is-ready-for-download-on-apple-app-store/">http://www.x2on.de/2011/04/28/secure-mail-is-ready-for-download-on-apple-app-store/</a></p>
-
-<!--more-->
-
-
-<p>Thanks for your help at the <a href="http://www.x2on.de/2011/04/01/secure-mail-beta-test-smime-on-ios-with-openssl/">beta-test</a>.</p>
-
-<p><a href="http://www.x2on.de/wp-content/uploads/2011/04/Review.png"><img src="http://www.x2on.de/wp-content/uploads/2011/04/Review.png" alt="" /></a></p>
-
-<h3>Some screenshot from the final 1.0:</h3>
-
-<p><a href="http://www.x2on.de/wp-content/uploads/2011/04/1.png"><img src="http://www.x2on.de/wp-content/uploads/2011/04/1-159x300.png" alt="" /></a><a href="http://www.x2on.de/wp-content/uploads/2011/04/2.png"><img src="http://www.x2on.de/wp-content/uploads/2011/04/2-159x300.png" alt="" /></a><a href="http://www.x2on.de/wp-content/uploads/2011/04/3.png"><img src="http://www.x2on.de/wp-content/uploads/2011/04/3-159x300.png" alt="" /></a><a href="http://www.x2on.de/wp-content/uploads/2011/04/4.png"><img src="http://www.x2on.de/wp-content/uploads/2011/04/4-159x300.png" alt="" /></a><a href="http://www.x2on.de/wp-content/uploads/2011/04/5.png"><img src="http://www.x2on.de/wp-content/uploads/2011/04/5-159x300.png" alt="" /></a></p>
 ]]></content>
   </entry>
   
