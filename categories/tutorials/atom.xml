@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Tutorials | x2on.de]]></title>
+  <link href="http://x2on.github.com/categories/tutorials/atom.xml" rel="self"/>
+  <link href="http://x2on.github.com/"/>
+  <updated>2013-01-28T22:46:38+01:00</updated>
+  <id>http://x2on.github.com/</id>
+  <author>
+    <name><![CDATA[Felix Schulze]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[iOS-Libaries: cyrius-sasl, libetpan, expat, sksmtpmessage]]></title>
+    <link href="http://x2on.github.com/2012/02/21/ios-libaries-cyrius-sasl-libetpan-expat-sksmtpmessage/"/>
+    <updated>2012-02-21T17:33:58+01:00</updated>
+    <id>http://x2on.github.com/2012/02/21/ios-libaries-cyrius-sasl-libetpan-expat-sksmtpmessage</id>
+    <content type="html"><![CDATA[<p>I published some scripts and modifications to build the following libraries for the iOS-SDK:</p>
+
+<ul>
+<li>cyrius-sasl: <a href="https://github.com/x2on/cyrus-sasl-ios">https://github.com/x2on/cyrus-sasl-ios</a></li>
+<li>expat: <a href="https://github.com/x2on/expat-ios">https://github.com/x2on/expat-ios</a></li>
+<li>libetpan: <a href="https://github.com/x2on/libetpan">https://github.com/x2on/libetpan</a></li>
+<li>sksmtpmessage: <a href="https://github.com/x2on/skpsmtpmessage">https://github.com/x2on/skpsmtpmessage</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Tutorial: Building SuperTux 0.3.3 on Mac OS X Lion]]></title>
+    <link href="http://x2on.github.com/2012/01/28/tutorial-building-supertux-0-3-3-on-mac-os-x-lion/"/>
+    <updated>2012-01-28T17:43:45+01:00</updated>
+    <id>http://x2on.github.com/2012/01/28/tutorial-building-supertux-0-3-3-on-mac-os-x-lion</id>
+    <content type="html"><![CDATA[<p>Regarding to my tutorial for building <a href="http://www.x2on.de/2010/01/30/tutorial-building-supertux-0-3-2-svn-on-mac-os-x-snow-leopard/">SuperTux 0.3.2 SVN on Mac OS X Snow Leopard</a> i updated the tutorial for Mac OS X Lion and the new location from the SuperTux Sourcecode.</p>
+
+<!-- more -->
+
+
+<p>I also build a version for download if you don't want to build it: <a href="http://www.x2on.de/2012/01/29/supertux-0-3-3-for-mac-os-x-lion-download/">SuperTux 0.3.3 for Mac OS X Lion</a></p>
+
+<h4>Prerequisites</h4>
+
+<p>Install HomeBrew:
+<code>bash
+/usr/bin/ruby -e "$(/usr/bin/curl -fksSL https://raw.github.com/mxcl/homebrew/master/Library/Contributions/install_homebrew.rb)"
+</code></p>
+
+<p>Install needed requirements:
+<code>bash
+brew install libvorbis physfs glew sdl sdl_image boost
+</code></p>
+
+<h4>Build SuperTux</h4>
+
+<p><code>bash
+git clone https://code.google.com/p/supertux/
+cd supertux
+mkdir dist
+mkdir build &amp;&amp; cd build
+cmake .. -DCMAKE_INSTALL_PREFIX=../dist/ -DCMAKE_BUILD_TYPE=RELEASE
+make install
+</code>
+If all works SuperTux.app should be in the dist folder.</p>
+
+<h4>Links:</h4>
+
+<ul>
+<li>HomeBrew: <a href="https://github.com/mxcl/homebrew">https://github.com/mxcl/homebrew</a></li>
+<li>SuperTux: <a href="http://supertux.lethargik.org/wiki/Main_Page">http://supertux.lethargik.org/wiki/Main_Page</a></li>
+<li>SuperTux Sourcecode: <a href="https://code.google.com/p/supertux/">https://code.google.com/p/supertux/</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Tutorial: Redmine with Git and Gitosis on Ubuntu 11.04]]></title>
+    <link href="http://x2on.github.com/2011/04/23/tutorial-redmine-with-git-and-gitosis-on-ubuntu-11-04/"/>
+    <updated>2011-04-23T09:03:00+02:00</updated>
+    <id>http://x2on.github.com/2011/04/23/tutorial-redmine-with-git-and-gitosis-on-ubuntu-11-04</id>
+    <content type="html"><![CDATA[<p>This is a tutorial for installing redmine on Ubuntu 11.04 with Git integration, managed by Gitosis and a redmine gitosis plugin.</p>
+
+<p>It’s based on my last tutorial about installing redmine ob Ubuntu 8.04: http://www.x2on.de/2010/10/30/tutorial-redmine-with-svn-git-and-gitosis-on-ubuntu-8-04/</p>
+
+<!--more-->
+
+
+<h1>1. Install redmine</h1>
+
+<p>Get recent version from github (currently 1.1.3)
+<code>bash
+apt-get install git-core
+mkdir /var/www
+cd /var/www
+git clone git://github.com/edavis10/redmine.git
+cd redmine
+git checkout -b 1.1.3 1.1.3
+</code>
+Install packages
+<code>bash
+apt-get install ruby  ruby1.9.1-dev libgemplugin-ruby libgemplugin-ruby1.8  mysql-server apache2-mpm-prefork wget libruby-extras libruby1.8-extras rake apache2-prefork-dev libapache-dbi-perl libapache2-mod-perl2 libdigest-sha1-perl libmysqlclient15-dev build-essential libcurl4-openssl-dev cron
+</code>
+If you like to use Gant-Charts:
+<code>bash
+apt-get install librmagick-ruby1.8
+</code>
+Create database
+<code>bash
+mysql -u root -p
+</code>
+<code>sql
+CREATE DATABASE redmine CHARACTER SET utf8;
+CREATE USER 'redmine'@'localhost' IDENTIFIED BY 'my_password';
+GRANT ALL privileges ON redmine.* TO 'redmine'@'localhost';
+</code>
+Configure Database Settings
+<code>bash
+cp redmine/config/database.yml.example redmine/config/database.yml
+nano redmine/config/database.yml
+production:
+  adapter: mysql
+  database: redmine
+  host: localhost
+  username: redmine
+  password: my_password
+  encoding: utf8
+</code></p>
+
+<p>Install Rubygem (Ubuntu 11.04 has an older version)
+<code>bash
+wget http://production.cf.rubygems.org/rubygems/rubygems-1.7.2.tgz
+tar xvfz rubygems-1.7.2.tgz
+cd rubygems-1.7.2
+mv /usr/bin/gem /usr/bin/gem-ubuntu
+ruby setup.rb
+ln -s /usr/bin/gem1.8 /usr/bin/gem
+</code>
+Install Rails + Rack
+<code>bash
+gem install rails -v=2.3.11
+gem install rack -v=1.1.0
+gem install mysql
+gem install -v=0.4.2 i18n
+</code>
+Configure redmine
+<code>bash
+cd /var/www/redmine
+chown -R www-data:www-data files log tmp public/plugin_assets
+chmod -R 755 files log tmp public/plugin_assets
+chmod -R 777 public/plugin_assets
+rake generate_session_store
+RAILS_ENV=production rake db:migrate
+RAILS_ENV=production rake redmine:load_default_data
+</code>
+Test redmine
+<code>bash
+ruby script/server webrick -e production
+</code>
+Now you can check http://my_domain.com:3000 if everything works</p>
+
+<ol>
+<li><p>Apache Integration
+Install passenger (Modify version numbers if needed)
+<code>bash
+gem install passenger
+passenger-install-apache2-module
+echo "LoadModule passenger_module /usr/lib/ruby/gems/1.8/gems/passenger-3.0.7/ext/apache2/mod_passenger.so" &amp;gt; /etc/apache2/mods-available/passenger.load
+ln -s /etc/apache2/mods-available/passenger.load /etc/apache2/mods-enabled/passenger.load
+nano /etc/apache2/mods-available/passenger.conf
+PassengerRoot /usr/lib/ruby/gems/1.8/gems/passenger-3.0.7
+PassengerRuby /usr/bin/ruby1.8
+</code>
+Alternative: You can install passenger with ubuntu:
+<code>bash
+apt-get install libapache2-mod-passenger
+</code>
+Configure Apache
+<code>bash
+nano /etc/apache2/sites-available/my_domain
+</code>
+```bash
+<VirtualHost *:80>
+ ServerName my_domain.com</p>
+
+<p> DocumentRoot /var/www/redmine/public</p>
+
+<p> PassengerDefaultUser www-data
+ RailsEnv production
+ RailsBaseURI /redmine
+ SetEnv X_DEBIAN_SITEID "default"
+ <Directory /var/www/redmine/public></p>
+
+<pre><code> Order allow,deny
+ Allow from all
+</code></pre>
+
+<p> </Directory>
+</VirtualHost>
+<code>
+</code>bash
+nano /etc/apache2/apache2.conf
+<code>
+Add this at the end of the file:
+</code>bash
+Include /etc/apache2/mods-available/passenger.conf
+<code>
+Activate your site
+</code>bash
+ln -s /etc/apache2/sites-available/my_domain /etc/apache2/sites-enabled/my_domain
+<code>
+Remove default entry
+</code>bash
+rm /etc/apache2/sites-enabled/000-default
+<code>
+Restart Apache and it should work
+</code>bash
+/etc/init.d/apache2 restart
+```</p></li>
+<li>Git integration
+Install needed packages:
+<code>bash
+gem install inifile
+apt-get install libnet-ssh-ruby1.8 python-setuptools
+gem install lockfile net-ssh
+apt-get install gitosis git-daemon-run acl
+</code>
+Activate acl for your partition:
+<code>bash
+nano /etc/fstab
+...
+UUID=xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx /               ext4    acl,errors=remount-ro 0       1
+...
+</code>
+Reboot your machine:
+<code>reboot</code>
+Configure gitosis:
+<code>bash
+sudo -H -u gitosis ssh-keygen -t dsa
+</code>
+No Password, default file.
+<code>bash
+sudo -u gitosis cat ~gitosis/.ssh/id_dsa.pub | sudo -H -u gitosis gitosis-init
+sudo sed -i.orig 's:/var/cache:/srv/gitosis:g' /etc/sv/git-daemon/run
+sudo sv restart git-daemon
+</code>
+Install gitosis plugin for redmine:
+<code>bash
+setfacl -m user:www-data:r-x,mask:r-x ~gitosis/.ssh
+setfacl -m user:www-data:r--,mask:r-- ~gitosis/.ssh/id_dsa
+cd /var/www/redmine
+script/plugin install git://github.com/xdissent/redmine_gitosis.git
+sudo -u www-data X_DEBIAN_SITEID=default RAILS_ENV=production rake db:migrate:plugins
+/etc/init.d/apache2 restart
+</code>
+Open your Browser, got to my_domain and login. Go to Administration – Plugins – Configure Redmine Gitosis plugin.
+Change localhost to my_domain.
+Change xdissent.com to my_domain.</li>
+</ol>
+
+
+<p>Have fun!</p>
+
+<p>Source:
+http://brantinteractive.com/2007/02/16/getting-the-mysql-gem-installed-on-ubuntu/
+http://www.redmine.org/wiki/1/RedmineInstall
+http://wiki.ousli.org/index.php/Redmine_in_Ubuntu_Jaunty_9.04
+http://www.redmine.org/wiki/1/HowTo_Install_Redmine_in_Ubuntu
+http://www.redmine.org/wiki/redmine/Repositories_access_control_with_apache_mod_dav_svn_and_mod_perl
+http://xdissent.com/2010/05/04/github-clone-with-redmine/
+http://dev.remarkablewit.com/redmine/projects/dev-server/wiki
+https://github.com/xdissent/redmine_gitosis
+http://www.redmine.org/issues/2525
+http://wiki.ubuntuusers.de/acl</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[PolarSSL for iOS (iPhone, iPad and iPod Touch)]]></title>
+    <link href="http://x2on.github.com/2011/04/08/polarssl-for-ios-iphone-ipad-and-ipod-touch/"/>
+    <updated>2011-04-08T11:19:39+02:00</updated>
+    <id>http://x2on.github.com/2011/04/08/polarssl-for-ios-iphone-ipad-and-ipod-touch</id>
+    <content type="html"><![CDATA[<p>This is a tutorial for using self-compiled builds of the PolarSSL-library for iOS.</p>
+
+<p>PolarSSL is a light-weight open source cryptographic and SSL/TLS library written in C.</p>
+
+<p>You can build apps with XCode and the official SDK from Apple with this.
+I also made a small example-app for using the libraries with XCode and the iPhone/iPhone-Simulator.
+You can also download the precompiled PolarSSL-library (0.14.3).</p>
+
+<!--more-->
+
+
+<p>You can get the scripts and the sourcecode here: <a href="https://github.com/x2on/PolarSSL-for-iOS">https://github.com/x2on/PolarSSL-for-iOS</a></p>
+
+<p><a href="http://www.x2on.de/wp-content/uploads/2011/04/PolarSSL-for-iOS.png"><img src="http://www.x2on.de/wp-content/uploads/2011/04/PolarSSL-for-iOS-159x300.png" alt="" /></a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Update: OpenSSL 1.0.0d Libraries for iPhone iPod Touch iPad]]></title>
+    <link href="http://x2on.github.com/2011/02/08/update-openssl-1-0-0d-libraries-for-iphone-ipod-touch-ipad/"/>
+    <updated>2011-02-08T21:36:14+01:00</updated>
+    <id>http://x2on.github.com/2011/02/08/update-openssl-1-0-0d-libraries-for-iphone-ipod-touch-ipad</id>
+    <content type="html"><![CDATA[<p>OpenSSL 1.0.0d is released and i updated the OpenSSL-Libraries for iPhone/iPod Touch. You can get it at <a href="http://github.com/x2on/OpenSSL-for-iPhone">http://github.com/x2on/OpenSSL-for-iPhone</a></p>
+
+<!--more-->
+
+
+<p><a href="http://www.x2on.de/wp-content/uploads/2010/12/OpenSSL-for-iOS.png"><img src="http://www.x2on.de/wp-content/uploads/2010/12/OpenSSL-for-iOS-159x300.png" alt="" /></a></p>
+]]></content>
+  </entry>
+  
+</feed>

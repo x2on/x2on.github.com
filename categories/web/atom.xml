@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Web | x2on.de]]></title>
+  <link href="http://x2on.github.com/categories/web/atom.xml" rel="self"/>
+  <link href="http://x2on.github.com/"/>
+  <updated>2013-01-28T22:46:38+01:00</updated>
+  <id>http://x2on.github.com/</id>
+  <author>
+    <name><![CDATA[Felix Schulze]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Twitter wordpress integration for marketing]]></title>
+    <link href="http://x2on.github.com/2010/10/31/twitter-wordpress-integration-for-marketing/"/>
+    <updated>2010-10-31T11:33:03+01:00</updated>
+    <id>http://x2on.github.com/2010/10/31/twitter-wordpress-integration-for-marketing</id>
+    <content type="html"><![CDATA[<p>There are many wordpress plugins for automatic twitter post and show the last tweets in a widget.
+I tested a few of these, but only "Twitter Tools" worked as expected.</p>
+
+<p>You can get it here: <a href="http://wordpress.org/extend/plugins/twitter-tools/">http://wordpress.org/extend/plugins/twitter-tools/</a></p>
+
+<p>Uses anybody an other plugin?</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Wordpress Revisionen löschen]]></title>
+    <link href="http://x2on.github.com/2009/02/01/wordpress-revisionen-loeschen/"/>
+    <updated>2009-02-01T20:57:14+01:00</updated>
+    <id>http://x2on.github.com/2009/02/01/wordpress-revisionen-loeschen</id>
+    <content type="html"><![CDATA[<p>Im Laufe der Zeit füllt sich die Datenbank von Wordpress mit zahlreichen Einträgen von alten Revisionen. Um diese zu löschen reicht ein kleiner SQL Befehl (z.B. über phpMyAdmin):</p>
+
+<p><code>sql  
+SELECT * FROM `wp_posts` WHERE `post_type` = 'revision';
+</code></p>
+
+<p>Dann kann man alle Einträge auswählen und löschen.
+Man sollte aber unbedingt vorher ein Backup seiner Datenbank anlegen.</p>
+]]></content>
+  </entry>
+  
+</feed>

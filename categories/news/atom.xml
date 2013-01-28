@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: News | x2on.de]]></title>
+  <link href="http://x2on.github.com/categories/news/atom.xml" rel="self"/>
+  <link href="http://x2on.github.com/"/>
+  <updated>2013-01-28T22:46:38+01:00</updated>
+  <id>http://x2on.github.com/</id>
+  <author>
+    <name><![CDATA[Felix Schulze]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Update: GnuTLS-for-iOS updated to GnuTLS 2.12.0]]></title>
+    <link href="http://x2on.github.com/2011/03/27/update-gnutls-for-ios-updated-to-gnutls-2-12-0/"/>
+    <updated>2011-03-27T16:50:44+02:00</updated>
+    <id>http://x2on.github.com/2011/03/27/update-gnutls-for-ios-updated-to-gnutls-2-12-0</id>
+    <content type="html"><![CDATA[<p>GnuTLS 2.12.0 is released and i updated the GnuTLS-Libraries for iPhone/iPod Touch.</p>
+
+<!--more-->
+
+
+<p>You can get it at <a href="http://github.com/x2on/OpenSSL-for-iPhone">https://github.com/x2on/GnuTLS-for-iOS</a></p>
+
+<p><a href="http://www.x2on.de/wp-content/uploads/2011/02/GnuTLS.png"><img src="http://www.x2on.de/wp-content/uploads/2011/02/GnuTLS-159x300.png" alt="" /></a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Update: OpenSSL 1.0.0d Libraries for iPhone iPod Touch iPad]]></title>
+    <link href="http://x2on.github.com/2011/02/08/update-openssl-1-0-0d-libraries-for-iphone-ipod-touch-ipad/"/>
+    <updated>2011-02-08T21:36:14+01:00</updated>
+    <id>http://x2on.github.com/2011/02/08/update-openssl-1-0-0d-libraries-for-iphone-ipod-touch-ipad</id>
+    <content type="html"><![CDATA[<p>OpenSSL 1.0.0d is released and i updated the OpenSSL-Libraries for iPhone/iPod Touch. You can get it at <a href="http://github.com/x2on/OpenSSL-for-iPhone">http://github.com/x2on/OpenSSL-for-iPhone</a></p>
+
+<!--more-->
+
+
+<p><a href="http://www.x2on.de/wp-content/uploads/2010/12/OpenSSL-for-iOS.png"><img src="http://www.x2on.de/wp-content/uploads/2010/12/OpenSSL-for-iOS-159x300.png" alt="" /></a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[SuperTux 0.3.3 for Mac OS X Snow Leopard Download]]></title>
+    <link href="http://x2on.github.com/2010/12/17/supertux-0-3-3-for-mac-os-x-download-update/"/>
+    <updated>2010-12-17T14:49:19+01:00</updated>
+    <id>http://x2on.github.com/2010/12/17/supertux-0-3-3-for-mac-os-x-download-update</id>
+    <content type="html"><![CDATA[<p>I build the Jump’n’Run-Game SuperTux 0.3.3 for Mac OS X with new versions from needed libraries. So it should work for Snow Leopard. Have fun…!</p>
+
+<!--more-->
+
+
+<p><strong>Download (Intel – 67,4MB):</strong> <a href="http://www.x2on.de/wp-content/uploads/2010/12/SuperTux-0.3.3.dmg">SuperTux_0.3.3.dmg</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Tutorial: Script for building OpenSSL for iOS (iPhone/iPad)]]></title>
+    <link href="http://x2on.github.com/2010/12/16/tutorial-script-for-building-openssl-for-ios-iphoneipad/"/>
+    <updated>2010-12-16T20:13:54+01:00</updated>
+    <id>http://x2on.github.com/2010/12/16/tutorial-script-for-building-openssl-for-ios-iphoneipad</id>
+    <content type="html"><![CDATA[<p>Related to my posts <a href="http://www.x2on.de/2010/02/01/tutorial-iphone-app-with-compiled-openssl-library/">http://www.x2on.de/2010/02/01/tutorial-iphone-app-with-compiled-openssl-library/</a> and <a href="http://www.x2on.de/2010/07/13/tutorial-iphone-app-with-compiled-openssl-1-0-0a-library/">http://www.x2on.de/2010/07/13/tutorial-iphone-app-with-compiled-openssl-1-0-0a-library/</a> i created a buildscript for building OpenSSL for iOS (iPhone/iPad).</p>
+
+<!--more-->
+
+
+<p>You can get it here: <a href="https://github.com/x2on/OpenSSL-for-iPhone/blob/master/build-libssl.sh">https://github.com/x2on/OpenSSL-for-iPhone/blob/master/build-libssl.sh</a></p>
+
+<p><strong>Source:</strong>
+<div><script src='https://gist.github.com/2962107.js'></script>
+<noscript><pre><code>#!/bin/sh
+
+#  Automatic build script for libssl and libcrypto 
+#  for iPhoneOS and iPhoneSimulator
+#
+#  Created by Felix Schulze on 16.12.10.
+#  Copyright 2010 Felix Schulze. All rights reserved.
+#
+#  Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+#  you may not use this file except in compliance with the License.
+#  You may obtain a copy of the License at
+#
+#  http://www.apache.org/licenses/LICENSE-2.0
+#
+#  Unless required by applicable law or agreed to in writing, software
+#  distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+#  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+#  See the License for the specific language governing permissions and
+#  limitations under the License.
+#
+###########################################################################
+#  Change values here													  #
+#																		  #
+VERSION=&quot;1.0.0c&quot;													      #
+SDKVERSION=&quot;4.2&quot;														  #
+#																		  #
+###########################################################################
+#																		  #
+# Don't change anything under this line!								  #
+#																		  #
+###########################################################################
+
+
+
+CURRENTPATH=`pwd`
+
+set -e
+if [ ! -e openssl-${VERSION}.tar.gz ]; then
+	echo &quot;Downloading openssl-${VERSION}.tar.gz&quot;
+	curl -O http://www.openssl.org/source/openssl-${VERSION}.tar.gz
+else
+	echo &quot;Using openssl-${VERSION}.tar.gz&quot;
+fi
+
+mkdir -p &quot;${CURRENTPATH}/src&quot;
+tar zxf openssl-${VERSION}.tar.gz -C &quot;${CURRENTPATH}/src&quot;
+cd &quot;${CURRENTPATH}/src/openssl-${VERSION}&quot;
+
+############
+# iPhone Simulator
+echo &quot;Building openssl for iPhoneSimulator ${SDKVERSION} i386&quot;
+echo &quot;Please stand by...&quot;
+
+export CC=&quot;/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc -arch i386&quot;
+mkdir -p &quot;${CURRENTPATH}/bin/iPhoneSimulator${SDKVERSION}.sdk&quot;
+
+LOG=&quot;${CURRENTPATH}/bin/iPhoneSimulator${SDKVERSION}.sdk/build-openssl-${VERSION}.log&quot;
+
+./configure BSD-generic32 --openssldir=&quot;${CURRENTPATH}/bin/iPhoneSimulator${SDKVERSION}.sdk&quot; &gt; &quot;${LOG}&quot; 2&gt;&amp;1
+# add -isysroot to CC=
+sed -ie &quot;s!^CFLAG=!CFLAG=-isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator${SDKVERSION}.sdk !&quot; &quot;Makefile&quot;
+
+make &gt;&gt; &quot;${LOG}&quot; 2&gt;&amp;1
+make install &gt;&gt; &quot;${LOG}&quot; 2&gt;&amp;1
+make clean &gt;&gt; &quot;${LOG}&quot; 2&gt;&amp;1
+#############
+
+#############
+# iPhoneOS armv6
+echo &quot;Building openssl for iPhoneOS ${SDKVERSION} armv6&quot;
+echo &quot;Please stand by...&quot;
+
+export CC=&quot;/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc -arch armv6&quot;
+mkdir -p &quot;${CURRENTPATH}/bin/iPhoneOS${SDKVERSION}-armv6.sdk&quot;
+
+LOG=&quot;${CURRENTPATH}/bin/iPhoneOS${SDKVERSION}-armv6.sdk/build-openssl-${VERSION}.log&quot;
+
+./configure BSD-generic32 --openssldir=&quot;${CURRENTPATH}/bin/iPhoneOS${SDKVERSION}-armv6.sdk&quot; &gt; &quot;${LOG}&quot; 2&gt;&amp;1
+
+sed -ie &quot;s!^CFLAG=!CFLAG=-isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS${SDKVERSION}.sdk !&quot; &quot;Makefile&quot;
+# remove sig_atomic for iPhoneOS
+sed -ie &quot;s!static volatile sig_atomic_t intr_signal;!static volatile intr_signal;!&quot; &quot;crypto/ui/ui_openssl.c&quot;
+
+make &gt;&gt; &quot;${LOG}&quot; 2&gt;&amp;1
+make install &gt;&gt; &quot;${LOG}&quot; 2&gt;&amp;1
+make clean &gt;&gt; &quot;${LOG}&quot; 2&gt;&amp;1
+#############
+
+#############
+# iPhoneOS armv7
+echo &quot;Building openssl for iPhoneOS ${SDKVERSION} armv7&quot;
+echo &quot;Please stand by...&quot;
+
+export CC=&quot;/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc -arch armv7&quot;
+mkdir -p &quot;${CURRENTPATH}/bin/iPhoneOS${SDKVERSION}-armv7.sdk&quot;
+
+LOG=&quot;${CURRENTPATH}/bin/iPhoneOS${SDKVERSION}-armv7.sdk/build-openssl-${VERSION}.log&quot;
+
+
+./configure BSD-generic32 --openssldir=&quot;${CURRENTPATH}/bin/iPhoneOS${SDKVERSION}-armv7.sdk&quot; &gt;&gt; &quot;${LOG}&quot; 2&gt;&amp;1
+
+sed -ie &quot;s!^CFLAG=!CFLAG=-isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS${SDKVERSION}.sdk !&quot; &quot;Makefile&quot;
+# remove sig_atomic for iPhoneOS
+sed -ie &quot;s!static volatile sig_atomic_t intr_signal;!static volatile intr_signal;!&quot; &quot;crypto/ui/ui_openssl.c&quot;
+
+make &gt;&gt; &quot;${LOG}&quot; 2&gt;&amp;1
+make install &gt;&gt; &quot;${LOG}&quot; 2&gt;&amp;1
+make clean &gt;&gt; &quot;${LOG}&quot; 2&gt;&amp;1
+#############
+
+echo &quot;Build library...&quot;
+lipo -create ${CURRENTPATH}/bin/iPhoneSimulator${SDKVERSION}.sdk/lib/libssl.a ${CURRENTPATH}/bin/iPhoneOS${SDKVERSION}-armv6.sdk/lib/libssl.a ${CURRENTPATH}/bin/iPhoneOS${SDKVERSION}-armv7.sdk/lib/libssl.a -output ${CURRENTPATH}/libssl.a
+
+lipo -create ${CURRENTPATH}/bin/iPhoneSimulator${SDKVERSION}.sdk/lib/libcrypto.a ${CURRENTPATH}/bin/iPhoneOS${SDKVERSION}-armv6.sdk/lib/libcrypto.a ${CURRENTPATH}/bin/iPhoneOS${SDKVERSION}-armv7.sdk/lib/libcrypto.a -output ${CURRENTPATH}/libcrypto.a
+
+mkdir -p ${CURRENTPATH}/include
+cp -R ${CURRENTPATH}/bin/iPhoneSimulator${SDKVERSION}.sdk/include/openssl ${CURRENTPATH}/include/
+echo &quot;Building done.&quot;
+</code></pre></noscript></div>
+</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Update: OpenSSL 1.0.0c Libraries for iPhone iPod Touch iPad]]></title>
+    <link href="http://x2on.github.com/2010/12/04/update-openssl-1-0-0c-libraries-for-iphone-ipod-touch-ipad/"/>
+    <updated>2010-12-04T13:15:40+01:00</updated>
+    <id>http://x2on.github.com/2010/12/04/update-openssl-1-0-0c-libraries-for-iphone-ipod-touch-ipad</id>
+    <content type="html"><![CDATA[<p>OpenSSL 1.0.0c is released and i updated the OpenSSL-Libraries for iPhone/iPod Touch. I also did some GUI-Improvements for easier understanding. You can get it at <a href="http://github.com/x2on/OpenSSL-for-iPhone">http://github.com/x2on/OpenSSL-for-iPhone</a></p>
+
+<!--more-->
+
+
+<p><a href="http://www.x2on.de/wp-content/uploads/2010/12/OpenSSL-for-iOS.png"><img src="http://www.x2on.de/wp-content/uploads/2010/12/OpenSSL-for-iOS-159x300.png" alt="" /></a></p>
+]]></content>
+  </entry>
+  
+</feed>

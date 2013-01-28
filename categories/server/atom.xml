@@ -1,0 +1,590 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Server | x2on.de]]></title>
+  <link href="http://x2on.github.com/categories/server/atom.xml" rel="self"/>
+  <link href="http://x2on.github.com/"/>
+  <updated>2013-01-28T22:46:38+01:00</updated>
+  <id>http://x2on.github.com/</id>
+  <author>
+    <name><![CDATA[Felix Schulze]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Tutorial: Redmine with Git and Gitosis on Ubuntu 11.04]]></title>
+    <link href="http://x2on.github.com/2011/04/23/tutorial-redmine-with-git-and-gitosis-on-ubuntu-11-04/"/>
+    <updated>2011-04-23T09:03:00+02:00</updated>
+    <id>http://x2on.github.com/2011/04/23/tutorial-redmine-with-git-and-gitosis-on-ubuntu-11-04</id>
+    <content type="html"><![CDATA[<p>This is a tutorial for installing redmine on Ubuntu 11.04 with Git integration, managed by Gitosis and a redmine gitosis plugin.</p>
+
+<p>It’s based on my last tutorial about installing redmine ob Ubuntu 8.04: http://www.x2on.de/2010/10/30/tutorial-redmine-with-svn-git-and-gitosis-on-ubuntu-8-04/</p>
+
+<!--more-->
+
+
+<h1>1. Install redmine</h1>
+
+<p>Get recent version from github (currently 1.1.3)
+<code>bash
+apt-get install git-core
+mkdir /var/www
+cd /var/www
+git clone git://github.com/edavis10/redmine.git
+cd redmine
+git checkout -b 1.1.3 1.1.3
+</code>
+Install packages
+<code>bash
+apt-get install ruby  ruby1.9.1-dev libgemplugin-ruby libgemplugin-ruby1.8  mysql-server apache2-mpm-prefork wget libruby-extras libruby1.8-extras rake apache2-prefork-dev libapache-dbi-perl libapache2-mod-perl2 libdigest-sha1-perl libmysqlclient15-dev build-essential libcurl4-openssl-dev cron
+</code>
+If you like to use Gant-Charts:
+<code>bash
+apt-get install librmagick-ruby1.8
+</code>
+Create database
+<code>bash
+mysql -u root -p
+</code>
+<code>sql
+CREATE DATABASE redmine CHARACTER SET utf8;
+CREATE USER 'redmine'@'localhost' IDENTIFIED BY 'my_password';
+GRANT ALL privileges ON redmine.* TO 'redmine'@'localhost';
+</code>
+Configure Database Settings
+<code>bash
+cp redmine/config/database.yml.example redmine/config/database.yml
+nano redmine/config/database.yml
+production:
+  adapter: mysql
+  database: redmine
+  host: localhost
+  username: redmine
+  password: my_password
+  encoding: utf8
+</code></p>
+
+<p>Install Rubygem (Ubuntu 11.04 has an older version)
+<code>bash
+wget http://production.cf.rubygems.org/rubygems/rubygems-1.7.2.tgz
+tar xvfz rubygems-1.7.2.tgz
+cd rubygems-1.7.2
+mv /usr/bin/gem /usr/bin/gem-ubuntu
+ruby setup.rb
+ln -s /usr/bin/gem1.8 /usr/bin/gem
+</code>
+Install Rails + Rack
+<code>bash
+gem install rails -v=2.3.11
+gem install rack -v=1.1.0
+gem install mysql
+gem install -v=0.4.2 i18n
+</code>
+Configure redmine
+<code>bash
+cd /var/www/redmine
+chown -R www-data:www-data files log tmp public/plugin_assets
+chmod -R 755 files log tmp public/plugin_assets
+chmod -R 777 public/plugin_assets
+rake generate_session_store
+RAILS_ENV=production rake db:migrate
+RAILS_ENV=production rake redmine:load_default_data
+</code>
+Test redmine
+<code>bash
+ruby script/server webrick -e production
+</code>
+Now you can check http://my_domain.com:3000 if everything works</p>
+
+<ol>
+<li><p>Apache Integration
+Install passenger (Modify version numbers if needed)
+<code>bash
+gem install passenger
+passenger-install-apache2-module
+echo "LoadModule passenger_module /usr/lib/ruby/gems/1.8/gems/passenger-3.0.7/ext/apache2/mod_passenger.so" &amp;gt; /etc/apache2/mods-available/passenger.load
+ln -s /etc/apache2/mods-available/passenger.load /etc/apache2/mods-enabled/passenger.load
+nano /etc/apache2/mods-available/passenger.conf
+PassengerRoot /usr/lib/ruby/gems/1.8/gems/passenger-3.0.7
+PassengerRuby /usr/bin/ruby1.8
+</code>
+Alternative: You can install passenger with ubuntu:
+<code>bash
+apt-get install libapache2-mod-passenger
+</code>
+Configure Apache
+<code>bash
+nano /etc/apache2/sites-available/my_domain
+</code>
+```bash
+<VirtualHost *:80>
+ ServerName my_domain.com</p>
+
+<p> DocumentRoot /var/www/redmine/public</p>
+
+<p> PassengerDefaultUser www-data
+ RailsEnv production
+ RailsBaseURI /redmine
+ SetEnv X_DEBIAN_SITEID "default"
+ <Directory /var/www/redmine/public></p>
+
+<pre><code> Order allow,deny
+ Allow from all
+</code></pre>
+
+<p> </Directory>
+</VirtualHost>
+<code>
+</code>bash
+nano /etc/apache2/apache2.conf
+<code>
+Add this at the end of the file:
+</code>bash
+Include /etc/apache2/mods-available/passenger.conf
+<code>
+Activate your site
+</code>bash
+ln -s /etc/apache2/sites-available/my_domain /etc/apache2/sites-enabled/my_domain
+<code>
+Remove default entry
+</code>bash
+rm /etc/apache2/sites-enabled/000-default
+<code>
+Restart Apache and it should work
+</code>bash
+/etc/init.d/apache2 restart
+```</p></li>
+<li>Git integration
+Install needed packages:
+<code>bash
+gem install inifile
+apt-get install libnet-ssh-ruby1.8 python-setuptools
+gem install lockfile net-ssh
+apt-get install gitosis git-daemon-run acl
+</code>
+Activate acl for your partition:
+<code>bash
+nano /etc/fstab
+...
+UUID=xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx /               ext4    acl,errors=remount-ro 0       1
+...
+</code>
+Reboot your machine:
+<code>reboot</code>
+Configure gitosis:
+<code>bash
+sudo -H -u gitosis ssh-keygen -t dsa
+</code>
+No Password, default file.
+<code>bash
+sudo -u gitosis cat ~gitosis/.ssh/id_dsa.pub | sudo -H -u gitosis gitosis-init
+sudo sed -i.orig 's:/var/cache:/srv/gitosis:g' /etc/sv/git-daemon/run
+sudo sv restart git-daemon
+</code>
+Install gitosis plugin for redmine:
+<code>bash
+setfacl -m user:www-data:r-x,mask:r-x ~gitosis/.ssh
+setfacl -m user:www-data:r--,mask:r-- ~gitosis/.ssh/id_dsa
+cd /var/www/redmine
+script/plugin install git://github.com/xdissent/redmine_gitosis.git
+sudo -u www-data X_DEBIAN_SITEID=default RAILS_ENV=production rake db:migrate:plugins
+/etc/init.d/apache2 restart
+</code>
+Open your Browser, got to my_domain and login. Go to Administration – Plugins – Configure Redmine Gitosis plugin.
+Change localhost to my_domain.
+Change xdissent.com to my_domain.</li>
+</ol>
+
+
+<p>Have fun!</p>
+
+<p>Source:
+http://brantinteractive.com/2007/02/16/getting-the-mysql-gem-installed-on-ubuntu/
+http://www.redmine.org/wiki/1/RedmineInstall
+http://wiki.ousli.org/index.php/Redmine_in_Ubuntu_Jaunty_9.04
+http://www.redmine.org/wiki/1/HowTo_Install_Redmine_in_Ubuntu
+http://www.redmine.org/wiki/redmine/Repositories_access_control_with_apache_mod_dav_svn_and_mod_perl
+http://xdissent.com/2010/05/04/github-clone-with-redmine/
+http://dev.remarkablewit.com/redmine/projects/dev-server/wiki
+https://github.com/xdissent/redmine_gitosis
+http://www.redmine.org/issues/2525
+http://wiki.ubuntuusers.de/acl</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Tutorial: Redmine with SVN, Git and Gitosis on Ubuntu 8.04]]></title>
+    <link href="http://x2on.github.com/2010/10/30/tutorial-redmine-with-svn-git-and-gitosis-on-ubuntu-8-04/"/>
+    <updated>2010-10-30T08:54:24+02:00</updated>
+    <id>http://x2on.github.com/2010/10/30/tutorial-redmine-with-svn-git-and-gitosis-on-ubuntu-8-04</id>
+    <content type="html"><![CDATA[<p>This is a tutorial for installing redmine on Ubuntu 8.04 with SVN and Git integration (managed by Gitosis and a redmine gitosis plugin).</p>
+
+<!--more-->
+
+
+<p>UPDATE #1 - 2011-04-23: New Tutorial for Redmine with Git and Gitosis on Ubuntu 11.04:<a href="http://www.x2on.de/2011/04/23/tutorial-redmine-with-git-and-gitosis-on-ubuntu-11-04/">http://www.x2on.de/2011/04/23/tutorial-redmine-with-git-and-gitosis-on-ubuntu-11-04/</a></p>
+
+<h2>1. Install redmine</h2>
+
+<p>Get recent trunk version from github (currently 1.02)
+<code>bash    
+apt-get install git-core
+mkdir /var/www
+cd /var/www
+git clone git://github.com/edavis10/redmine.git
+</code>
+Install packages
+<code>bash     
+apt-get install ruby ruby1.8-dev libgemplugin-ruby libgemplugin-ruby1.8  mysql-server apache2-mpm-prefork wget libruby-extras libruby1.8-extras rails subversion rake apache2-prefork-dev libapache-dbi-perl libapache2-mod-perl2 libdigest-sha1-perl libapache2-svn libmysqlclient15-dev build-essential libcurl4-openssl-dev cron
+</code>
+Create database</p>
+
+<p>```bash     <br/>
+mysql -u root -p</p>
+
+<p>$> create database redmine character set utf8;
+$> create user 'redmine'@'localhost' identified by 'my_password';
+$> grant all privileges on redmine.* to 'redmine'@'localhost';
+```</p>
+
+<p>Configure Database Settings</p>
+
+<p><code>bash   
+cp redmine/config/database.yml.example redmine/config/database.yml
+nano redmine/config/database.yml
+</code></p>
+
+<p>```
+production:</p>
+
+<pre><code>adapter: mysql
+database: redmine
+host: localhost
+username: redmine
+password: 47w8t2938qfge2
+encoding: utf8
+</code></pre>
+
+<p>```</p>
+
+<p>Install Rubygem (Ubuntu 8.04 has an older version)</p>
+
+<p><code>bash    
+wget http://production.cf.rubygems.org/rubygems/rubygems-1.3.7.tgz
+tar xvfz rubygems-1.3.7.tgz
+cd rubygems-1.3.7
+ruby setup.rb
+ln -s /usr/bin/gem1.8 /usr/bin/gem
+</code></p>
+
+<p>Install Rails + Rack</p>
+
+<p><code>bash    
+gem install rails -v=2.3.5
+gem install rack -v=1.0.1
+gem install mysql
+</code></p>
+
+<p>Configure redmine</p>
+
+<p><code>bash    
+cd /var/www/redmine
+chown -R www-data:www-data files log tmp public/plugin_assets
+chmod -R 755 files log tmp public/plugin_assets
+rake generate_session_store
+RAILS_ENV=production rake db:migrate
+RAILS_ENV=production rake redmine:load_default_data
+</code></p>
+
+<p>Test redmine</p>
+
+<p><code>bash     
+ruby script/server webrick -e production
+</code></p>
+
+<p>Now you can check http://my_domain.com:3000 if everything works</p>
+
+<h2>2. Apache Integration</h2>
+
+<p>Install passenger (Modify version numbers if needed)</p>
+
+<p><code>bash     
+gem install passenger
+echo "LoadModule passenger_module /usr/lib/ruby/gems/1.8/gems/passenger-3.0.0/ext/apache2/mod_passenger.so" &gt; /etc/apache2/mods-available/passenger.load
+ln -s /etc/apache2/mods-available/passenger.load /etc/apache2/mods-enabled/passenger.load
+</code></p>
+
+<p><code>bash  
+nano /etc/apache2/mods-available/passenger.conf
+</code></p>
+
+<p><code>bash   
+PassengerRoot /usr/lib/ruby/gems/1.8/gems/passenger-3.0.0
+PassengerRuby /usr/bin/ruby1.8
+</code></p>
+
+<p>Configure Apache
+```bash</p>
+
+<pre><code>nano /etc/apache2/sites-available/my_domain
+</code></pre>
+
+<p>```</p>
+
+<p>```bash
+ServerName my_domain.com</p>
+
+<p>DocumentRoot /var/www/redmine/public</p>
+
+<p>ServerAdmin user@example.com
+LogLevel warn
+ErrorLog /var/log/apache2/redmine_error
+CustomLog /var/log/apache2/redmine_access combined</p>
+
+<p>Options Indexes FollowSymLinks MultiViews
+AllowOverride None
+Order allow,deny
+allow from all
+<code>
+</code>bash
+nano /etc/apache2/apache2.conf
+```</p>
+
+<p>Add this at the end of the file:
+<code>bash  
+Include /etc/apache2/mods-available/passenger.conf
+</code></p>
+
+<p>Activate your site
+<code>bash
+ln -s /etc/apache2/sites-available/my_domain /etc/apache2/sites-enabled/my_domain
+</code></p>
+
+<p>Remove default entry
+<code>bash  
+rm /etc/apache2/sites-enabled/000-default
+</code></p>
+
+<p>Restart Apache and it should work
+<code>bash
+/etc/init.d/apache2 restart
+</code></p>
+
+<h2>3. Subversion integration</h2>
+
+<p><code>bash
+ln -s /var/www/redmine/extra/svn/Redmine.pm /usr/lib/perl5/Apache/Redmine.pm
+nano /etc/apache2/sites-available/svn
+</code>
+```bash</p>
+
+<pre><code> # /svn location for users
+ PerlLoadModule Apache::Redmine
+
+   DAV svn
+   SVNParentPath "/var/repos/svn"
+   Order deny,allow
+   Deny from all
+   Satisfy any
+
+   PerlAccessHandler Apache::Authn::Redmine::access_handler
+   PerlAuthenHandler Apache::Authn::Redmine::authen_handler
+   AuthType Basic
+   AuthName "Redmine SVN Repository" 
+
+   #read-only access
+
+      Require valid-user
+      Allow from my_domain.com
+      Allow from localhost
+       Satisfy any
+
+   # write access
+     Require valid-user
+
+   ## Mysql-Settings
+   RedmineDSN "DBI:mysql:database=redmine;host=localhost"
+   RedmineDbUser "redmine"
+   RedmineDbPass "my_password"
+
+#Security:
+
+      Order deny,allow
+      Allow from localhost
+      Allow from my_domain.com
+      Deny from all
+</code></pre>
+
+<p>```</p>
+
+<p><code>bash   
+ln -s /etc/apache2/sites-available/svn /etc/apache2/sites-enabled/svn
+mkdir -p /var/repos/svn
+chown -R www-data:www-data /var/repos
+chmod 0750 /var/repos/svn
+</code></p>
+
+<p>Go to Administration - Settings - Repositories on your redmine site and enable "WS for repository management". Then generate an API key.</p>
+
+<p>Test the automatic generation:</p>
+
+<p><code>bash
+ruby /var/www/redmine/extra/svn/reposman.rb --redmine my_domain.com --svn-dir /var/repos/svn --owner www-data --url http://my_domain.com/svn --verbose --key=my_api_key
+</code></p>
+
+<p>If everything works create an crontab for this:</p>
+
+<p><code>bash  
+nano /etc/cron.d/redmine
+</code></p>
+
+<p><code>bash
+10 * * * * root ruby /var/www/redmine/extra/svn/reposman.rb --redmine my_domain.com --svn-dir /var/repos/svn --owner www-data --url http://my_domain.com/svn --verbose --key=my_api_key
+</code></p>
+
+<p>Now you are ready to use SVN with redmine</p>
+
+<h2>4. Git integration</h2>
+
+<p>Install needed packages:</p>
+
+<p><code>bash   
+gem install inifile
+apt-get install libnet-ssh-ruby1.8 python-setuptools
+gem install lockfile
+easy_install pip
+pip install virtualenv
+</code></p>
+
+<p>Add an user for gitosis:
+<code>bash
+adduser --system --shell /bin/bash --gecos 'Git Administrator' --group --disabled-password --home /opt/gitosis git
+</code></p>
+
+<p>Create an ssh-key (with empty passphrase):
+<code>bash
+sudo -H -u git ssh-keygen -t dsa
+</code></p>
+
+<p>Create an Virtual Environment for python and install gitosis:
+<code>bash  
+sudo -u git virtualenv ~git/virtualenv
+sudo -u git ~git/virtualenv/bin/pip install git+git://eagain.net/gitosis.git
+echo "source $HOME/virtualenv/bin/activate" | sudo -u git tee -a ~git/.bashrc &gt; /dev/null
+sudo -u git cat ~git/.ssh/id_dsa.pub | sudo -H -u git ~git/virtualenv/bin/gitosis-init
+</code></p>
+
+<p>Install redmine-gitosis plugin:
+<code>bash
+cd /var/www/redmine/
+chown -R www-data:www-data /var/www/redmine
+script/plugin install git://github.com/rocket-rentals/redmine-gitosis.git
+</code></p>
+
+<p>Patch the plugin:
+<code>bash
+nano /var/www/redmine/vendor/plugins/redmine-gitosis/lib/gitosis.rb
+</code>
+```ruby</p>
+
+<pre><code>require 'lockfile'
+require 'inifile'
+require 'net/ssh'
+
+module Gitosis
+  # server config
+  GITOSIS_URI = 'git@my_domain.com:gitosis-admin.git'
+  GITOSIS_BASE_PATH = '/opt/gitosis/repositories/'
+
+  # commands
+  ENV['GIT_SSH'] = SSH_WITH_IDENTITY_FILE = File.join(RAILS_ROOT, 'vendor/plugins/redmine-gitosis/extra/ssh_with_identity_file.sh')
+</code></pre>
+
+<p>```</p>
+
+<p>Configure SSH:</p>
+
+<p><code>bash   
+mkdir /var/www/.ssh
+chown -R www-data:www-data /var/www/.ssh
+sudo -u www-data ssh my_domain.com
+</code></p>
+
+<p>Migrate plugin:
+<code>bash    
+rake db:migrate_plugins RAILS_ENV=production
+</code></p>
+
+<p>Remove standard ssh-key and change it to the created one:
+<code>bash  
+rm /var/www/redmine/vendor/plugins/redmine-gitosis/extra/ssh/private_key
+cp ~git/.ssh/id_dsa /var/www/redmine/vendor/plugins/redmine-gitosis/extra/ssh/private_key
+chown -R www-data:www-data /var/www/redmine
+</code></p>
+
+<p>Test if the www-data user can read the key:
+<code>bash  
+sudo -u www-data cat /var/www/redmine/vendor/plugins/redmine-gitosis/extra/ssh/private_key
+</code></p>
+
+<p>Add the www-data user to the git group:
+<code>bash   
+usermod -a -G git www-data
+</code></p>
+
+<p><strong>Have fun!</strong></p>
+
+<h3>Source:</h3>
+
+<p><a href="http://brantinteractive.com/2007/02/16/getting-the-mysql-gem-installed-on-ubuntu/"> http://brantinteractive.com/2007/02/16/getting-the-mysql-gem-installed-on-ubuntu/
+</a><a href="http://www.redmine.org/wiki/1/RedmineInstall"> http://www.redmine.org/wiki/1/RedmineInstall</a>
+<a href="http://wiki.ousli.org/index.php/Redmine_in_Ubuntu_Jaunty_9.04"> http://wiki.ousli.org/index.php/Redmine_in_Ubuntu_Jaunty_9.04</a>
+<a href="http://www.redmine.org/wiki/1/HowTo_Install_Redmine_in_Ubuntu"> http://www.redmine.org/wiki/1/HowTo_Install_Redmine_in_Ubuntu</a>
+<a href="http://www.redmine.org/wiki/redmine/Repositories_access_control_with_apache_mod_dav_svn_and_mod_perl"> http://www.redmine.org/wiki/redmine/Repositories_access_control_with_apache_mod_dav_svn_and_mod_perl
+</a><a href="http://xdissent.com/2010/05/04/github-clone-with-redmine/"> http://xdissent.com/2010/05/04/github-clone-with-redmine/
+</a><a href="http://wiki.ubuntuusers.de/virtualenv"> http://wiki.ubuntuusers.de/virtualenv</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Backup Skript für Server]]></title>
+    <link href="http://x2on.github.com/2009/03/16/backup-skript-fur-server/"/>
+    <updated>2009-03-16T12:18:23+01:00</updated>
+    <id>http://x2on.github.com/2009/03/16/backup-skript-fur-server</id>
+    <content type="html"><![CDATA[<p>Um von einem Server immer ein Backup der aktuellen Konfigurations-Dateien zu haben, ist es sehr praktisch sich diese einmal pro Tag per E-mail automatisch senden zu lassen. Für den Versand per E-mail wird das Programm mutt benötigt.</p>
+
+<p>In Debian lässt sich mutt einfach über folgenden Befehl installieren:</p>
+
+<pre><code>apt-get install mutt
+</code></pre>
+
+<p>Danach muss ein Skript für das Backup und den Versand angelegt werden:
+(Bitte Pfad, Betreff und E-mail Adresse anpassen).</p>
+
+<pre><code>nano /etc/cron.daily/backup
+
+
+
+
+
+#!/bin/sh
+DATUM=`/bin/date "+%Y-%m-%d_%H-%M"`
+tar cvfz /backup/backup-$DATUM.tar.gz /etc/*
+mutt -n -F /dev/null -s "Betreff der E-mail" -a /backup/backup-$DATUM.tar.gz email@example.com &lt; /dev/null
+
+
+
+
+chmod +x /etc/cron.daily/backup
+</code></pre>
+
+<p>Abschließend das Skript testen:</p>
+
+<pre><code>/etc/cron.daily/backup
+</code></pre>
+]]></content>
+  </entry>
+  
+</feed>

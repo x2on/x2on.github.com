@@ -1,0 +1,538 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Mac OS X Adressbuch in Thunderbird integrieren - x2on.de</title>
+  <meta name="author" content="Felix Schulze">
+
+  
+  <meta name="description" content="Mozilla Thunderbird 2.0x unter Mac OS X hat den Nachteil, das man damit nicht das integrierte Adressbuch benutzen kann. Thunderbird 3.0 kann dies &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://x2on.github.com/2008/03/27/mac-os-x-adressbuch-in-thunderbird-integrieren/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="x2on.de" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-12483325-4']);
+    _gaq.push(['_gat._anonymizeIp']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+<div id="logo">
+  <h1><a href="/">x2on.de</a></h1>
+  
+    <h2>by Felix Schulze - a mobile evangelist. Tutorials for iOS, Android, Mac, Linux, iPhone and more...</h2>
+  
+</div>
+<div id="banner">
+	<script type="text/javascript"><!--
+google_ad_client = "ca-pub-7131940430529312";
+/* 728x90 - Header */
+google_ad_slot = "0685801932";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:x2on.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/contact">Contact / Imprint</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Mac OS X Adressbuch in Thunderbird Integrieren</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-03-27T15:32:43+01:00" pubdate data-updated="true">Mar 27<span>th</span>, 2008</time>
+        
+         | <a href="#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Mozilla Thunderbird 2.0x unter Mac OS X hat den Nachteil, das man damit nicht das integrierte Adressbuch benutzen kann. Thunderbird 3.0 kann dies zwar, befindet sich aber noch im Alpha Stadium, und ist daher sehr unstabil. In Bugzilla gibt es aber einen Patch, damit man das Adressbuch bereits in 2.0x benutzen kann. Dafür muss man aber Thunderbird selbst kompilieren.</p>
+
+<!--more-->
+
+
+<p>Ich gehe bei der Anleitung von Leopard 10.5.2 und Thunderbird 2.0.0.12 auf einem Intel Mac aus.</p>
+
+<p><strong>Disclaimer:</strong> Ich übernehme keine Garantie für Schäden am System, Verlust von Daten oder sonst irgendwas. Jeder der diesen Schritt macht muss selber wissen ob er das Risiko eingehen will.
+<strong>DU MACHST DIE ÄNDERUNG AUF DEIN RISIKO</strong></p>
+
+<p><strong>Teil 1: Benötigtes Software installieren</strong></p>
+
+<p>Als erstes müssen wir Apple&#8217;s Entwicklungsumgebung XCode installieren, was ca. 2,4 GB freien Speicher benötigt. Die Software findet sich auf der Leopard DVD oder im <a href="http://developer.apple.com/tools/xcode/index.html">Developer Center</a> von Apple.</p>
+
+<p>Nun benötigen wir noch MacPorts:</p>
+
+<ol>
+<li><p>DMG Image von der <a href="http://www.macports.org/install.php">Download-Seite</a> herunterladen und installieren</p></li>
+<li><p>Terminal öffnen und folgendes eingeben:</p></li>
+</ol>
+
+
+<pre><code>nano ~/.bash_profile
+</code></pre>
+
+<ol>
+<li>Folgendes hinzufügen:</li>
+</ol>
+
+
+<pre><code>export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+</code></pre>
+
+<ol>
+<li><p>Mit Strg+O speichern und Strg+X den Editor schliessen</p></li>
+<li><p>Terminal neustarten</p></li>
+<li><p>MacPorts auf den neusten Stand bringen:</p></li>
+</ol>
+
+
+<pre><code>sudo port -v selfupdate
+</code></pre>
+
+<ol>
+<li>Benötigte Bibiliotheken installieren (dauert etwas):</li>
+</ol>
+
+
+<pre><code>sudo port sync
+sudo port install libidl glib1 glib2
+</code></pre>
+
+<ol>
+<li>Wget installieren:</li>
+</ol>
+
+
+<pre><code>sudo port install wget
+</code></pre>
+
+<p><strong>Teil 2: Konfiguration von Thunderbird erstellen</strong></p>
+
+<p>Konfigurationsdatei für das Kompilieren erstellen:</p>
+
+<pre><code>nano ~/.mozconfig
+</code></pre>
+
+<p>Und folgenden Inhalt hineinkopieren:</p>
+
+<pre><code>export CC="gcc-4.0"
+export CXX="g++-4.0"
+# Options for client.mk
+. $topsrcdir/mail/config/mozconfig
+mk_add_options MOZ_CO_PROJECT=mail
+mk_add_options MOZ_CO_LOCALES="de"
+mk_add_options MOZ_OBJDIR=@TOPSRCDIR@/thunderbird-static
+mk_add_options BUILD_OFFICIAL=1
+mk_add_options MOZILLA_OFFICIAL=1
+# Options for configure
+ac_add_options --with-macos-sdk=/Developer/SDKs/MacOSX10.5.sdk
+ac_add_options --enable-application="mail"
+ac_add_options --enable-optimize="-O2 -g"
+ac_add_options --enable-static
+ac_add_options --enable-ldap
+ac_add_options --enable-extensions=default
+ac_add_options --enable-ui-locale="de"
+ac_add_options --enable-official-branding
+ac_add_options --enable-crypto
+ac_add_options --enable-default-toolkit=mac
+ac_add_options --enable-canvas
+ac_add_options --with-system-nss
+ac_add_options --with-system-nspr
+ac_add_options --disable-debug
+ac_add_options --disable-tests
+ac_add_options --disable-shared
+ac_add_options --disable-profilesharing
+</code></pre>
+
+<p>Mit Strg+O speichern und Strg+X den Editor schliessen</p>
+
+<p>Die Bedeutung der Angaben kann man auf der <a href="http://developer.mozilla.org/en/docs/Mac_OS_X_Build_Prerequisites#.mozconfig_Options_and_Other_Tunables">Mozilla Developer Seite</a> nachlesen</p>
+
+<p>Wichtig: Hier ist das offizielle Mozilla-Branding aktiviert. Builds mit diesem Branding dürfen nach Mozilla-Lizenzvertrag nur für den Eigengebrauch verwendet und nicht verteilt werden. Will man eine Thunderbird-Version verteilen muss man das offizielle Branding abstellen.</p>
+
+<p><strong>Teil 3: Sourcen herunterladen</strong></p>
+
+<ol>
+<li>Nun müssen wir die Sprachdateien herunterladen:</li>
+</ol>
+
+
+<pre><code>cvs -d :pserver:anonymous@cvs-mirror.mozilla.org:/l10n co l10n/de
+cvs -d :pserver:anonymous@cvs-mirror.mozilla.org:/l10n co l10n/en-GB
+</code></pre>
+
+<ol>
+<li>Nun noch die Sourcen von Thunderbird 2.0.0.12 herunterladen:</li>
+</ol>
+
+
+<pre><code>wget ftp://ftp.mozilla.org/pub/mozilla.org/thunderbird/releases/2.0.0.12/source/thunderbird-2.0.0.12-source.tar.bz2
+</code></pre>
+
+<ol>
+<li>Danach die Sourcen entpacken:</li>
+</ol>
+
+
+<pre><code>tar xjf thunderbird-2.0.0.12-source.tar.bz2
+</code></pre>
+
+<ol>
+<li>Die Sprachdateien in den mozilla Ordner kopieren</li>
+</ol>
+
+
+<pre><code>cp -a~/l10n ~/mozilla/
+</code></pre>
+
+<p><strong>Teil 4: Sourcen patchen</strong></p>
+
+<ol>
+<li><p>Damit das Adressbuch funktioniert, müssen wir noch die Sourcen patchen:</p></li>
+<li><p>Den <a href="https://bugzilla.mozilla.org/attachment.cgi?id=268949">Patch für Thunderbird 2.0x</a> im Home-Verzeichnis speichern</p></li>
+</ol>
+
+
+<pre><code>cd mozilla
+cat ~/addrbook.patch |patch -p1 -b
+</code></pre>
+
+<ol>
+<li>Nun kommt mehrmals das man den Pfad für eine Datei angeben soll! Hier muss immer der absolute Pfad zu der gewünschten Datei angeben werden (/Users//mozilla/mozilla/).</li>
+</ol>
+
+
+<p><strong>Teil 5: Sourcen kompilieren</strong></p>
+
+<p>Nun nur noch die Sourcen kompilieren und wir haben es geschafft! (Auf einem MBP 2,2 Ghz dauerte das ca. 40 min)</p>
+
+<pre><code>make -f client.mk checkout
+make -f client.mk build
+make -C thunderbird-static/mail/installer
+</code></pre>
+
+<p>Wenn alles funktioniert hat findet ihr unter <code>mozilla/thunderbird-static/dist/</code> ein DMG Image mit dem fertigen Thunderbird!</p>
+
+<p><strong>Teil 6: Adressbuch zugänglich machen</strong></p>
+
+<p>Der letzte Schritt ist die prefs.js von Thunderbird anzupassen, damit das Adressbuch in Thunderbird erscheint.
+Falls ihr noch kein Profil angelegt habt, erstmal Thunderbird starten und ein E-mail Konto anlegen.</p>
+
+<pre><code>cd ~/Library/Thunderbird/Profiles/
+</code></pre>
+
+<p>Mit ls die Verzeichnisse anzeigen und dann mit
+cd  in das passende Verzeichniss wechseln</p>
+
+<pre><code>nano prefs.js
+</code></pre>
+
+<p>Dort folgendes einfügen:</p>
+
+<pre><code>user_pref("ldap_2.servers.osx.description", "OS X");
+user_pref("ldap_2.servers.osx.dirType", 3);
+user_pref("ldap_2.servers.osx.uri", "moz-abOSXdirectory:///");
+</code></pre>
+
+<p>Das wars! Nun sollte in Thunderbird das Mac OS X Adressbuch zugänglich sein.</p>
+
+<p>Für alle denen dieses Arbeit zu aufwendig ist, habe ich ein Thunderbird 2.0.0.12 für Leopard-Intel kompiliert. Diese Version ist ohne Thunderbird Branding, da dies laut der <a href="http://www.mozilla.org/foundation/trademarks/">Mozilla Trademark Policy</a> nicht erlaubt ist. (Bis auf andere Icons ändert sich nichts).</p>
+
+<p><a href="http://www.x2on.de/projekte/">Download Thunderbird OS X Adressbuch Edition</a></p>
+
+<p>Dieser Werk oder Inhalt ist unter einer <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/de/">Creative Commons-Lizenz</a> lizenziert.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Felix Schulze</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-03-27T15:32:43+01:00" pubdate data-updated="true">Mar 27<span>th</span>, 2008</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/categories/mac/'>Mac</a>, <a class='category' href='/categories/projects/'>Projects</a>, <a class='category' href='/categories/tutorials/'>Tutorials</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://x2on.github.com/2008/03/27/mac-os-x-adressbuch-in-thunderbird-integrieren/" data-via="x2on" data-counturl="http://x2on.github.com/2008/03/27/mac-os-x-adressbuch-in-thunderbird-integrieren/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/2008/03/23/eee-pc-automatischer-installer-fur-keepassx-update/" title="Previous Post: Eee-PC: Automatischer Installer für KeePassX Update">&laquo; Eee-PC: Automatischer Installer für KeePassX Update</a>
+      
+      
+        <a class="basic-alignment right" href="/2008/04/15/triple-boot-mit-os-x-ubuntu-710-und-windows-vista/" title="Next Post: Triple Boot mit OS X, Ubuntu 7.10 und Windows Vista">Triple Boot mit OS X, Ubuntu 7.10 und Windows Vista &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+<section>
+	<h1>Sponsor</h1>
+	<div><script type="text/javascript"><!--
+google_ad_client = "ca-pub-7131940430529312";
+/* 728x90 - Comments */
+google_ad_slot = "2934223972";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+</section>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/2012/07/11/weak-delegate-and-ocmock/">Weak delegate and OCMock</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2012/06/01/simple-share-for-ios-a-drop-in-library-for-social-share/">simple-share for iOS - A drop-in library for social share</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2012/02/21/ios-libaries-cyrius-sasl-libetpan-expat-sksmtpmessage/">iOS-Libaries: cyrius-sasl, libetpan, expat, sksmtpmessage</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2012/01/29/supertux-0-3-3-for-mac-os-x-lion-download/">SuperTux 0.3.3 for Mac OS X Lion Download</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2012/01/28/tutorial-building-supertux-0-3-3-on-mac-os-x-lion/">Tutorial: Building SuperTux 0.3.3 on Mac OS X Lion</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("x2on", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/x2on" class="twitter-follow-button" data-show-count="false">Follow @x2on</a>
+  
+</section>
+
+
+
+<section class="googleplus googleplus-hidden">
+  <h1>
+    <a href="https://plus.google.com/100175380008710629075?rel=author">
+      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
+      Google+
+    </a>
+  </h1>
+</section>
+
+
+<section>
+  <h1>Sponsor</h1>
+  <div id="sponsor"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-7131940430529312";
+/* 160x600 - Sidebar */
+google_ad_slot = "7603099291";
+google_ad_width = 160;
+google_ad_height = 600;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+</section>
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Felix Schulze -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'x2on';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://x2on.de/2008/03/27/mac-os-x-adressbuch-in-thunderbird-integrieren/';
+        var disqus_url = 'http://x2on.de/2008/03/27/mac-os-x-adressbuch-in-thunderbird-integrieren/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

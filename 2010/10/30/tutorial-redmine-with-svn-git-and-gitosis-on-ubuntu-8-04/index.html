@@ -1,0 +1,828 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Tutorial: Redmine with SVN, Git and Gitosis on Ubuntu 8.04 - x2on.de</title>
+  <meta name="author" content="Felix Schulze">
+
+  
+  <meta name="description" content="This is a tutorial for installing redmine on Ubuntu 8.04 with SVN and Git integration (managed by Gitosis and a redmine gitosis plugin). UPDATE #1 - &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://x2on.github.com/2010/10/30/tutorial-redmine-with-svn-git-and-gitosis-on-ubuntu-8-04/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="x2on.de" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-12483325-4']);
+    _gaq.push(['_gat._anonymizeIp']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+<div id="logo">
+  <h1><a href="/">x2on.de</a></h1>
+  
+    <h2>by Felix Schulze - a mobile evangelist. Tutorials for iOS, Android, Mac, Linux, iPhone and more...</h2>
+  
+</div>
+<div id="banner">
+	<script type="text/javascript"><!--
+google_ad_client = "ca-pub-7131940430529312";
+/* 728x90 - Header */
+google_ad_slot = "0685801932";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:x2on.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/contact">Contact / Imprint</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Tutorial: Redmine With SVN, Git and Gitosis on Ubuntu 8.04</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-10-30T08:54:24+02:00" pubdate data-updated="true">Oct 30<span>th</span>, 2010</time>
+        
+         | <a href="#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>This is a tutorial for installing redmine on Ubuntu 8.04 with SVN and Git integration (managed by Gitosis and a redmine gitosis plugin).</p>
+
+<!--more-->
+
+
+<p>UPDATE #1 - 2011-04-23: New Tutorial for Redmine with Git and Gitosis on Ubuntu 11.04:<a href="http://www.x2on.de/2011/04/23/tutorial-redmine-with-git-and-gitosis-on-ubuntu-11-04/">http://www.x2on.de/2011/04/23/tutorial-redmine-with-git-and-gitosis-on-ubuntu-11-04/</a></p>
+
+<h2>1. Install redmine</h2>
+
+<p>Get recent trunk version from github (currently 1.02)</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>apt-get install git-core
+</span><span class='line'>mkdir /var/www
+</span><span class='line'><span class="nb">cd</span> /var/www
+</span><span class='line'>git clone git://github.com/edavis10/redmine.git
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Install packages</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>apt-get install ruby ruby1.8-dev libgemplugin-ruby libgemplugin-ruby1.8  mysql-server apache2-mpm-prefork wget libruby-extras libruby1.8-extras rails subversion rake apache2-prefork-dev libapache-dbi-perl libapache2-mod-perl2 libdigest-sha1-perl libapache2-svn libmysqlclient15-dev build-essential libcurl4-openssl-dev cron
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Create database</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>mysql -u root -p
+</span><span class='line'>
+</span><span class='line'><span class="nv">$&gt;</span> create database redmine character <span class="nb">set </span>utf8;
+</span><span class='line'><span class="nv">$&gt;</span> create user <span class="s1">&#39;redmine&#39;</span>@<span class="s1">&#39;localhost&#39;</span> identified by <span class="s1">&#39;my_password&#39;</span>;
+</span><span class='line'><span class="nv">$&gt;</span> grant all privileges on redmine.* to <span class="s1">&#39;redmine&#39;</span>@<span class="s1">&#39;localhost&#39;</span>;
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Configure Database Settings</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>cp redmine/config/database.yml.example redmine/config/database.yml
+</span><span class='line'>nano redmine/config/database.yml
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>production:
+</span><span class='line'>  adapter: mysql
+</span><span class='line'>  database: redmine
+</span><span class='line'>  host: localhost
+</span><span class='line'>  username: redmine
+</span><span class='line'>  password: 47w8t2938qfge2
+</span><span class='line'>  encoding: utf8
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Install Rubygem (Ubuntu 8.04 has an older version)</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>wget http://production.cf.rubygems.org/rubygems/rubygems-1.3.7.tgz
+</span><span class='line'>tar xvfz rubygems-1.3.7.tgz
+</span><span class='line'><span class="nb">cd </span>rubygems-1.3.7
+</span><span class='line'>ruby setup.rb
+</span><span class='line'>ln -s /usr/bin/gem1.8 /usr/bin/gem
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Install Rails + Rack</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>gem install rails -v<span class="o">=</span>2.3.5
+</span><span class='line'>gem install rack -v<span class="o">=</span>1.0.1
+</span><span class='line'>gem install mysql
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Configure redmine</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">cd</span> /var/www/redmine
+</span><span class='line'>chown -R www-data:www-data files log tmp public/plugin_assets
+</span><span class='line'>chmod -R 755 files log tmp public/plugin_assets
+</span><span class='line'>rake generate_session_store
+</span><span class='line'><span class="nv">RAILS_ENV</span><span class="o">=</span>production rake db:migrate
+</span><span class='line'><span class="nv">RAILS_ENV</span><span class="o">=</span>production rake redmine:load_default_data
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Test redmine</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>ruby script/server webrick -e production
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Now you can check http://my_domain.com:3000 if everything works</p>
+
+<h2>2. Apache Integration</h2>
+
+<p>Install passenger (Modify version numbers if needed)</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>gem install passenger
+</span><span class='line'><span class="nb">echo</span> <span class="s2">&quot;LoadModule passenger_module /usr/lib/ruby/gems/1.8/gems/passenger-3.0.0/ext/apache2/mod_passenger.so&quot;</span> &gt; /etc/apache2/mods-available/passenger.load
+</span><span class='line'>ln -s /etc/apache2/mods-available/passenger.load /etc/apache2/mods-enabled/passenger.load
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>nano /etc/apache2/mods-available/passenger.conf
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>PassengerRoot /usr/lib/ruby/gems/1.8/gems/passenger-3.0.0
+</span><span class='line'>PassengerRuby /usr/bin/ruby1.8
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Configure Apache</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>nano /etc/apache2/sites-available/my_domain
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>ServerName my_domain.com
+</span><span class='line'>
+</span><span class='line'>DocumentRoot /var/www/redmine/public
+</span><span class='line'>
+</span><span class='line'>ServerAdmin user@example.com
+</span><span class='line'>LogLevel warn
+</span><span class='line'>ErrorLog /var/log/apache2/redmine_error
+</span><span class='line'>CustomLog /var/log/apache2/redmine_access combined
+</span><span class='line'>
+</span><span class='line'>Options Indexes FollowSymLinks MultiViews
+</span><span class='line'>AllowOverride None
+</span><span class='line'>Order allow,deny
+</span><span class='line'>allow from all
+</span></code></pre></td></tr></table></div></figure>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>nano /etc/apache2/apache2.conf
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Add this at the end of the file:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>Include /etc/apache2/mods-available/passenger.conf
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Activate your site</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>ln -s /etc/apache2/sites-available/my_domain /etc/apache2/sites-enabled/my_domain
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Remove default entry</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>rm /etc/apache2/sites-enabled/000-default
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Restart Apache and it should work</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>/etc/init.d/apache2 restart
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>3. Subversion integration</h2>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>ln -s /var/www/redmine/extra/svn/Redmine.pm /usr/lib/perl5/Apache/Redmine.pm
+</span><span class='line'>nano /etc/apache2/sites-available/svn
+</span></code></pre></td></tr></table></div></figure>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'> <span class="c"># /svn location for users</span>
+</span><span class='line'> PerlLoadModule Apache::Redmine
+</span><span class='line'>
+</span><span class='line'>   DAV svn
+</span><span class='line'>   SVNParentPath <span class="s2">&quot;/var/repos/svn&quot;</span>
+</span><span class='line'>   Order deny,allow
+</span><span class='line'>   Deny from all
+</span><span class='line'>   Satisfy any
+</span><span class='line'>
+</span><span class='line'>   PerlAccessHandler Apache::Authn::Redmine::access_handler
+</span><span class='line'>   PerlAuthenHandler Apache::Authn::Redmine::authen_handler
+</span><span class='line'>   AuthType Basic
+</span><span class='line'>   AuthName <span class="s2">&quot;Redmine SVN Repository&quot;</span>
+</span><span class='line'>
+</span><span class='line'>   <span class="c">#read-only access</span>
+</span><span class='line'>
+</span><span class='line'>      Require valid-user
+</span><span class='line'>      Allow from my_domain.com
+</span><span class='line'>      Allow from localhost
+</span><span class='line'>       Satisfy any
+</span><span class='line'>
+</span><span class='line'>   <span class="c"># write access</span>
+</span><span class='line'>     Require valid-user
+</span><span class='line'>
+</span><span class='line'>   <span class="c">## Mysql-Settings</span>
+</span><span class='line'>   RedmineDSN <span class="s2">&quot;DBI:mysql:database=redmine;host=localhost&quot;</span>
+</span><span class='line'>   RedmineDbUser <span class="s2">&quot;redmine&quot;</span>
+</span><span class='line'>   RedmineDbPass <span class="s2">&quot;my_password&quot;</span>
+</span><span class='line'>
+</span><span class='line'><span class="c">#Security:</span>
+</span><span class='line'>
+</span><span class='line'>      Order deny,allow
+</span><span class='line'>      Allow from localhost
+</span><span class='line'>      Allow from my_domain.com
+</span><span class='line'>      Deny from all
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>ln -s /etc/apache2/sites-available/svn /etc/apache2/sites-enabled/svn
+</span><span class='line'>mkdir -p /var/repos/svn
+</span><span class='line'>chown -R www-data:www-data /var/repos
+</span><span class='line'>chmod 0750 /var/repos/svn
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Go to Administration - Settings - Repositories on your redmine site and enable &#8220;WS for repository management&#8221;. Then generate an API key.</p>
+
+<p>Test the automatic generation:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>ruby /var/www/redmine/extra/svn/reposman.rb --redmine my_domain.com --svn-dir /var/repos/svn --owner www-data --url http://my_domain.com/svn --verbose --key<span class="o">=</span>my_api_key
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>If everything works create an crontab for this:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>nano /etc/cron.d/redmine
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>10 * * * * root ruby /var/www/redmine/extra/svn/reposman.rb --redmine my_domain.com --svn-dir /var/repos/svn --owner www-data --url http://my_domain.com/svn --verbose --key<span class="o">=</span>my_api_key
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Now you are ready to use SVN with redmine</p>
+
+<h2>4. Git integration</h2>
+
+<p>Install needed packages:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>gem install inifile
+</span><span class='line'>apt-get install libnet-ssh-ruby1.8 python-setuptools
+</span><span class='line'>gem install lockfile
+</span><span class='line'>easy_install pip
+</span><span class='line'>pip install virtualenv
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Add an user for gitosis:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>adduser --system --shell /bin/bash --gecos <span class="s1">&#39;Git Administrator&#39;</span> --group --disabled-password --home /opt/gitosis git
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Create an ssh-key (with empty passphrase):</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>sudo -H -u git ssh-keygen -t dsa
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Create an Virtual Environment for python and install gitosis:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>sudo -u git virtualenv ~git/virtualenv
+</span><span class='line'>sudo -u git ~git/virtualenv/bin/pip install git+git://eagain.net/gitosis.git
+</span><span class='line'><span class="nb">echo</span> <span class="s2">&quot;source $HOME/virtualenv/bin/activate&quot;</span> | sudo -u git tee -a ~git/.bashrc &gt; /dev/null
+</span><span class='line'>sudo -u git cat ~git/.ssh/id_dsa.pub | sudo -H -u git ~git/virtualenv/bin/gitosis-init
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Install redmine-gitosis plugin:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">cd</span> /var/www/redmine/
+</span><span class='line'>chown -R www-data:www-data /var/www/redmine
+</span><span class='line'>script/plugin install git://github.com/rocket-rentals/redmine-gitosis.git
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Patch the plugin:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>nano /var/www/redmine/vendor/plugins/redmine-gitosis/lib/gitosis.rb
+</span></code></pre></td></tr></table></div></figure>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="nb">require</span> <span class="s1">&#39;lockfile&#39;</span>
+</span><span class='line'><span class="nb">require</span> <span class="s1">&#39;inifile&#39;</span>
+</span><span class='line'><span class="nb">require</span> <span class="s1">&#39;net/ssh&#39;</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">module</span> <span class="nn">Gitosis</span>
+</span><span class='line'>  <span class="c1"># server config</span>
+</span><span class='line'>  <span class="no">GITOSIS_URI</span> <span class="o">=</span> <span class="s1">&#39;git@my_domain.com:gitosis-admin.git&#39;</span>
+</span><span class='line'>  <span class="no">GITOSIS_BASE_PATH</span> <span class="o">=</span> <span class="s1">&#39;/opt/gitosis/repositories/&#39;</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1"># commands</span>
+</span><span class='line'>  <span class="no">ENV</span><span class="o">[</span><span class="s1">&#39;GIT_SSH&#39;</span><span class="o">]</span> <span class="o">=</span> <span class="no">SSH_WITH_IDENTITY_FILE</span> <span class="o">=</span> <span class="no">File</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="no">RAILS_ROOT</span><span class="p">,</span> <span class="s1">&#39;vendor/plugins/redmine-gitosis/extra/ssh_with_identity_file.sh&#39;</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Configure SSH:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>mkdir /var/www/.ssh
+</span><span class='line'>chown -R www-data:www-data /var/www/.ssh
+</span><span class='line'>sudo -u www-data ssh my_domain.com
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Migrate plugin:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>rake db:migrate_plugins <span class="nv">RAILS_ENV</span><span class="o">=</span>production
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Remove standard ssh-key and change it to the created one:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>rm /var/www/redmine/vendor/plugins/redmine-gitosis/extra/ssh/private_key
+</span><span class='line'>cp ~git/.ssh/id_dsa /var/www/redmine/vendor/plugins/redmine-gitosis/extra/ssh/private_key
+</span><span class='line'>chown -R www-data:www-data /var/www/redmine
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Test if the www-data user can read the key:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>sudo -u www-data cat /var/www/redmine/vendor/plugins/redmine-gitosis/extra/ssh/private_key
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Add the www-data user to the git group:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>usermod -a -G git www-data
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Have fun!</strong></p>
+
+<h3>Source:</h3>
+
+<p><a href="http://brantinteractive.com/2007/02/16/getting-the-mysql-gem-installed-on-ubuntu/"> http://brantinteractive.com/2007/02/16/getting-the-mysql-gem-installed-on-ubuntu/
+</a><a href="http://www.redmine.org/wiki/1/RedmineInstall"> http://www.redmine.org/wiki/1/RedmineInstall</a>
+<a href="http://wiki.ousli.org/index.php/Redmine_in_Ubuntu_Jaunty_9.04"> http://wiki.ousli.org/index.php/Redmine_in_Ubuntu_Jaunty_9.04</a>
+<a href="http://www.redmine.org/wiki/1/HowTo_Install_Redmine_in_Ubuntu"> http://www.redmine.org/wiki/1/HowTo_Install_Redmine_in_Ubuntu</a>
+<a href="http://www.redmine.org/wiki/redmine/Repositories_access_control_with_apache_mod_dav_svn_and_mod_perl"> http://www.redmine.org/wiki/redmine/Repositories_access_control_with_apache_mod_dav_svn_and_mod_perl
+</a><a href="http://xdissent.com/2010/05/04/github-clone-with-redmine/"> http://xdissent.com/2010/05/04/github-clone-with-redmine/
+</a><a href="http://wiki.ubuntuusers.de/virtualenv"> http://wiki.ubuntuusers.de/virtualenv</a></p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Felix Schulze</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-10-30T08:54:24+02:00" pubdate data-updated="true">Oct 30<span>th</span>, 2010</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/categories/linux/'>Linux</a>, <a class='category' href='/categories/server/'>Server</a>, <a class='category' href='/categories/tutorials/'>Tutorials</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://x2on.github.com/2010/10/30/tutorial-redmine-with-svn-git-and-gitosis-on-ubuntu-8-04/" data-via="x2on" data-counturl="http://x2on.github.com/2010/10/30/tutorial-redmine-with-svn-git-and-gitosis-on-ubuntu-8-04/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/2010/10/07/googlessl-search-as-default-in-chrome/" title="Previous Post: GoogleSSL Search as default in Chrome">&laquo; GoogleSSL Search as default in Chrome</a>
+      
+      
+        <a class="basic-alignment right" href="/2010/10/31/twitter-wordpress-integration-for-marketing/" title="Next Post: Twitter wordpress integration for marketing">Twitter wordpress integration for marketing &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+<section>
+	<h1>Sponsor</h1>
+	<div><script type="text/javascript"><!--
+google_ad_client = "ca-pub-7131940430529312";
+/* 728x90 - Comments */
+google_ad_slot = "2934223972";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+</section>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/2012/07/11/weak-delegate-and-ocmock/">Weak delegate and OCMock</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2012/06/01/simple-share-for-ios-a-drop-in-library-for-social-share/">simple-share for iOS - A drop-in library for social share</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2012/02/21/ios-libaries-cyrius-sasl-libetpan-expat-sksmtpmessage/">iOS-Libaries: cyrius-sasl, libetpan, expat, sksmtpmessage</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2012/01/29/supertux-0-3-3-for-mac-os-x-lion-download/">SuperTux 0.3.3 for Mac OS X Lion Download</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2012/01/28/tutorial-building-supertux-0-3-3-on-mac-os-x-lion/">Tutorial: Building SuperTux 0.3.3 on Mac OS X Lion</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("x2on", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/x2on" class="twitter-follow-button" data-show-count="false">Follow @x2on</a>
+  
+</section>
+
+
+
+<section class="googleplus googleplus-hidden">
+  <h1>
+    <a href="https://plus.google.com/100175380008710629075?rel=author">
+      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
+      Google+
+    </a>
+  </h1>
+</section>
+
+
+<section>
+  <h1>Sponsor</h1>
+  <div id="sponsor"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-7131940430529312";
+/* 160x600 - Sidebar */
+google_ad_slot = "7603099291";
+google_ad_width = 160;
+google_ad_height = 600;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+</section>
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Felix Schulze -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'x2on';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://x2on.de/2010/10/30/tutorial-redmine-with-svn-git-and-gitosis-on-ubuntu-8-04/';
+        var disqus_url = 'http://x2on.de/2010/10/30/tutorial-redmine-with-svn-git-and-gitosis-on-ubuntu-8-04/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

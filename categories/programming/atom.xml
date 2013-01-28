@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Programming | x2on.de]]></title>
+  <link href="http://x2on.github.com/categories/programming/atom.xml" rel="self"/>
+  <link href="http://x2on.github.com/"/>
+  <updated>2013-01-28T22:46:38+01:00</updated>
+  <id>http://x2on.github.com/</id>
+  <author>
+    <name><![CDATA[Felix Schulze]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Weak delegate and OCMock]]></title>
+    <link href="http://x2on.github.com/2012/07/11/weak-delegate-and-ocmock/"/>
+    <updated>2012-07-11T17:09:00+02:00</updated>
+    <id>http://x2on.github.com/2012/07/11/weak-delegate-and-ocmock</id>
+    <content type="html"><![CDATA[<p>If you switch your Objective-C project to ARC or start a new project based on ARC you could use <code>__weak</code> delegates. But if you try to mock them with OCMock, it fails.</p>
+
+<!-- more -->
+
+
+<p><code>objective-c Normal Delegate Mock with OCMock (no __weak)
+id someDelegateMock = [OCMockObject mockForProtocol:@protocol(SomeWeakDelegate)];
+[[someDelegateMock expect] someDelegateCall:@"SomeString"]
+someObject.delegate = someDelegateMock;
+[someObject doSomethingWhichShouldCallTheDelegate];
+STAssertNoThrow([someDelegateMock verify], @"expected delegate should be called");
+</code>
+A workaround for this is to create an <code>NSObject</code>, which implements the <code>__weak</code> delegate and use some properties to verify:</p>
+
+<p>```objective-c Delegate Mock for weak delegate
+@interface SomeDelegateMock : NSObject<SomeWeakDelegate>
+@property (nonatomic, assign) BOOL someDelegateCalled;
+@property (nonatomic, strong) NSString *someString;
+@end</p>
+
+<p>@implementation SomeDelegateMock
+@synthesize someDelegateCalled = <em>someDelegateCalled;
+@synthesize someString = </em>someString;</p>
+
+<ul>
+<li>(void) someDelegateCall:(NSString *)aString {
+  self.someDelegateCalled = YES;
+  self.someString = aString;
+}</li>
+</ul>
+
+
+<p>@end
+<code>
+</code>objective-c Usage of the Delegate Mock
+SomeDelegateMock *someDelegateMock = [SomeDelegateMock new];
+someObject.delegate = someDelegateMock;
+[someObject doSomethingToCallTheDelegate];
+STAssertTrue(someDelegateMock.someDelegateCalled, @"expected delegate should be called");
+STAssertEqualObjects(someString, @"SomeString", @"expected delegate value");
+<code>``
+With this workaround you can test</code>__weak` delegates with OCMock.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[simple-share for iOS - A drop-in library for social share]]></title>
+    <link href="http://x2on.github.com/2012/06/01/simple-share-for-ios-a-drop-in-library-for-social-share/"/>
+    <updated>2012-06-01T20:19:30+02:00</updated>
+    <id>http://x2on.github.com/2012/06/01/simple-share-for-ios-a-drop-in-library-for-social-share</id>
+    <content type="html"><![CDATA[<p>There are a lot of social share libraries like <a href="http://getsharekit.com/">ShareKit</a>, but for my case they where too complicated to integrate or too big for my project. So i decided to build my own share library.</p>
+
+<!-- more -->
+
+
+<p>The current version supports:</p>
+
+<ul>
+<li>Facebook</li>
+<li>Twitter (iOS 5)</li>
+<li>Mail</li>
+<li>Open in Safari</li>
+</ul>
+
+
+<p>The  static-library is very small and uses the original <a href="https://github.com/facebook/facebook-ios-sdk">facebook-for-ios</a> sdk from facebook.</p>
+
+<p>For JSON it uses <a href="https://github.com/johnezang/JSONKit">JSONKit</a> instead of <a href="https://github.com/stig/json-framework">SBJSON</a> (with a little wrapper for the facebook-ios-sdk).</p>
+
+<p>The library is licensed under Apache License 2.0 and you can get the source here:</p>
+
+<p><a href="https://github.com/x2on/simple-share-ios">https://github.com/x2on/simple-share-ios</a></p>
+
+<p>The project also includes a iOS demo application.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[iOS-Libaries: cyrius-sasl, libetpan, expat, sksmtpmessage]]></title>
+    <link href="http://x2on.github.com/2012/02/21/ios-libaries-cyrius-sasl-libetpan-expat-sksmtpmessage/"/>
+    <updated>2012-02-21T17:33:58+01:00</updated>
+    <id>http://x2on.github.com/2012/02/21/ios-libaries-cyrius-sasl-libetpan-expat-sksmtpmessage</id>
+    <content type="html"><![CDATA[<p>I published some scripts and modifications to build the following libraries for the iOS-SDK:</p>
+
+<ul>
+<li>cyrius-sasl: <a href="https://github.com/x2on/cyrus-sasl-ios">https://github.com/x2on/cyrus-sasl-ios</a></li>
+<li>expat: <a href="https://github.com/x2on/expat-ios">https://github.com/x2on/expat-ios</a></li>
+<li>libetpan: <a href="https://github.com/x2on/libetpan">https://github.com/x2on/libetpan</a></li>
+<li>sksmtpmessage: <a href="https://github.com/x2on/skpsmtpmessage">https://github.com/x2on/skpsmtpmessage</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[PolarSSL for iOS (iPhone, iPad and iPod Touch)]]></title>
+    <link href="http://x2on.github.com/2011/04/08/polarssl-for-ios-iphone-ipad-and-ipod-touch/"/>
+    <updated>2011-04-08T11:19:39+02:00</updated>
+    <id>http://x2on.github.com/2011/04/08/polarssl-for-ios-iphone-ipad-and-ipod-touch</id>
+    <content type="html"><![CDATA[<p>This is a tutorial for using self-compiled builds of the PolarSSL-library for iOS.</p>
+
+<p>PolarSSL is a light-weight open source cryptographic and SSL/TLS library written in C.</p>
+
+<p>You can build apps with XCode and the official SDK from Apple with this.
+I also made a small example-app for using the libraries with XCode and the iPhone/iPhone-Simulator.
+You can also download the precompiled PolarSSL-library (0.14.3).</p>
+
+<!--more-->
+
+
+<p>You can get the scripts and the sourcecode here: <a href="https://github.com/x2on/PolarSSL-for-iOS">https://github.com/x2on/PolarSSL-for-iOS</a></p>
+
+<p><a href="http://www.x2on.de/wp-content/uploads/2011/04/PolarSSL-for-iOS.png"><img src="http://www.x2on.de/wp-content/uploads/2011/04/PolarSSL-for-iOS-159x300.png" alt="" /></a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[GnuTLS for iOS (iPhone and iPad)]]></title>
+    <link href="http://x2on.github.com/2011/02/01/gnutls-for-ios-iphone-and-ipad/"/>
+    <updated>2011-02-01T15:28:27+01:00</updated>
+    <id>http://x2on.github.com/2011/02/01/gnutls-for-ios-iphone-and-ipad</id>
+    <content type="html"><![CDATA[<p>This is a tutorial for using self-compiled builds of the GnuTLS-library for iOS. You can build apps with XCode and the official SDK from Apple with this. I also made a small example-app for using the libraries with XCode and the iPhone/iPhone-Simulator. You can also download the precompiled GnuTLS-library (2.10.4).</p>
+
+<!--more-->
+
+
+<p>Enjoy GnuTLS on the iPhone!</p>
+
+<p>I have made an iOS 4.2 XCode Project with GnuTLS 2.10.4 Libaries. The examples uses the MD5-algorithm to calculate an md5 from an UITextfield.</p>
+
+<p>You can get the scripts and the sourcecode here: <a href="https://github.com/x2on/GnuTLS-for-iOS">https://github.com/x2on/GnuTLS-for-iOS</a></p>
+
+<p><a href="http://www.x2on.de/wp-content/uploads/2011/02/GnuTLS.png"><img src="http://www.x2on.de/wp-content/uploads/2011/02/GnuTLS-159x300.png" alt="" /></a></p>
+]]></content>
+  </entry>
+  
+</feed>

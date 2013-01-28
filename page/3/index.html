@@ -1,0 +1,676 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>x2on.de</title>
+  <meta name="author" content="Felix Schulze">
+
+  
+  <meta name="description" content="This is a tutorial for installing redmine on Ubuntu 8.04 with SVN and Git integration (managed by Gitosis and a redmine gitosis plugin). ">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://x2on.github.com/page/3/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="x2on.de" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-12483325-4']);
+    _gaq.push(['_gat._anonymizeIp']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+<div id="logo">
+  <h1><a href="/">x2on.de</a></h1>
+  
+    <h2>by Felix Schulze - a mobile evangelist. Tutorials for iOS, Android, Mac, Linux, iPhone and more...</h2>
+  
+</div>
+<div id="banner">
+	<script type="text/javascript"><!--
+google_ad_client = "ca-pub-7131940430529312";
+/* 728x90 - Header */
+google_ad_slot = "0685801932";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:x2on.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/contact">Contact / Imprint</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+  
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2010/10/30/tutorial-redmine-with-svn-git-and-gitosis-on-ubuntu-8-04/">Tutorial: Redmine With SVN, Git and Gitosis on Ubuntu 8.04</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-10-30T08:54:24+02:00" pubdate data-updated="true">Oct 30<span>th</span>, 2010</time>
+        
+         | <a href="/2010/10/30/tutorial-redmine-with-svn-git-and-gitosis-on-ubuntu-8-04/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>This is a tutorial for installing redmine on Ubuntu 8.04 with SVN and Git integration (managed by Gitosis and a redmine gitosis plugin).</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/2010/10/30/tutorial-redmine-with-svn-git-and-gitosis-on-ubuntu-8-04/">Read more &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2010/10/07/googlessl-search-as-default-in-chrome/">GoogleSSL Search as Default in Chrome</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-10-07T20:19:46+02:00" pubdate data-updated="true">Oct 7<span>th</span>, 2010</time>
+        
+         | <a href="/2010/10/07/googlessl-search-as-default-in-chrome/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Since this year you can use Google Search with SSL encryption (<a href="https://www.google.com/">https://www.google.com/</a>). With the following URL you can tell Google Chrome to use this encrypted Google Search Site:</p>
+
+<pre><code>https://encrypted.google.com/search?q=%s
+</code></pre>
+
+<p>If you want use the german Google Site use following URL:</p>
+
+<pre><code>https://encrypted.google.com/search?hl=de&amp;ie;=UTF-8&amp;q;=%s
+</code></pre>
+
+<p>If you don&#8217;t know how to change the search URL: <a href="http://www.google.com/support/chrome/bin/answer.py?answer=95653">http://www.google.com/support/chrome/bin/answer.py?answer=95653</a></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2010/07/13/build-git-from-source-on-ubuntu/">Build Git From Source on Ubuntu</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-07-13T18:44:15+02:00" pubdate data-updated="true">Jul 13<span>th</span>, 2010</time>
+        
+         | <a href="/2010/07/13/build-git-from-source-on-ubuntu/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Snippet for building Git from source on Ubuntu Linux:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>sudo apt-get install git-core build-essential autoconf
+</span><span class='line'>sudo apt-get install libdigest-sha1-perl liberror-perl
+</span><span class='line'>sudo apt-get build-dep git-core
+</span><span class='line'>git clone git://git.kernel.org/pub/scm/git/git.git
+</span><span class='line'><span class="nb">cd </span>git
+</span><span class='line'>make configure
+</span><span class='line'>./configure
+</span><span class='line'>make
+</span><span class='line'>sudo apt-get purge git-core
+</span><span class='line'>sudo make install
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2010/07/13/tutorial-iphone-app-with-compiled-openssl-1-0-0a-library/">Tutorial: iPhone App With Compiled OpenSSL 1.0.0a Library</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-07-13T18:22:25+02:00" pubdate data-updated="true">Jul 13<span>th</span>, 2010</time>
+        
+         | <a href="/2010/07/13/tutorial-iphone-app-with-compiled-openssl-1-0-0a-library/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>This is a tutorial for using self-compiled builds of  the OpenSSL-library on the iPhone. You can build apps with XCode and the official SDK from Apple with this. I also made a small example-app for using the libraries with XCode and the iPhone/iPhone-Simulator. You can also download the precompiled OpenSSL-library (1.0.0a).</p>
+
+<p>This tutorial works with OpenSSL 1.0.0a and Xcode 3.2.3 with iOS 4.</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/2010/07/13/tutorial-iphone-app-with-compiled-openssl-1-0-0a-library/">Read more &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2010/06/30/update-openssl-1-0-0a-libraries-for-iphone-ipod-touch-ipad-with-ios4/">Update: OpenSSL 1.0.0a Libraries for iPhone iPod Touch iPad With iOS4</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-06-30T20:01:01+02:00" pubdate data-updated="true">Jun 30<span>th</span>, 2010</time>
+        
+         | <a href="/2010/06/30/update-openssl-1-0-0a-libraries-for-iphone-ipod-touch-ipad-with-ios4/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>OpenSSL 1.0.0a is released and i updated the OpenSSL-Libraries for iPhone/iPod Touch. Now the Library is build with the iOS4.0 base SDK and Xcode 3.2.3. You can use it now with the iPad too. You can get it at http://github.com/x2on/OpenSSL-for-iPhone</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2010/06/10/update-openssl-0-9-8o-libaries-for-iphone-ipod-touch-ipad/">Update: OpenSSL 0.9.8o Libraries for iPhone iPod Touch iPad</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-06-10T18:05:03+02:00" pubdate data-updated="true">Jun 10<span>th</span>, 2010</time>
+        
+         | <a href="/2010/06/10/update-openssl-0-9-8o-libaries-for-iphone-ipod-touch-ipad/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>OpenSSL 0.9.8o is released and i updated the OpenSSL-Libraries for iPhone/iPod Touch. I added an extra version for the iPad (compiled with the iPhoneOS 3.2 SDK). You can get it at <a href="http://github.com/x2on/OpenSSL-for-iPhone">http://github.com/x2on/OpenSSL-for-iPhone</a></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2010/03/31/update-openssl-0-9-8n-libaries-for-iphoneipod-touch/">Update: OpenSSL 0.9.8n Libaries for iPhone/iPod Touch</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-03-31T13:42:51+02:00" pubdate data-updated="true">Mar 31<span>st</span>, 2010</time>
+        
+         | <a href="/2010/03/31/update-openssl-0-9-8n-libaries-for-iphoneipod-touch/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>OpenSSL 0.9.8n is released and i updated the OpenSSL-Libaries for iPhone/iPod Touch. You can get it at <a href="http://github.com/x2on/OpenSSL-for-iPhone">http://github.com/x2on/OpenSSL-for-iPhone</a></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2010/03/09/supertux-0-3-3-for-mac-os-x-download/">SuperTux 0.3.3 for Mac OS X Download</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-03-09T23:16:19+01:00" pubdate data-updated="true">Mar 9<span>th</span>, 2010</time>
+        
+         | <a href="/2010/03/09/supertux-0-3-3-for-mac-os-x-download/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I build the Jump’n&#8217;Run-Game SuperTux 0.3.3 for Mac OS X! Have fun&#8230;!</p>
+
+<p><del><strong>Download (Intel – 57,6MB):</strong> <a href="http://www.x2on.de/wp-content/uploads/2010/03/SuperTux_0.3.3.dmg">SuperTux_0.3.3.dmg</a></del></p>
+
+<p>UPDATE 2010-12-17:
+<strong>Download (Intel – 67,4MB):</strong> <a href="http://www.x2on.de/wp-content/uploads/2010/12/SuperTux-0.3.3.dmg">SuperTux_0.3.3.dmg</a></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2010/03/08/new-design-english-content/">New Design - English Content</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-03-08T16:50:45+01:00" pubdate data-updated="true">Mar 8<span>th</span>, 2010</time>
+        
+         | <a href="/2010/03/08/new-design-english-content/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>x2on.de got a new design - i hope all works fine.</p>
+
+<p>I also switched the blog language to english, because most visitors are non german speaking people.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2010/02/28/update-openssl-0-9-8m-libaries-for-iphoneipod-touch/">Update: OpenSSL 0.9.8m Libaries for iPhone/iPod Touch</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-02-28T20:09:10+01:00" pubdate data-updated="true">Feb 28<span>th</span>, 2010</time>
+        
+         | <a href="/2010/02/28/update-openssl-0-9-8m-libaries-for-iphoneipod-touch/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>OpenSSL 0.9.8m is released and i updated the OpenSSL-Libaries for iPhone/iPod Touch. You can get it at <a href="http://github.com/x2on/OpenSSL-for-iPhone">http://github.com/x2on/OpenSSL-for-iPhone</a></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  <div class="pagination">
+    
+      <a class="prev" href="/page/4/">&larr; Older</a>
+    
+    <a href="/blog/archives">Blog Archives</a>
+    
+    <a class="next" href="/page/2/">Newer &rarr;</a>
+    
+  </div>
+</div>
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/2012/07/11/weak-delegate-and-ocmock/">Weak delegate and OCMock</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2012/06/01/simple-share-for-ios-a-drop-in-library-for-social-share/">simple-share for iOS - A drop-in library for social share</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2012/02/21/ios-libaries-cyrius-sasl-libetpan-expat-sksmtpmessage/">iOS-Libaries: cyrius-sasl, libetpan, expat, sksmtpmessage</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2012/01/29/supertux-0-3-3-for-mac-os-x-lion-download/">SuperTux 0.3.3 for Mac OS X Lion Download</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2012/01/28/tutorial-building-supertux-0-3-3-on-mac-os-x-lion/">Tutorial: Building SuperTux 0.3.3 on Mac OS X Lion</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("x2on", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/x2on" class="twitter-follow-button" data-show-count="false">Follow @x2on</a>
+  
+</section>
+
+
+
+<section class="googleplus googleplus-hidden">
+  <h1>
+    <a href="https://plus.google.com/100175380008710629075?rel=author">
+      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
+      Google+
+    </a>
+  </h1>
+</section>
+
+
+<section>
+  <h1>Sponsor</h1>
+  <div id="sponsor"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-7131940430529312";
+/* 160x600 - Sidebar */
+google_ad_slot = "7603099291";
+google_ad_width = 160;
+google_ad_height = 600;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+</section>
+  
+</aside>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Felix Schulze -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'x2on';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
