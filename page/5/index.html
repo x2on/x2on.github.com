@@ -9,8 +9,7 @@
   <meta name="author" content="Felix Schulze">
 
   
-  <meta name="description" content="Die neue Version GnuPG 2 ist schwieriger zu kompilieren als die alte 1.4er Version.
-Desweiteren wird ein Pinentry Programm benötigt, um die &hellip;">
+  <meta name="description" content="Ubuntu 9.10 Karmic läuft auf dem Eee-PC 1005HA &#8220;out of the box&#8221; ziemlich rund. Um die letzten Feinheiten zum laufen zu bekommen ( &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -94,6 +93,78 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2009/11/30/eee-pc-1005ha-ubuntu-karmic-sondertasten-perfomance/">Eee-PC 1005HA Ubuntu Karmic Sondertasten + Perfomance</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-11-30T22:54:16+01:00" pubdate data-updated="true">Nov 30<span>th</span>, 2009</time>
+        
+         | <a href="/2009/11/30/eee-pc-1005ha-ubuntu-karmic-sondertasten-perfomance/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Ubuntu 9.10 Karmic läuft auf dem Eee-PC 1005HA &#8220;out of the box&#8221; ziemlich rund. Um die letzten Feinheiten zum laufen zu bekommen (Sondertasten, Performance/Laufzeit-Tunning) gibt es Tool eee-control.</p>
+
+<blockquote><p>Abhilfe schafft hier ein neues Freeware-Tool namens <a href="http://greg.geekmind.org/eee-control/">Eee-Control</a>. Über die Task-Leiste anwählbar, ermöglicht es das Untertakten der CPU zur Akku-Schonung ebenso wie die Belegung der Hotkeys, eine Änderung der Displayhelligkeit sowie die (De-)aktivierung von Bluetooth, WLAN, Webcam, Touchpad und Kartenlesegerät. (Quelle: <a href="http://www.einfach-eee.de/eee-pc-software/eee-control-eee-manager-fuer-linux/">http://www.einfach-eee.de/eee-pc-software/eee-control-eee-manager-fuer-linux/</a>)</p></blockquote>
+
+<p>Leider funktioniert das unter Ubuntu 9.10 nicht so richtig. Es gibt aber eine angepasste Version für Karmic.</p>
+
+<ul>
+<li><p><a href="http://greg.geekmind.org/eee-control/">Original eee-control</a></p></li>
+<li><p><a href="http://danamlund.dk/eee-control/eee-control.html">Angepasste für Karmic 9.10</a></p></li>
+</ul>
+
+
+<p>Damit nun auf einem 1005HA das ganze einwandfrei läuft, muss noch eine Datei angepasst werden:</p>
+
+<pre><code>sudo gedit /usr/bin/eee-control-daemon #Zeile 85-86
+</code></pre>
+
+<p><strong>Original:</strong></p>
+
+<pre><code>elif os.path.exists("/sys/class/backlight/eeepc/brightness"):
+        brn_path = "/sys/class/backlight/eeepc/brightness"
+</code></pre>
+
+<p><strong>in folgendes ändern:</strong></p>
+
+<pre><code>elif os.path.exists("/sys/class/backlight/acpi_video0/brightness"):
+        brn_path = "/sys/class/backlight/acpi_video0/brightness"
+</code></pre>
+
+<p><strong>Links:</strong></p>
+
+<ul>
+<li><a href="http://forum.eeeuser.com/viewtopic.php?id=43975&amp;p=29">http://forum.eeeuser.com/viewtopic.php?id=43975&amp;p=29</a></li>
+</ul>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -682,49 +753,6 @@ Man sollte aber unbedingt vorher ein Backup seiner Datenbank anlegen.</p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/2008/04/25/eee-pc-automatisches-script-fuer-ubuntu-804/">Eee-PC: Automatisches Script Für Ubuntu 8.04</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2008-04-25T10:45:17+02:00" pubdate data-updated="true">Apr 25<span>th</span>, 2008</time>
-        
-         | <a href="/2008/04/25/eee-pc-automatisches-script-fuer-ubuntu-804/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Mit diesem kleinen Script funktioniert in Ubuntu 8.04 Wlan, Sound, die OSD Anzeige und das Herunterfahren. Weiterhin werden einige grafische Anpassungen gemacht, damit der kleine Monitor besser ausgenutzt wird.</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/2008/04/25/eee-pc-automatisches-script-fuer-ubuntu-804/">Read more &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/page/6/">&larr; Older</a>
@@ -742,6 +770,10 @@ Man sollte aber unbedingt vorher ein Backup seiner Datenbank anlegen.</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/2013/04/25/tutorial-building-supertux-0-3-3-on-mac-os-x-mountain-lion/">Tutorial: Building SuperTux 0.3.3 on Mac OS X Mountain Lion</a>
+      </li>
+    
+      <li class="post">
         <a href="/2013/01/24/why-you-should-use-continuous-integration-for-ios-development/">Why you should use Continuous Integration for iOS Development?</a>
       </li>
     
@@ -755,10 +787,6 @@ Man sollte aber unbedingt vorher ein Backup seiner Datenbank anlegen.</p>
     
       <li class="post">
         <a href="/2012/02/21/ios-libaries-cyrius-sasl-libetpan-expat-sksmtpmessage/">iOS-Libaries: cyrius-sasl, libetpan, expat, sksmtpmessage</a>
-      </li>
-    
-      <li class="post">
-        <a href="/2012/01/29/supertux-0-3-3-for-mac-os-x-lion-download/">SuperTux 0.3.3 for Mac OS X Lion Download</a>
       </li>
     
   </ul>

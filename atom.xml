@@ -4,7 +4,7 @@
   <title><![CDATA[x2on.de]]></title>
   <link href="http://x2on.github.com/atom.xml" rel="self"/>
   <link href="http://x2on.github.com/"/>
-  <updated>2013-01-28T22:55:58+01:00</updated>
+  <updated>2013-04-25T21:39:11+02:00</updated>
   <id>http://x2on.github.com/</id>
   <author>
     <name><![CDATA[Felix Schulze]]></name>
@@ -12,6 +12,64 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Tutorial: Building SuperTux 0.3.3 on Mac OS X Mountain Lion]]></title>
+    <link href="http://x2on.github.com/2013/04/25/tutorial-building-supertux-0-3-3-on-mac-os-x-mountain-lion/"/>
+    <updated>2013-04-25T21:34:45+02:00</updated>
+    <id>http://x2on.github.com/2013/04/25/tutorial-building-supertux-0-3-3-on-mac-os-x-mountain-lion</id>
+    <content type="html"><![CDATA[<p>Regarding to my tutorial for building <a href="http://x2on.de/2012/01/28/tutorial-building-supertux-0-3-3-on-mac-os-x-lion/">SuperTux 0.3.3 on Mac OS X Lion</a> i updated the tutorial for Mac OS X Mountain Lion.</p>
+
+<!-- more -->
+
+
+<h4>Prerequisites</h4>
+
+<p>Install HomeBrew:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>ruby -e <span class="s2">&quot;$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)&quot;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Install <a href="http://itunes.apple.com/us/app/xcode/id497799835?ls=1&amp;mt=12">Xcode</a></p>
+
+<p>Install needed requirements:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>brew install cmake libvorbis physfs glew sdl sdl_image boost
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h4>Build SuperTux</h4>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git clone https://code.google.com/p/supertux/
+</span><span class='line'><span class="nb">cd </span>supertux
+</span><span class='line'>mkdir dist
+</span><span class='line'>mkdir build <span class="o">&amp;&amp;</span> <span class="nb">cd </span>build
+</span><span class='line'>cmake .. -DCMAKE_INSTALL_PREFIX<span class="o">=</span>../dist/ -DCMAKE_BUILD_TYPE<span class="o">=</span>RELEASE
+</span><span class='line'>make install
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>If all works SuperTux.app should be in the dist folder.</p>
+
+<h4>Links:</h4>
+
+<ul>
+<li>HomeBrew: <a href="https://github.com/mxcl/homebrew">https://github.com/mxcl/homebrew</a></li>
+<li>SuperTux: <a href="http://supertux.lethargik.org/wiki/Main_Page">http://supertux.lethargik.org/wiki/Main_Page</a></li>
+<li>SuperTux Sourcecode: <a href="https://code.google.com/p/supertux/">https://code.google.com/p/supertux/</a></li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Why you should use Continuous Integration for iOS Development?]]></title>
@@ -936,15 +994,6 @@ echo &quot;Building done.&quot;
 
 
 <p><a href="http://www.x2on.de/wp-content/uploads/2010/12/OpenSSL-for-iOS.png"><img src="http://www.x2on.de/wp-content/uploads/2010/12/OpenSSL-for-iOS-159x300.png" alt="" /></a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Update: OpenSSL 1.0.0b Libraries for iPhone iPod Touch iPad]]></title>
-    <link href="http://x2on.github.com/2010/11/16/update-openssl-1-0-0b-libraries-for-iphone-ipod-touch-ipad/"/>
-    <updated>2010-11-16T19:30:44+01:00</updated>
-    <id>http://x2on.github.com/2010/11/16/update-openssl-1-0-0b-libraries-for-iphone-ipod-touch-ipad</id>
-    <content type="html"><![CDATA[<p>OpenSSL 1.0.0b is released and i updated the OpenSSL-Libraries for iPhone/iPod Touch. You can get it at <a href="http://github.com/x2on/OpenSSL-for-iPhone">http://github.com/x2on/OpenSSL-for-iPhone</a></p>
 ]]></content>
   </entry>
   

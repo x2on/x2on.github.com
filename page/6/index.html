@@ -9,7 +9,7 @@
   <meta name="author" content="Felix Schulze">
 
   
-  <meta name="description" content="Dieses Tutorial richtet sich an alle die auf unter Mac OS X für Entwicklungszwecke gerne einen XAMPP Apache2 Webserver mit integriertem TomCat 6 &hellip;">
+  <meta name="description" content="Mit diesem kleinen Script funktioniert in Ubuntu 8.04 Wlan, Sound, die OSD Anzeige und das Herunterfahren. Weiterhin werden einige grafische &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -93,6 +93,49 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2008/04/25/eee-pc-automatisches-script-fuer-ubuntu-804/">Eee-PC: Automatisches Script Für Ubuntu 8.04</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-04-25T10:45:17+02:00" pubdate data-updated="true">Apr 25<span>th</span>, 2008</time>
+        
+         | <a href="/2008/04/25/eee-pc-automatisches-script-fuer-ubuntu-804/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Mit diesem kleinen Script funktioniert in Ubuntu 8.04 Wlan, Sound, die OSD Anzeige und das Herunterfahren. Weiterhin werden einige grafische Anpassungen gemacht, damit der kleine Monitor besser ausgenutzt wird.</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/2008/04/25/eee-pc-automatisches-script-fuer-ubuntu-804/">Read more &rarr;</a>
+    </footer>
+  
+
+
+    </article>
   
   
     <article>
@@ -564,89 +607,6 @@ chmod +x keepassinstall-en
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/2008/01/28/eee-pc-keepassx-installieren/">Eee-PC: KeePassX Installieren</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2008-01-28T15:37:07+01:00" pubdate data-updated="true">Jan 28<span>th</span>, 2008</time>
-        
-         | <a href="/2008/01/28/eee-pc-keepassx-installieren/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Dieses How-To beschreibt wie man auf seinem Eee-PC den Passwort-Manager KeePassX installiert!</p>
-
-<p>Video-Tutorial bei YouTube: http://de.youtube.com/watch?v=-1gPVm98HIQ</p>
-
-<p>Benötigte Software:
-http://prdownloads.sourceforge.net/keepassx/KeePassX-0.2.2.deb?download
-(unter /home/user speichern.)</p>
-
-<p>Installation:</p>
-
-<ol>
-<li>Konsole mit Alt+Strg+T öffnen</li>
-<li>sudo bash</li>
-<li>su -c &#8216;echo deb http://xnv4.xandros.com/xs2.0/upkg-srv2 etch main contrib non-free&#8217; >> /etc/apt/sources.list
-(Erzeugt neuen Eintrag in der Sources.list)</li>
-<li>apt-get update</li>
-<li>libpng3 installieren: apt-get install libpng3</li>
-<li>KeePassX installieren: dpkg -i /home/user/KeePassX-0.2.2.deb</li>
-<li>Nun läßt sich KeePassX mittels Konsole über keepass ausführen</li>
-<li>Wichtig: Aufräumarbeiten:</li>
-<li>sudo nano /etc/apt/sources.list</li>
-<li>Ein # vor der letzten Zeile machen</li>
-<li>Strg+O dann Strg+X</li>
-<li>sudo apt-get update</li>
-</ol>
-
-
-<p>Icon in den Easy-Mode einfügen:</p>
-
-<ol>
-<li>Icons unter /home/user abspeichern
-KeePassX-Logo KeePassX-Logo KeePassX-LogoKeePassX-Logo KeePassX-Logo</li>
-<li>sudo cp /home/user/*.png /opt/xandros/share/AsusLauncher/</li>
-<li>cd /opt/xandros/share/AsusLauncher/</li>
-<li>sudo cp simpleui.rc simpleui.rc.bak</li>
-<li>sudo kwrite simpleui.rc</li>
-<li><parcel simplecat="Work" extraargs="/usr/local/bin/keepass"
-icon="keepass_norm.png"
-selected_icon="keepass_hi.png">
-<name lang="en">KeePassX</name>
-<name lang="de_DE">KeePassX</name>
-</parcel></li>
-<li>am Ende einfügen (aber vor </simpleui>)</li>
-<li>X-Server mit Alt+Srg+Backspace neustarten</li>
-</ol>
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/page/7/">&larr; Older</a>
@@ -664,6 +624,10 @@ selected_icon="keepass_hi.png">
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/2013/04/25/tutorial-building-supertux-0-3-3-on-mac-os-x-mountain-lion/">Tutorial: Building SuperTux 0.3.3 on Mac OS X Mountain Lion</a>
+      </li>
+    
+      <li class="post">
         <a href="/2013/01/24/why-you-should-use-continuous-integration-for-ios-development/">Why you should use Continuous Integration for iOS Development?</a>
       </li>
     
@@ -677,10 +641,6 @@ selected_icon="keepass_hi.png">
     
       <li class="post">
         <a href="/2012/02/21/ios-libaries-cyrius-sasl-libetpan-expat-sksmtpmessage/">iOS-Libaries: cyrius-sasl, libetpan, expat, sksmtpmessage</a>
-      </li>
-    
-      <li class="post">
-        <a href="/2012/01/29/supertux-0-3-3-for-mac-os-x-lion-download/">SuperTux 0.3.3 for Mac OS X Lion Download</a>
       </li>
     
   </ul>

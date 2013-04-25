@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Thunderbird 3.0 Beta 4 und OS X - x2on.de</title>
+  <title>Tutorial: Building SuperTux 0.3.3 on Mac OS X Mountain Lion - x2on.de</title>
   <meta name="author" content="Felix Schulze">
 
   
-  <meta name="description" content="Thunderbird unterstützt nun mit der Version 3.0 endlich das Mac OS X Adressbuch. Die von mir zur Verfügung gestellten Thunderbird 2.x Versionen mit &hellip;">
+  <meta name="description" content="Regarding to my tutorial for building SuperTux 0.3.3 on Mac OS X Lion i updated the tutorial for Mac OS X Mountain Lion. Prerequisites Install &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://x2on.github.com/2009/10/10/thunderbird-3-0-beta-4-und-os-x/">
+  <link rel="canonical" href="http://x2on.github.com/2013/04/25/tutorial-building-supertux-0-3-3-on-mac-os-x-mountain-lion/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -96,7 +96,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
   
   <header>
     
-      <h1 class="entry-title">Thunderbird 3.0 Beta 4 Und OS X</h1>
+      <h1 class="entry-title">Tutorial: Building SuperTux 0.3.3 on Mac OS X Mountain Lion</h1>
     
     
       <p class="meta">
@@ -112,7 +112,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
   
 
 
-<time datetime="2009-10-10T20:46:23+02:00" pubdate data-updated="true">Oct 10<span>th</span>, 2009</time>
+<time datetime="2013-04-25T21:34:45+02:00" pubdate data-updated="true">Apr 25<span>th</span>, 2013</time>
         
          | <a href="#disqus_thread">Comments</a>
         
@@ -121,11 +121,56 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
   </header>
 
 
-<div class="entry-content"><p>Thunderbird unterstützt nun mit der Version 3.0 endlich das Mac OS X Adressbuch. Die von mir zur Verfügung gestellten Thunderbird 2.x Versionen mit einem Patch, um das Adressbuch von Mac OS X zugänglich zu machen, werden dadurch nicht mehr benötigt. Ich empfehle allen Anwendern einen Umstieg auf Thunderbird 3.0. Trotz Beta-Status macht die neue Version einen sehr guten Eindruck, und fast alle Addons sind mittlerweile auch für diese Version verfügbar (für Enigmail gibt es eine Vorabversion).</p>
+<div class="entry-content"><p>Regarding to my tutorial for building <a href="http://x2on.de/2012/01/28/tutorial-building-supertux-0-3-3-on-mac-os-x-lion/">SuperTux 0.3.3 on Mac OS X Lion</a> i updated the tutorial for Mac OS X Mountain Lion.</p>
 
-<p>Links:
-<a href="http://www.mozillamessaging.com/en-US/thunderbird/early_releases/downloads/">Thunderbird 3.0 Beta 4</a>
-<a href="http://enigmail.mozdev.org/download/nightly.php">Enigmail Vorabversion</a></p>
+<!-- more -->
+
+
+<h4>Prerequisites</h4>
+
+<p>Install HomeBrew:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>ruby -e <span class="s2">&quot;$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)&quot;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Install <a href="http://itunes.apple.com/us/app/xcode/id497799835?ls=1&amp;mt=12">Xcode</a></p>
+
+<p>Install needed requirements:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>brew install cmake libvorbis physfs glew sdl sdl_image boost
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h4>Build SuperTux</h4>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git clone https://code.google.com/p/supertux/
+</span><span class='line'><span class="nb">cd </span>supertux
+</span><span class='line'>mkdir dist
+</span><span class='line'>mkdir build <span class="o">&amp;&amp;</span> <span class="nb">cd </span>build
+</span><span class='line'>cmake .. -DCMAKE_INSTALL_PREFIX<span class="o">=</span>../dist/ -DCMAKE_BUILD_TYPE<span class="o">=</span>RELEASE
+</span><span class='line'>make install
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>If all works SuperTux.app should be in the dist folder.</p>
+
+<h4>Links:</h4>
+
+<ul>
+<li>HomeBrew: <a href="https://github.com/mxcl/homebrew">https://github.com/mxcl/homebrew</a></li>
+<li>SuperTux: <a href="http://supertux.lethargik.org/wiki/Main_Page">http://supertux.lethargik.org/wiki/Main_Page</a></li>
+<li>SuperTux Sourcecode: <a href="https://code.google.com/p/supertux/">https://code.google.com/p/supertux/</a></li>
+</ul>
+
 </div>
 
 
@@ -148,12 +193,12 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
   
 
 
-<time datetime="2009-10-10T20:46:23+02:00" pubdate data-updated="true">Oct 10<span>th</span>, 2009</time>
+<time datetime="2013-04-25T21:34:45+02:00" pubdate data-updated="true">Apr 25<span>th</span>, 2013</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/categories/mac/'>Mac</a>, <a class='category' href='/categories/projects/'>Projects</a>, <a class='category' href='/categories/software/'>Software</a>
+    <a class='category' href='/categories/mac/'>Mac</a>, <a class='category' href='/categories/software/'>Software</a>, <a class='category' href='/categories/tutorials/'>Tutorials</a>
   
 </span>
 
@@ -162,7 +207,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://x2on.github.com/2009/10/10/thunderbird-3-0-beta-4-und-os-x/" data-via="x2on" data-counturl="http://x2on.github.com/2009/10/10/thunderbird-3-0-beta-4-und-os-x/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://x2on.github.com/2013/04/25/tutorial-building-supertux-0-3-3-on-mac-os-x-mountain-lion/" data-via="x2on" data-counturl="http://x2on.github.com/2013/04/25/tutorial-building-supertux-0-3-3-on-mac-os-x-mountain-lion/" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>
@@ -175,10 +220,8 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/2009/04/13/miktex-package-manager-unter-linux-nutzen/" title="Previous Post: MiKTeX Package Manager unter Linux nutzen">&laquo; MiKTeX Package Manager unter Linux nutzen</a>
+        <a class="basic-alignment left" href="/2013/01/24/why-you-should-use-continuous-integration-for-ios-development/" title="Previous Post: Why you should use Continuous Integration for iOS Development?">&laquo; Why you should use Continuous Integration for iOS Development?</a>
       
-      
-        <a class="basic-alignment right" href="/2009/10/21/shell-skripte-in-ant-build-datei-einbinden/" title="Next Post: Shell-Skripte in ANT-Build Datei einbinden">Shell-Skripte in ANT-Build Datei einbinden &raquo;</a>
       
     </p>
   </footer>
@@ -296,8 +339,8 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://x2on.de/2009/10/10/thunderbird-3-0-beta-4-und-os-x/';
-        var disqus_url = 'http://x2on.de/2009/10/10/thunderbird-3-0-beta-4-und-os-x/';
+        var disqus_identifier = 'http://x2on.de/2013/04/25/tutorial-building-supertux-0-3-3-on-mac-os-x-mountain-lion/';
+        var disqus_url = 'http://x2on.de/2013/04/25/tutorial-building-supertux-0-3-3-on-mac-os-x-mountain-lion/';
         var disqus_script = 'embed.js';
       
     (function () {

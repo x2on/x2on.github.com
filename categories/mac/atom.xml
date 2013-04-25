@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Mac | x2on.de]]></title>
   <link href="http://x2on.github.com/categories/mac/atom.xml" rel="self"/>
   <link href="http://x2on.github.com/"/>
-  <updated>2013-01-28T22:55:58+01:00</updated>
+  <updated>2013-04-25T21:39:11+02:00</updated>
   <id>http://x2on.github.com/</id>
   <author>
     <name><![CDATA[Felix Schulze]]></name>
@@ -12,6 +12,53 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Tutorial: Building SuperTux 0.3.3 on Mac OS X Mountain Lion]]></title>
+    <link href="http://x2on.github.com/2013/04/25/tutorial-building-supertux-0-3-3-on-mac-os-x-mountain-lion/"/>
+    <updated>2013-04-25T21:34:45+02:00</updated>
+    <id>http://x2on.github.com/2013/04/25/tutorial-building-supertux-0-3-3-on-mac-os-x-mountain-lion</id>
+    <content type="html"><![CDATA[<p>Regarding to my tutorial for building <a href="http://x2on.de/2012/01/28/tutorial-building-supertux-0-3-3-on-mac-os-x-lion/">SuperTux 0.3.3 on Mac OS X Lion</a> i updated the tutorial for Mac OS X Mountain Lion.</p>
+
+<!-- more -->
+
+
+<h4>Prerequisites</h4>
+
+<p>Install HomeBrew:
+<code>bash
+ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
+</code></p>
+
+<p>Install <a href="http://itunes.apple.com/us/app/xcode/id497799835?ls=1&amp;mt=12">Xcode</a></p>
+
+<p>Install needed requirements:
+<code>bash
+brew install cmake libvorbis physfs glew sdl sdl_image boost
+</code></p>
+
+<h4>Build SuperTux</h4>
+
+<p><code>bash
+git clone https://code.google.com/p/supertux/
+cd supertux
+mkdir dist
+mkdir build &amp;&amp; cd build
+cmake .. -DCMAKE_INSTALL_PREFIX=../dist/ -DCMAKE_BUILD_TYPE=RELEASE
+make install
+</code>
+If all works SuperTux.app should be in the dist folder.</p>
+
+<h4>Links:</h4>
+
+<ul>
+<li>HomeBrew: <a href="https://github.com/mxcl/homebrew">https://github.com/mxcl/homebrew</a></li>
+<li>SuperTux: <a href="http://supertux.lethargik.org/wiki/Main_Page">http://supertux.lethargik.org/wiki/Main_Page</a></li>
+<li>SuperTux Sourcecode: <a href="https://code.google.com/p/supertux/">https://code.google.com/p/supertux/</a></li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[SuperTux 0.3.3 for Mac OS X Lion Download]]></title>
@@ -125,20 +172,6 @@ If all works SuperTux.app should be in the dist folder.</p>
 
 
 <p><a href="http://www.x2on.de/wp-content/uploads/2010/12/Screen2.png"><img src="http://www.x2on.de/wp-content/uploads/2010/12/Screen2-159x300.png" alt="" /></a><a href="http://www.x2on.de/wp-content/uploads/2010/12/Screen1.png"><img src="http://www.x2on.de/wp-content/uploads/2010/12/Screen1-159x300.png" alt="" /></a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Update: OpenSSL 1.0.0c Libraries for iPhone iPod Touch iPad]]></title>
-    <link href="http://x2on.github.com/2010/12/04/update-openssl-1-0-0c-libraries-for-iphone-ipod-touch-ipad/"/>
-    <updated>2010-12-04T13:15:40+01:00</updated>
-    <id>http://x2on.github.com/2010/12/04/update-openssl-1-0-0c-libraries-for-iphone-ipod-touch-ipad</id>
-    <content type="html"><![CDATA[<p>OpenSSL 1.0.0c is released and i updated the OpenSSL-Libraries for iPhone/iPod Touch. I also did some GUI-Improvements for easier understanding. You can get it at <a href="http://github.com/x2on/OpenSSL-for-iPhone">http://github.com/x2on/OpenSSL-for-iPhone</a></p>
-
-<!--more-->
-
-
-<p><a href="http://www.x2on.de/wp-content/uploads/2010/12/OpenSSL-for-iOS.png"><img src="http://www.x2on.de/wp-content/uploads/2010/12/OpenSSL-for-iOS-159x300.png" alt="" /></a></p>
 ]]></content>
   </entry>
   
