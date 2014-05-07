@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Certificates | x2on.de]]></title>
   <link href="http://x2on.github.com/categories/certificates/atom.xml" rel="self"/>
   <link href="http://x2on.github.com/"/>
-  <updated>2014-05-07T16:42:36+02:00</updated>
+  <updated>2014-05-07T16:53:36+02:00</updated>
   <id>http://x2on.github.com/</id>
   <author>
     <name><![CDATA[Felix Schulze]]></name>
@@ -52,7 +52,127 @@
 <p>You can get it here: <a href="https://github.com/x2on/OpenSSL-for-iPhone/blob/master/build-libssl.sh">https://github.com/x2on/OpenSSL-for-iPhone/blob/master/build-libssl.sh</a></p>
 
 <p><strong>Source:</strong>
-{% gist 2962107 %}</p>
+<div><script src='https://gist.github.com/2962107.js'></script>
+<noscript><pre><code>#!/bin/sh
+
+#  Automatic build script for libssl and libcrypto 
+#  for iPhoneOS and iPhoneSimulator
+#
+#  Created by Felix Schulze on 16.12.10.
+#  Copyright 2010 Felix Schulze. All rights reserved.
+#
+#  Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+#  you may not use this file except in compliance with the License.
+#  You may obtain a copy of the License at
+#
+#  http://www.apache.org/licenses/LICENSE-2.0
+#
+#  Unless required by applicable law or agreed to in writing, software
+#  distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+#  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+#  See the License for the specific language governing permissions and
+#  limitations under the License.
+#
+###########################################################################
+#  Change values here													  #
+#																		  #
+VERSION=&quot;1.0.0c&quot;													      #
+SDKVERSION=&quot;4.2&quot;														  #
+#																		  #
+###########################################################################
+#																		  #
+# Don&#39;t change anything under this line!								  #
+#																		  #
+###########################################################################
+
+
+
+CURRENTPATH=`pwd`
+
+set -e
+if [ ! -e openssl-${VERSION}.tar.gz ]; then
+	echo &quot;Downloading openssl-${VERSION}.tar.gz&quot;
+	curl -O http://www.openssl.org/source/openssl-${VERSION}.tar.gz
+else
+	echo &quot;Using openssl-${VERSION}.tar.gz&quot;
+fi
+
+mkdir -p &quot;${CURRENTPATH}/src&quot;
+tar zxf openssl-${VERSION}.tar.gz -C &quot;${CURRENTPATH}/src&quot;
+cd &quot;${CURRENTPATH}/src/openssl-${VERSION}&quot;
+
+############
+# iPhone Simulator
+echo &quot;Building openssl for iPhoneSimulator ${SDKVERSION} i386&quot;
+echo &quot;Please stand by...&quot;
+
+export CC=&quot;/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc -arch i386&quot;
+mkdir -p &quot;${CURRENTPATH}/bin/iPhoneSimulator${SDKVERSION}.sdk&quot;
+
+LOG=&quot;${CURRENTPATH}/bin/iPhoneSimulator${SDKVERSION}.sdk/build-openssl-${VERSION}.log&quot;
+
+./configure BSD-generic32 --openssldir=&quot;${CURRENTPATH}/bin/iPhoneSimulator${SDKVERSION}.sdk&quot; &gt; &quot;${LOG}&quot; 2&gt;&amp;1
+# add -isysroot to CC=
+sed -ie &quot;s!^CFLAG=!CFLAG=-isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator${SDKVERSION}.sdk !&quot; &quot;Makefile&quot;
+
+make &gt;&gt; &quot;${LOG}&quot; 2&gt;&amp;1
+make install &gt;&gt; &quot;${LOG}&quot; 2&gt;&amp;1
+make clean &gt;&gt; &quot;${LOG}&quot; 2&gt;&amp;1
+#############
+
+#############
+# iPhoneOS armv6
+echo &quot;Building openssl for iPhoneOS ${SDKVERSION} armv6&quot;
+echo &quot;Please stand by...&quot;
+
+export CC=&quot;/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc -arch armv6&quot;
+mkdir -p &quot;${CURRENTPATH}/bin/iPhoneOS${SDKVERSION}-armv6.sdk&quot;
+
+LOG=&quot;${CURRENTPATH}/bin/iPhoneOS${SDKVERSION}-armv6.sdk/build-openssl-${VERSION}.log&quot;
+
+./configure BSD-generic32 --openssldir=&quot;${CURRENTPATH}/bin/iPhoneOS${SDKVERSION}-armv6.sdk&quot; &gt; &quot;${LOG}&quot; 2&gt;&amp;1
+
+sed -ie &quot;s!^CFLAG=!CFLAG=-isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS${SDKVERSION}.sdk !&quot; &quot;Makefile&quot;
+# remove sig_atomic for iPhoneOS
+sed -ie &quot;s!static volatile sig_atomic_t intr_signal;!static volatile intr_signal;!&quot; &quot;crypto/ui/ui_openssl.c&quot;
+
+make &gt;&gt; &quot;${LOG}&quot; 2&gt;&amp;1
+make install &gt;&gt; &quot;${LOG}&quot; 2&gt;&amp;1
+make clean &gt;&gt; &quot;${LOG}&quot; 2&gt;&amp;1
+#############
+
+#############
+# iPhoneOS armv7
+echo &quot;Building openssl for iPhoneOS ${SDKVERSION} armv7&quot;
+echo &quot;Please stand by...&quot;
+
+export CC=&quot;/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc -arch armv7&quot;
+mkdir -p &quot;${CURRENTPATH}/bin/iPhoneOS${SDKVERSION}-armv7.sdk&quot;
+
+LOG=&quot;${CURRENTPATH}/bin/iPhoneOS${SDKVERSION}-armv7.sdk/build-openssl-${VERSION}.log&quot;
+
+
+./configure BSD-generic32 --openssldir=&quot;${CURRENTPATH}/bin/iPhoneOS${SDKVERSION}-armv7.sdk&quot; &gt;&gt; &quot;${LOG}&quot; 2&gt;&amp;1
+
+sed -ie &quot;s!^CFLAG=!CFLAG=-isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS${SDKVERSION}.sdk !&quot; &quot;Makefile&quot;
+# remove sig_atomic for iPhoneOS
+sed -ie &quot;s!static volatile sig_atomic_t intr_signal;!static volatile intr_signal;!&quot; &quot;crypto/ui/ui_openssl.c&quot;
+
+make &gt;&gt; &quot;${LOG}&quot; 2&gt;&amp;1
+make install &gt;&gt; &quot;${LOG}&quot; 2&gt;&amp;1
+make clean &gt;&gt; &quot;${LOG}&quot; 2&gt;&amp;1
+#############
+
+echo &quot;Build library...&quot;
+lipo -create ${CURRENTPATH}/bin/iPhoneSimulator${SDKVERSION}.sdk/lib/libssl.a ${CURRENTPATH}/bin/iPhoneOS${SDKVERSION}-armv6.sdk/lib/libssl.a ${CURRENTPATH}/bin/iPhoneOS${SDKVERSION}-armv7.sdk/lib/libssl.a -output ${CURRENTPATH}/libssl.a
+
+lipo -create ${CURRENTPATH}/bin/iPhoneSimulator${SDKVERSION}.sdk/lib/libcrypto.a ${CURRENTPATH}/bin/iPhoneOS${SDKVERSION}-armv6.sdk/lib/libcrypto.a ${CURRENTPATH}/bin/iPhoneOS${SDKVERSION}-armv7.sdk/lib/libcrypto.a -output ${CURRENTPATH}/libcrypto.a
+
+mkdir -p ${CURRENTPATH}/include
+cp -R ${CURRENTPATH}/bin/iPhoneSimulator${SDKVERSION}.sdk/include/openssl ${CURRENTPATH}/include/
+echo &quot;Building done.&quot;
+</code></pre></noscript></div>
+</p>
 ]]></content>
   </entry>
   

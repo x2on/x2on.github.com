@@ -4,7 +4,7 @@
   <title><![CDATA[Category: LaTex | x2on.de]]></title>
   <link href="http://x2on.github.com/categories/latex/atom.xml" rel="self"/>
   <link href="http://x2on.github.com/"/>
-  <updated>2014-05-07T16:42:36+02:00</updated>
+  <updated>2014-05-07T16:53:36+02:00</updated>
   <id>http://x2on.github.com/</id>
   <author>
     <name><![CDATA[Felix Schulze]]></name>
@@ -74,7 +74,33 @@ sudo mpm --install=PAKETNAME --install-root=/usr/share/texmf-texlive/
     <id>http://x2on.github.com/2009/02/25/latex-fusszeile-auf-jeder-seite</id>
     <content type="html"><![CDATA[<p>Mit LaTex gibt es mit dem Paket <code>fancyhdr</code> eine einfache Möglichkeit Fußzeilen zu erzeugen. Diese werden jedoch auf den Kapitel-Seiten (die über <code>chapter{Kapitelname}</code> erzeugt werden) nicht angezeigt, da LaTex hier automatisch <code>thispagestyle{plain}</code> aufruft. Damit aber auch auf diesen Seiten eine Fusszeile angezeigt wird, muss man den Plain-Styl überschreiben:</p>
 
-<p>{% gist 4659299 %}</p>
+<p><div><script src='https://gist.github.com/4659299.js'></script>
+<noscript><pre><code>%Kopf- und Fußzeile
+usepackage{fancyhdr}
+pagestyle{fancy}
+fancyhf{}
+
+%Kopfzeile mittig mit Kaptilname
+fancyhead[C]{nouppercase{leftmark}}
+%Linie oben
+renewcommand{headrulewidth}{0.5pt}
+
+%Fußzeile links bzw. innen
+fancyfoot[L]{Text muss hier stehen}
+%Fußzeile mittig (Seitennummer)
+fancyfoot[C]{thepage}
+%Linie unten
+renewcommand{footrulewidth}{0.5pt}
+
+% Fußzeile auf jeder Seite - auch Kapitel und Inhaltsverzeichnis
+fancypagestyle{plain}{%
+   fancyhf{}%
+   fancyhead[C]{} %Kapitelname ausblenden
+   fancyfoot[L]{Text muss hier stehen}
+   renewcommand{headrulewidth}{0.0pt} %obere Linie ausblenden
+   fancyfoot[C]{thepage}
+}</code></pre></noscript></div>
+</p>
 ]]></content>
   </entry>
   
