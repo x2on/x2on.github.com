@@ -4,7 +4,7 @@
   <title><![CDATA[x2on.de]]></title>
   <link href="http://x2on.github.com/atom.xml" rel="self"/>
   <link href="http://x2on.github.com/"/>
-  <updated>2014-05-07T16:19:56+02:00</updated>
+  <updated>2014-05-07T16:29:56+02:00</updated>
   <id>http://x2on.github.com/</id>
   <author>
     <name><![CDATA[Felix Schulze]]></name>
@@ -12,6 +12,20 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Podcast: iOS backward compatibility]]></title>
+    <link href="http://x2on.github.com/2013/09/26/ios-backward-compatibility-podcast/"/>
+    <updated>2013-09-26T21:34:45+02:00</updated>
+    <id>http://x2on.github.com/2013/09/26/ios-backward-compatibility-podcast</id>
+    <content type="html"><![CDATA[<p><a href="http://heikobehrens.net/">Heiko Behrens</a> released his first podcast on UISprech talking with me about techniques for iOS development to check for versions, weak-linking, wrappers and adapters, various open-source libraries, approaches such as method swizzling and testing of compatibility.</p>
+
+<!-- more -->
+
+
+<p>Get it here (german): <a href="http://uisprech.de/1">http://uisprech.de/1</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Tutorial: Building SuperTux 0.3.3 on Mac OS X Mountain Lion]]></title>
@@ -980,20 +994,6 @@ echo &quot;Building done.&quot;
 
 
 <p><a href="http://www.x2on.de/wp-content/uploads/2010/12/Screen2.png"><img src="http://www.x2on.de/wp-content/uploads/2010/12/Screen2-159x300.png" alt="" /></a><a href="http://www.x2on.de/wp-content/uploads/2010/12/Screen1.png"><img src="http://www.x2on.de/wp-content/uploads/2010/12/Screen1-159x300.png" alt="" /></a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Update: OpenSSL 1.0.0c Libraries for iPhone iPod Touch iPad]]></title>
-    <link href="http://x2on.github.com/2010/12/04/update-openssl-1-0-0c-libraries-for-iphone-ipod-touch-ipad/"/>
-    <updated>2010-12-04T13:15:40+01:00</updated>
-    <id>http://x2on.github.com/2010/12/04/update-openssl-1-0-0c-libraries-for-iphone-ipod-touch-ipad</id>
-    <content type="html"><![CDATA[<p>OpenSSL 1.0.0c is released and i updated the OpenSSL-Libraries for iPhone/iPod Touch. I also did some GUI-Improvements for easier understanding. You can get it at <a href="http://github.com/x2on/OpenSSL-for-iPhone">http://github.com/x2on/OpenSSL-for-iPhone</a></p>
-
-<!--more-->
-
-
-<p><a href="http://www.x2on.de/wp-content/uploads/2010/12/OpenSSL-for-iOS.png"><img src="http://www.x2on.de/wp-content/uploads/2010/12/OpenSSL-for-iOS-159x300.png" alt="" /></a></p>
 ]]></content>
   </entry>
   

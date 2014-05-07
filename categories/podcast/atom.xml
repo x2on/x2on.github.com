@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Podcast | x2on.de]]></title>
+  <link href="http://x2on.github.com/categories/podcast/atom.xml" rel="self"/>
+  <link href="http://x2on.github.com/"/>
+  <updated>2014-05-07T16:29:56+02:00</updated>
+  <id>http://x2on.github.com/</id>
+  <author>
+    <name><![CDATA[Felix Schulze]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Podcast: iOS backward compatibility]]></title>
+    <link href="http://x2on.github.com/2013/09/26/ios-backward-compatibility-podcast/"/>
+    <updated>2013-09-26T21:34:45+02:00</updated>
+    <id>http://x2on.github.com/2013/09/26/ios-backward-compatibility-podcast</id>
+    <content type="html"><![CDATA[<p><a href="http://heikobehrens.net/">Heiko Behrens</a> released his first podcast on UISprech talking with me about techniques for iOS development to check for versions, weak-linking, wrappers and adapters, various open-source libraries, approaches such as method swizzling and testing of compatibility.</p>
+
+<!-- more -->
+
+
+<p>Get it here (german): <a href="http://uisprech.de/1">http://uisprech.de/1</a></p>
+]]></content>
+  </entry>
+  
+</feed>

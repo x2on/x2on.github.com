@@ -118,6 +118,54 @@
 
 
 
+<span class="glyphicon glyphicon-calendar"></span> <time datetime="2009-02-01T20:57:14+01:00" pubdate data-updated="true">Feb 1<span>st</span>, 2009</time>
+        
+           | <a href="/2009/02/01/wordpress-revisionen-loeschen/#disqus_thread"
+             data-disqus-identifier="http://x2on.github.com/2009/02/01/wordpress-revisionen-loeschen/">Comments</a>
+        
+      </p>
+    
+    
+      <h1 class="entry-title"><a href="/2009/02/01/wordpress-revisionen-loeschen/">Wordpress Revisionen Löschen</a></h1>
+    
+  </header>
+
+
+  <div class="entry-content clearfix"><p>Im Laufe der Zeit füllt sich die Datenbank von Wordpress mit zahlreichen Einträgen von alten Revisionen. Um diese zu löschen reicht ein kleiner SQL Befehl (z.B. über phpMyAdmin):</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sql'><span class='line'><span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="o">`</span><span class="n">wp_posts</span><span class="o">`</span> <span class="k">WHERE</span> <span class="o">`</span><span class="n">post_type</span><span class="o">`</span> <span class="o">=</span> <span class="s1">&#39;revision&#39;</span><span class="p">;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Dann kann man alle Einträge auswählen und löschen.
+Man sollte aber unbedingt vorher ein Backup seiner Datenbank anlegen.</p>
+</div>
+  
+  
+
+
+        </article>
+      
+      
+        <article class="post">
+          
+  <header class="page-header">
+    
+      <p class="meta text-muted text-uppercase">
+        
+
+
+
+
+
+
+
+
+
+
+
+
 <span class="glyphicon glyphicon-calendar"></span> <time datetime="2008-04-25T10:45:17+02:00" pubdate data-updated="true">Apr 25<span>th</span>, 2008</time>
         
            | <a href="/2008/04/25/eee-pc-automatisches-script-fuer-ubuntu-804/#disqus_thread"
@@ -578,60 +626,6 @@ chmod +x keepassinstall-en
 
         </article>
       
-      
-        <article class="post">
-          
-  <header class="page-header">
-    
-      <p class="meta text-muted text-uppercase">
-        
-
-
-
-
-
-
-
-
-
-
-
-
-<span class="glyphicon glyphicon-calendar"></span> <time datetime="2008-01-30T20:02:09+01:00" pubdate data-updated="true">Jan 30<span>th</span>, 2008</time>
-        
-           | <a href="/2008/01/30/eee-pc-auflosung-am-vga-ausgang-erhohen/#disqus_thread"
-             data-disqus-identifier="http://x2on.github.com/2008/01/30/eee-pc-auflosung-am-vga-ausgang-erhohen/">Comments</a>
-        
-      </p>
-    
-    
-      <h1 class="entry-title"><a href="/2008/01/30/eee-pc-auflosung-am-vga-ausgang-erhohen/">Eee-PC: Auflösung Am VGA-Ausgang Erhöhen</a></h1>
-    
-  </header>
-
-
-  <div class="entry-content clearfix"><p>Dieses How-To beschreibt wie man bei der deutschen Version beim Anschluß eines externen Monitors über den VGA-Ausgang eine höhere Auflösung als 1024x768 hinbekommt.</p>
-
-<p>Ich habe es mit 1440x900 und 1680 x 1050 getestet und funktioniert einwandfrei.</p>
-
-<p>Video-Tutorial bei YouTube: <a href="http://de.youtube.com/watch?v=U0FxJ5Kj8sE">http://de.youtube.com/watch?v=U0FxJ5Kj8sE</a></p>
-
-<ol>
-<li><p> Konsole mit Alt+Strg+T öffnen</p></li>
-<li><p> <code>sudo kate /etc/X11/xorg.conf</code></p></li>
-<li><p> Bis zu Section &ldquo;Screen&rdquo; nach unten scrollen</p></li>
-<li><p> Dort viermal Virtual 1024 768 in Virtual 1680 1680 ändern</p></li>
-<li><p> Datei speichern</p></li>
-<li><p> X-Server mit Alt+Srg+Backspace neustarten</p></li>
-</ol>
-
-</div>
-  
-  
-
-
-        </article>
-      
     </div>
 
     <ul class="pager">
@@ -655,6 +649,8 @@ chmod +x keepassinstall-en
   
   <div id="recent_posts" class="list-group">
     
+    <a class="list-group-item " href="/2013/09/26/ios-backward-compatibility-podcast/">Podcast: iOS Backward Compatibility</a>
+    
     <a class="list-group-item " href="/2013/04/25/tutorial-building-supertux-0-3-3-on-mac-os-x-mountain-lion/">Tutorial: Building SuperTux 0.3.3 on Mac OS X Mountain Lion</a>
     
     <a class="list-group-item " href="/2013/01/24/why-you-should-use-continuous-integration-for-ios-development/">Why You Should Use Continuous Integration for iOS Development?</a>
@@ -662,8 +658,6 @@ chmod +x keepassinstall-en
     <a class="list-group-item " href="/2012/07/11/weak-delegate-and-ocmock/">Weak Delegate and OCMock</a>
     
     <a class="list-group-item " href="/2012/06/01/simple-share-for-ios-a-drop-in-library-for-social-share/">Simple-share for iOS - a Drop-in Library for Social Share</a>
-    
-    <a class="list-group-item " href="/2012/02/21/ios-libaries-cyrius-sasl-libetpan-expat-sksmtpmessage/">iOS-Libaries: Cyrius-sasl, Libetpan, Expat, Sksmtpmessage</a>
     
   </div>
 </section>

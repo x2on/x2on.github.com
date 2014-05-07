@@ -118,6 +118,58 @@
 
 
 
+<span class="glyphicon glyphicon-calendar"></span> <time datetime="2009-12-11T23:28:21+01:00" pubdate data-updated="true">Dec 11<span>th</span>, 2009</time>
+        
+           | <a href="/2009/12/11/cheat-sheets-im-terminal-unter-mac/#disqus_thread"
+             data-disqus-identifier="http://x2on.github.com/2009/12/11/cheat-sheets-im-terminal-unter-mac/">Comments</a>
+        
+      </p>
+    
+    
+      <h1 class="entry-title"><a href="/2009/12/11/cheat-sheets-im-terminal-unter-mac/">Cheat Sheets Im Terminal Unter Mac</a></h1>
+    
+  </header>
+
+
+  <div class="entry-content clearfix"><p>Nachdem ich in den letzten Tagen wieder seitenweiße &ldquo;man&rdquo;-pages im Terminal gelesen habe, bin ich auf eine sehr praktische Anwendung namens &ldquo;cheat&rdquo; gestoßen.</p>
+
+<blockquote><p>Eigentlich steckt hinter dem RubyGem <a href="http://cheat.errtheblog.com/">Cheat</a> eine schöne Grundidee – User sammeln online in einer Art Wiki zu diversen Programmen kleine hilfreiche Notizen und im Alltag kann man auf diese aus dem Terminal heraus zurückgreifen. (Quelle: <a href="http://macfidelity.de/2009/11/13/mac-apps-cheat-sheets-im-mac-os-x-terminal/">Macfidelity</a>)</p></blockquote>
+
+<p><strong>Installation:</strong></p>
+
+<pre><code> sudo gem install cheat
+</code></pre>
+
+<p>Von nun an lassen sich viele nützliche Einträge über folgenden Befehl abrufen:</p>
+
+<pre><code>cheat &lt;programmname&gt;
+</code></pre>
+</div>
+  
+  
+
+
+        </article>
+      
+      
+        <article class="post">
+          
+  <header class="page-header">
+    
+      <p class="meta text-muted text-uppercase">
+        
+
+
+
+
+
+
+
+
+
+
+
+
 <span class="glyphicon glyphicon-calendar"></span> <time datetime="2009-11-30T22:54:16+01:00" pubdate data-updated="true">Nov 30<span>th</span>, 2009</time>
         
            | <a href="/2009/11/30/eee-pc-1005ha-ubuntu-karmic-sondertasten-perfomance/#disqus_thread"
@@ -730,54 +782,6 @@ fancypagestyle{plain}{%
 
         </article>
       
-      
-        <article class="post">
-          
-  <header class="page-header">
-    
-      <p class="meta text-muted text-uppercase">
-        
-
-
-
-
-
-
-
-
-
-
-
-
-<span class="glyphicon glyphicon-calendar"></span> <time datetime="2009-02-01T20:57:14+01:00" pubdate data-updated="true">Feb 1<span>st</span>, 2009</time>
-        
-           | <a href="/2009/02/01/wordpress-revisionen-loeschen/#disqus_thread"
-             data-disqus-identifier="http://x2on.github.com/2009/02/01/wordpress-revisionen-loeschen/">Comments</a>
-        
-      </p>
-    
-    
-      <h1 class="entry-title"><a href="/2009/02/01/wordpress-revisionen-loeschen/">Wordpress Revisionen Löschen</a></h1>
-    
-  </header>
-
-
-  <div class="entry-content clearfix"><p>Im Laufe der Zeit füllt sich die Datenbank von Wordpress mit zahlreichen Einträgen von alten Revisionen. Um diese zu löschen reicht ein kleiner SQL Befehl (z.B. über phpMyAdmin):</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='sql'><span class='line'><span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="o">`</span><span class="n">wp_posts</span><span class="o">`</span> <span class="k">WHERE</span> <span class="o">`</span><span class="n">post_type</span><span class="o">`</span> <span class="o">=</span> <span class="s1">&#39;revision&#39;</span><span class="p">;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Dann kann man alle Einträge auswählen und löschen.
-Man sollte aber unbedingt vorher ein Backup seiner Datenbank anlegen.</p>
-</div>
-  
-  
-
-
-        </article>
-      
     </div>
 
     <ul class="pager">
@@ -801,6 +805,8 @@ Man sollte aber unbedingt vorher ein Backup seiner Datenbank anlegen.</p>
   
   <div id="recent_posts" class="list-group">
     
+    <a class="list-group-item " href="/2013/09/26/ios-backward-compatibility-podcast/">Podcast: iOS Backward Compatibility</a>
+    
     <a class="list-group-item " href="/2013/04/25/tutorial-building-supertux-0-3-3-on-mac-os-x-mountain-lion/">Tutorial: Building SuperTux 0.3.3 on Mac OS X Mountain Lion</a>
     
     <a class="list-group-item " href="/2013/01/24/why-you-should-use-continuous-integration-for-ios-development/">Why You Should Use Continuous Integration for iOS Development?</a>
@@ -808,8 +814,6 @@ Man sollte aber unbedingt vorher ein Backup seiner Datenbank anlegen.</p>
     <a class="list-group-item " href="/2012/07/11/weak-delegate-and-ocmock/">Weak Delegate and OCMock</a>
     
     <a class="list-group-item " href="/2012/06/01/simple-share-for-ios-a-drop-in-library-for-social-share/">Simple-share for iOS - a Drop-in Library for Social Share</a>
-    
-    <a class="list-group-item " href="/2012/02/21/ios-libaries-cyrius-sasl-libetpan-expat-sksmtpmessage/">iOS-Libaries: Cyrius-sasl, Libetpan, Expat, Sksmtpmessage</a>
     
   </div>
 </section>

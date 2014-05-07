@@ -326,7 +326,11 @@
         <loc>
             http://x2on.github.com/2013/04/25/tutorial-building-supertux-0-3-3-on-mac-os-x-mountain-lion/
         </loc>
-        <lastmod>2014-05-07T15:24:06+02:00</lastmod>
+        <lastmod>2014-05-07T16:29:55+02:00</lastmod>
+    </url>
+    <url>
+        <loc>http://x2on.github.com/2013/09/26/ios-backward-compatibility-podcast/</loc>
+        <lastmod>2014-05-07T16:28:22+02:00</lastmod>
     </url>
     <url>
         <loc>http://x2on.github.com/assets/bootstrap/docs/about.html</loc>
@@ -350,7 +354,7 @@
     </url>
     <url>
         <loc>http://x2on.github.com/assets/bootstrap/docs/</loc>
-        <lastmod>2014-05-07T14:43:47+02:00</lastmod>
+        <lastmod>2014-05-07T16:29:55+02:00</lastmod>
     </url>
     <url>
         <loc>http://x2on.github.com/assets/bootstrap/docs/javascript.html</loc>
@@ -362,7 +366,7 @@
     </url>
     <url>
         <loc>http://x2on.github.com/blog/archives/</loc>
-        <lastmod>2014-05-07T15:20:59+02:00</lastmod>
+        <lastmod>2014-05-07T16:29:55+02:00</lastmod>
     </url>
     <url>
         <loc>http://x2on.github.com/contact/</loc>
@@ -370,7 +374,7 @@
     </url>
     <url>
         <loc>http://x2on.github.com/</loc>
-        <lastmod>2014-05-07T15:20:59+02:00</lastmod>
+        <lastmod>2014-05-07T16:29:55+02:00</lastmod>
     </url>
     <url>
         <loc>http://x2on.github.com/robots.txt</loc>

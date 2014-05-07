@@ -118,6 +118,60 @@
 
 
 
+<span class="glyphicon glyphicon-calendar"></span> <time datetime="2008-01-30T20:02:09+01:00" pubdate data-updated="true">Jan 30<span>th</span>, 2008</time>
+        
+           | <a href="/2008/01/30/eee-pc-auflosung-am-vga-ausgang-erhohen/#disqus_thread"
+             data-disqus-identifier="http://x2on.github.com/2008/01/30/eee-pc-auflosung-am-vga-ausgang-erhohen/">Comments</a>
+        
+      </p>
+    
+    
+      <h1 class="entry-title"><a href="/2008/01/30/eee-pc-auflosung-am-vga-ausgang-erhohen/">Eee-PC: Auflösung Am VGA-Ausgang Erhöhen</a></h1>
+    
+  </header>
+
+
+  <div class="entry-content clearfix"><p>Dieses How-To beschreibt wie man bei der deutschen Version beim Anschluß eines externen Monitors über den VGA-Ausgang eine höhere Auflösung als 1024x768 hinbekommt.</p>
+
+<p>Ich habe es mit 1440x900 und 1680 x 1050 getestet und funktioniert einwandfrei.</p>
+
+<p>Video-Tutorial bei YouTube: <a href="http://de.youtube.com/watch?v=U0FxJ5Kj8sE">http://de.youtube.com/watch?v=U0FxJ5Kj8sE</a></p>
+
+<ol>
+<li><p> Konsole mit Alt+Strg+T öffnen</p></li>
+<li><p> <code>sudo kate /etc/X11/xorg.conf</code></p></li>
+<li><p> Bis zu Section &ldquo;Screen&rdquo; nach unten scrollen</p></li>
+<li><p> Dort viermal Virtual 1024 768 in Virtual 1680 1680 ändern</p></li>
+<li><p> Datei speichern</p></li>
+<li><p> X-Server mit Alt+Srg+Backspace neustarten</p></li>
+</ol>
+
+</div>
+  
+  
+
+
+        </article>
+      
+      
+        <article class="post">
+          
+  <header class="page-header">
+    
+      <p class="meta text-muted text-uppercase">
+        
+
+
+
+
+
+
+
+
+
+
+
+
 <span class="glyphicon glyphicon-calendar"></span> <time datetime="2008-01-28T15:37:07+01:00" pubdate data-updated="true">Jan 28<span>th</span>, 2008</time>
         
            | <a href="/2008/01/28/eee-pc-keepassx-installieren/#disqus_thread"
@@ -618,6 +672,8 @@ umount /mnt-user</li>
   
   <div id="recent_posts" class="list-group">
     
+    <a class="list-group-item " href="/2013/09/26/ios-backward-compatibility-podcast/">Podcast: iOS Backward Compatibility</a>
+    
     <a class="list-group-item " href="/2013/04/25/tutorial-building-supertux-0-3-3-on-mac-os-x-mountain-lion/">Tutorial: Building SuperTux 0.3.3 on Mac OS X Mountain Lion</a>
     
     <a class="list-group-item " href="/2013/01/24/why-you-should-use-continuous-integration-for-ios-development/">Why You Should Use Continuous Integration for iOS Development?</a>
@@ -625,8 +681,6 @@ umount /mnt-user</li>
     <a class="list-group-item " href="/2012/07/11/weak-delegate-and-ocmock/">Weak Delegate and OCMock</a>
     
     <a class="list-group-item " href="/2012/06/01/simple-share-for-ios-a-drop-in-library-for-social-share/">Simple-share for iOS - a Drop-in Library for Social Share</a>
-    
-    <a class="list-group-item " href="/2012/02/21/ios-libaries-cyrius-sasl-libetpan-expat-sksmtpmessage/">iOS-Libaries: Cyrius-sasl, Libetpan, Expat, Sksmtpmessage</a>
     
   </div>
 </section>

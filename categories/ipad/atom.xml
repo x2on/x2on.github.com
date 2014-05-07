@@ -4,7 +4,7 @@
   <title><![CDATA[Category: iPad | x2on.de]]></title>
   <link href="http://x2on.github.com/categories/ipad/atom.xml" rel="self"/>
   <link href="http://x2on.github.com/"/>
-  <updated>2014-05-07T16:19:56+02:00</updated>
+  <updated>2014-05-07T16:29:56+02:00</updated>
   <id>http://x2on.github.com/</id>
   <author>
     <name><![CDATA[Felix Schulze]]></name>
@@ -12,6 +12,20 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Podcast: iOS backward compatibility]]></title>
+    <link href="http://x2on.github.com/2013/09/26/ios-backward-compatibility-podcast/"/>
+    <updated>2013-09-26T21:34:45+02:00</updated>
+    <id>http://x2on.github.com/2013/09/26/ios-backward-compatibility-podcast</id>
+    <content type="html"><![CDATA[<p><a href="http://heikobehrens.net/">Heiko Behrens</a> released his first podcast on UISprech talking with me about techniques for iOS development to check for versions, weak-linking, wrappers and adapters, various open-source libraries, approaches such as method swizzling and testing of compatibility.</p>
+
+<!-- more -->
+
+
+<p>Get it here (german): <a href="http://uisprech.de/1">http://uisprech.de/1</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Why you should use Continuous Integration for iOS Development?]]></title>
@@ -126,26 +140,6 @@ With this workaround you can test</code>__weak` delegates with OCMock.</p>
 <li>sksmtpmessage: <a href="https://github.com/x2on/skpsmtpmessage">https://github.com/x2on/skpsmtpmessage</a></li>
 </ul>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Secure-Mail is ready for download on Apple App Store]]></title>
-    <link href="http://x2on.github.com/2011/04/28/secure-mail-is-ready-for-download-on-apple-app-store/"/>
-    <updated>2011-04-28T07:29:14+02:00</updated>
-    <id>http://x2on.github.com/2011/04/28/secure-mail-is-ready-for-download-on-apple-app-store</id>
-    <content type="html"><![CDATA[<p>Secure-Mail is now ready for purchase on Apple App Store! The review process was sucessfully!</p>
-
-<p>With Secure-Mail you can read and write email encrypted with S/MIME (Secure/Multipurpose Internet Mail Extensions) on iOS (iPhone, iPad and iPod Touch).</p>
-
-<p><strong>You can find more details at <a href="http://www.secure-mail.me">www.secure-mail.me</a></strong></p>
-
-<p><strong>Direct link to Secure-Mail on App Store: <a href="http://itunes.apple.com/us/app/secure-mail/id420919054?mt=8&amp;ls=1#">Secure-Mail App</a></strong></p>
-
-<!--more-->
-
-
-<p><a href="/images/2011-04-28-secure-mail-is-ready-for-download-on-apple-app-store/1.png"><img src="/images/2011-04-28-secure-mail-is-ready-for-download-on-apple-app-store/1-159x300.png" alt="" /></a><a href="/images/2011-04-28-secure-mail-is-ready-for-download-on-apple-app-store/2.png"><img src="/images/2011-04-28-secure-mail-is-ready-for-download-on-apple-app-store/2-159x300.png" alt="" /></a><a href="/images/2011-04-28-secure-mail-is-ready-for-download-on-apple-app-store/3.png"><img src="/images/2011-04-28-secure-mail-is-ready-for-download-on-apple-app-store/3-159x300.png" alt="" /></a><a href="/images/2011-04-28-secure-mail-is-ready-for-download-on-apple-app-store/4.png"><img src="/images/2011-04-28-secure-mail-is-ready-for-download-on-apple-app-store/4-159x300.png" alt="" /></a><a href="/images/2011-04-28-secure-mail-is-ready-for-download-on-apple-app-store/5.png"><img src="/images/2011-04-28-secure-mail-is-ready-for-download-on-apple-app-store/5-159x300.png" alt="" /></a></p>
 ]]></content>
   </entry>
   
