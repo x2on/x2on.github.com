@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
 <!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
@@ -7,9 +6,8 @@
   <meta charset="utf-8">
   <title>S/MIME on iOS with OpenSSL (iPhone/iPad) (UPDATE #6) - x2on.de</title>
   <meta name="author" content="Felix Schulze">
-
+  <meta name="description" content="by Felix Schulze - a mobile evangelist. Tutorials for iOS, Android, Mac, Linux, iPhone and more...">
   
-  <meta name="description" content="Whenever I receive an encrypted e-mail, I can&#8217;t read it on my iPhone. So i write a little app that can do it ;) I used my OpenSSL-for-iOS &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,17 +16,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://x2on.github.com/2010/12/06/smime-on-ios-with-openssl-iphoneipad/">
-  <link href="/favicon.png" rel="icon">
-  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-  <script src="/javascripts/modernizr-2.0.js"></script>
-  <script src="/javascripts/ender.js"></script>
-  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link rel="canonical" href="http://x2on.github.com/2010/12/06/smime-on-ios-with-openssl-iphoneipad">
+  <link href="/favicon.png" type="image/png" rel="icon">
   <link href="/atom.xml" rel="alternate" title="x2on.de" type="application/atom+xml">
-  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
-<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
 
+  <link href="/assets/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="/assets/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css">
+<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+
+
+  <script src="/javascripts/libs/jquery/jquery-2.0.3.min.js"></script>
   
   <script type="text/javascript">
     var _gaq = _gaq || [];
@@ -46,60 +43,64 @@
 
 </head>
 
-<body   >
-  <header role="banner"><hgroup>
-<div id="logo">
-  <h1><a href="/">x2on.de</a></h1>
-  
-    <h2>by Felix Schulze - a mobile evangelist. Tutorials for iOS, Android, Mac, Linux, iPhone and more...</h2>
-  
-</div>
-<div id="banner">
-<script type="text/javascript"><!--
-google_ad_client = "ca-pub-5660005999283733";
-/* 728 x 90 - Header */
-google_ad_slot = "1841385402";
-google_ad_width = 728;
-google_ad_height = 90;
-//-->
-</script>
-<script type="text/javascript"
-src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-</script>
-</div>
-</hgroup>
+  <body   >
+    <div id="wrap">
+      <header role="banner">
+        <nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">x2on.de</a>
+        </div>
 
-</header>
-  <nav role="navigation"><ul class="subscription" data-subscription="rss">
-  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
-  
-</ul>
-  
-<form action="http://google.com/search" method="get">
-  <fieldset role="search">
-    <input type="hidden" name="q" value="site:x2on.github.com" />
-    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
-  </fieldset>
-</form>
-  
-<ul class="main-navigation">
-  <li><a href="/">Blog</a></li>
-  <li><a href="/blog/archives">Archives</a></li>
-  <li><a href="/contact">Contact / Imprint</a></li>
-</ul>
-
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class="active">
+                    <a href="/">Blog</a>
+                </li>
+                <li >
+                    <a href="/blog/archives">Archives</a>
+                </li>
+                <li >
+                    <a href="/contact">Contact / Imprint</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a class="subscribe-rss" href="/atom.xml" title="subscribe via RSS">
+                        <span class="visible-xs">RSS</span>
+                        <img class="hidden-xs" src="/images/rss.png" alt="RSS">
+                    </a>
+                </li>
+                
+            </ul>
+            
+                <form class="search navbar-form navbar-right" action="http://google.com/search" method="GET">
+                    <input type="hidden" name="q" value="site:x2on.github.com">
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="q" placeholder="Search">
+                    </div>
+                </form>
+            
+        </div>
+    </div>
 </nav>
-  <div id="main">
-    <div id="content">
-      <div>
-<article class="hentry" role="article">
-  
-  <header>
+
+
+      </header>
+      <div id="main" class="container">
+        <div id="content">
+          <div class="row">
+  <div class="page-content col-md-9">
+    <article class="hentry" role="article">
+      
+  <header class="page-header">
     
-      <h1 class="entry-title">S/MIME on iOS With OpenSSL (iPhone/iPad) (UPDATE #6)</h1>
-    
-    
-      <p class="meta">
+      <p class="meta text-muted text-uppercase">
         
 
 
@@ -109,19 +110,27 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 
 
 
-  
 
 
-<time datetime="2010-12-06T09:52:25+01:00" pubdate data-updated="true">Dec 6<span>th</span>, 2010</time>
+
+
+<span class="glyphicon glyphicon-calendar"></span> <time datetime="2010-12-06T09:52:25+01:00" pubdate data-updated="true">Dec 6<span>th</span>, 2010</time>
         
-         | <a href="#disqus_thread">Comments</a>
+           | <a href="#disqus_thread"
+             data-disqus-identifier="http://x2on.github.com">Comments</a>
         
       </p>
+    
+    
+    <h1 class="entry-title">
+        S/MIME on iOS With OpenSSL (iPhone/iPad) (UPDATE #6)
+        
+    </h1>
     
   </header>
 
 
-<div class="entry-content"><p>Whenever I receive an encrypted e-mail, I can&#8217;t read it on my iPhone. So i write a little app that can do it ;)</p>
+<div class="entry-content clearfix"><p>Whenever I receive an encrypted e-mail, I can&rsquo;t read it on my iPhone. So i write a little app that can do it ;)</p>
 
 <!--more-->
 
@@ -130,9 +139,9 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 
 <p><strong>UPDATE #1 (09.12.2010):</strong> New screenshots from current development build</p>
 
-<p><strong>UPDATE #2 (01.02.2011):</strong> The app is finished - But the encryption export is not really easy - stay tuned&#8230;</p>
+<p><strong>UPDATE #2 (01.02.2011):</strong> The app is finished &ndash; But the encryption export is not really easy &ndash; stay tuned&hellip;</p>
 
-<p><strong>UPDATE #3 (16.02.2011):</strong> So finally i got my ERN-Number with SNAP-R from BIS. Registered the app in iTunes Connect and working on some bugfixes and improvements. Stay tuned&#8230;</p>
+<p><strong>UPDATE #3 (16.02.2011):</strong> So finally i got my ERN-Number with SNAP-R from BIS. Registered the app in iTunes Connect and working on some bugfixes and improvements. Stay tuned&hellip;</p>
 
 <p><strong>UPDATE #4 (01.04.2011):</strong> Looking for Beta-tester: <a href="http://www.x2on.de/2011/04/01/secure-mail-beta-test-smime-on-ios-with-openssl/">http://www.x2on.de/2011/04/01/secure-mail-beta-test-smime-on-ios-with-openssl/</a></p>
 
@@ -156,28 +165,30 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 </div>
 
 
-  <footer>
-    <p class="meta">
-      
+      <footer>
+        <p class="meta text-muted">
+          
   
 
-<span class="byline author vcard">Posted by <span class="fn">Felix Schulze</span></span>
+<span class="glyphicon glyphicon-user"></span> <span class="byline author vcard">Posted by <span class="fn">Felix Schulze</span></span>
 
-      
-
-
+          
 
 
 
 
 
 
-  
 
 
-<time datetime="2010-12-06T09:52:25+01:00" pubdate data-updated="true">Dec 6<span>th</span>, 2010</time>
-      
 
+
+
+
+<span class="glyphicon glyphicon-calendar"></span> <time datetime="2010-12-06T09:52:25+01:00" pubdate data-updated="true">Dec 6<span>th</span>, 2010</time>
+          
+
+<span class="glyphicon glyphicon-tags"></span>&nbsp;
 <span class="categories">
   
     <a class='category' href='/categories/certificates/'>Certificates</a>, <a class='category' href='/categories/encryption/'>Encryption</a>, <a class='category' href='/categories/mac/'>Mac</a>, <a class='category' href='/categories/programming/'>Programming</a>, <a class='category' href='/categories/software/'>Software</a>, <a class='category' href='/categories/ipad/'>iPad</a>, <a class='category' href='/categories/iphone/'>iPhone</a>
@@ -185,34 +196,37 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 </span>
 
 
-    </p>
-    
-      <div class="sharing">
+        </p>
+        
+          <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://x2on.github.com/2010/12/06/smime-on-ios-with-openssl-iphoneipad/" data-via="x2on" data-counturl="http://x2on.github.com/2010/12/06/smime-on-ios-with-openssl-iphoneipad/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://x2on.github.com/2010/12/06/smime-on-ios-with-openssl-iphoneipad/" data-via="x2on" data-counturl="http://x2on.github.com/2010/12/06/smime-on-ios-with-openssl-iphoneipad/" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>
   
   
-    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
-  
 </div>
 
-    
-    <p class="meta">
-      
-        <a class="basic-alignment left" href="/2010/12/04/update-openssl-1-0-0c-libraries-for-iphone-ipod-touch-ipad/" title="Previous Post: Update: OpenSSL 1.0.0c Libraries for iPhone iPod Touch iPad">&laquo; Update: OpenSSL 1.0.0c Libraries for iPhone iPod Touch iPad</a>
-      
-      
-        <a class="basic-alignment right" href="/2010/12/16/tutorial-script-for-building-openssl-for-ios-iphoneipad/" title="Next Post: Tutorial: Script for building OpenSSL for iOS (iPhone/iPad)">Tutorial: Script for building OpenSSL for iOS (iPhone/iPad) &raquo;</a>
-      
-    </p>
-  </footer>
-</article>
-<section>
-	<h1>Sponsor</h1>
-	<div><script type="text/javascript"><!--
+        
+        
+          <ul class="meta text-muted pager">
+            
+            <li class="previous"><a href="/2010/12/04/update-openssl-1-0-0c-libraries-for-iphone-ipod-touch-ipad/" title="Previous Post: Update: OpenSSL 1.0.0c Libraries for iPhone iPod Touch iPad">&laquo; Update: OpenSSL 1.0.0c Libraries for iPhone iPod Touch iPad</a></li>
+            
+            
+            <li class="next"><a href="/2010/12/16/tutorial-script-for-building-openssl-for-ios-iphoneipad/" title="Next Post: Tutorial: Script for building OpenSSL for iOS (iPhone/iPad)">Tutorial: Script for building OpenSSL for iOS (iPhone/iPad) &raquo;</a></li>
+            
+          </ul>
+        
+      </footer>
+    </article>
+    <section class="panel panel-default">
+   <div class="panel-heading">
+    <h3 class="panel-title">Sponsor</h3>
+  </div>
+  <div id="sponsor-footer">
+<script type="text/javascript"><!--
 google_ad_client = "ca-pub-5660005999283733";
 /* 728x90 - Comments */
 google_ad_slot = "3318118605";
@@ -222,77 +236,94 @@ google_ad_height = 90;
 </script>
 <script type="text/javascript"
 src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-</script></div>
+</script>
+  </div>
 </section>
-
-  <section>
-    <h1>Comments</h1>
-    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    
+      <section>
+        <h1>Comments</h1>
+        <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </div>
-  </section>
+      </section>
+    
+  </div>
 
-</div>
-
-<aside class="sidebar">
   
-    <section>
-  <h1>Recent Posts</h1>
-  <ul id="recent_posts">
+  <aside class="sidebar col-md-3">
     
-      <li class="post">
-        <a href="/2013/04/25/tutorial-building-supertux-0-3-3-on-mac-os-x-mountain-lion/">Tutorial: Building SuperTux 0.3.3 on Mac OS X Mountain Lion</a>
-      </li>
+      <section class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Recent Posts</h3>
+  </div>
+  
+  <div id="recent_posts" class="list-group">
     
-      <li class="post">
-        <a href="/2013/01/24/why-you-should-use-continuous-integration-for-ios-development/">Why you should use Continuous Integration for iOS Development?</a>
-      </li>
+    <a class="list-group-item " href="/2013/04/25/tutorial-building-supertux-0-3-3-on-mac-os-x-mountain-lion/">Tutorial: Building SuperTux 0.3.3 on Mac OS X Mountain Lion</a>
     
-      <li class="post">
-        <a href="/2012/07/11/weak-delegate-and-ocmock/">Weak delegate and OCMock</a>
-      </li>
+    <a class="list-group-item " href="/2013/01/24/why-you-should-use-continuous-integration-for-ios-development/">Why You Should Use Continuous Integration for iOS Development?</a>
     
-      <li class="post">
-        <a href="/2012/06/01/simple-share-for-ios-a-drop-in-library-for-social-share/">simple-share for iOS - A drop-in library for social share</a>
-      </li>
+    <a class="list-group-item " href="/2012/07/11/weak-delegate-and-ocmock/">Weak Delegate and OCMock</a>
     
-      <li class="post">
-        <a href="/2012/02/21/ios-libaries-cyrius-sasl-libetpan-expat-sksmtpmessage/">iOS-Libaries: cyrius-sasl, libetpan, expat, sksmtpmessage</a>
-      </li>
+    <a class="list-group-item " href="/2012/06/01/simple-share-for-ios-a-drop-in-library-for-social-share/">Simple-share for iOS - a Drop-in Library for Social Share</a>
     
-  </ul>
+    <a class="list-group-item " href="/2012/02/21/ios-libaries-cyrius-sasl-libetpan-expat-sksmtpmessage/">iOS-Libaries: Cyrius-sasl, Libetpan, Expat, Sksmtpmessage</a>
+    
+  </div>
 </section>
 
-<section>
-  <h1>Latest Tweets</h1>
-  <ul id="tweets">
-    <li class="loading">Status updating...</li>
-  </ul>
+<section class="panel panel-default clearfix">
+  <div class="panel-heading">
+      <h3 class="panel-title">GitHub Repos</h3>
+  </div>
+  <div class="list-group" id="gh_repos">
+    <p class="loading">Status updating...</p>
+  </div>
+  
+    <div class="gh-profile-link pull-right text-muted">
+      <a href="https://github.com/x2on">@x2on</a> on GitHub
+    </div>
+  
   <script type="text/javascript">
-    $.domReady(function(){
-      getTwitterFeed("x2on", 0, false);
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'x2on',
+            count: 4,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
     });
   </script>
-  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
-  
-    <a href="http://twitter.com/x2on" class="twitter-follow-button" data-show-count="false">Follow @x2on</a>
-  
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
 </section>
 
 
 
-<section class="googleplus googleplus-hidden">
-  <h1>
-    <a href="https://plus.google.com/100175380008710629075?rel=author">
-      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
-      Google+
-    </a>
-  </h1>
+
+<section class="googleplus googleplus-hidden panel panel-default">
+  <div class="panel-body">
+    <h1>
+      <a href="https://plus.google.com/100175380008710629075?rel=author">
+        <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
+        Google+
+      </a>
+    </h1>
+  </div>
 </section>
 
 
-<section>
-  <h1>Sponsor</h1>
-  <div id="sponsor"><script type="text/javascript"><!--
+<section class="panel panel-default">
+   <div class="panel-heading">
+    <h3 class="panel-title">Sponsor</h3>
+  </div>
+  <div id="sponsor-sidebar"><script type="text/javascript"><!--
 google_ad_client = "ca-pub-5660005999283733";
 /* 160x600 - Sidebar */
 google_ad_slot = "9364652207";
@@ -304,46 +335,64 @@ google_ad_height = 600;
 src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 </script></div>
 </section>
+    
+  </aside>
   
-</aside>
+</div>
 
-
+        </div>
+      </div>
     </div>
+    <footer role="contentinfo"><div class="container">
+    <section class="panel panel-default">
+   <div class="panel-heading">
+    <h3 class="panel-title">Sponsor</h3>
   </div>
-  <footer role="contentinfo"><p>
-  Copyright &copy; 2014 - Felix Schulze -
-  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+  <div id="sponsor-footer">
+  <script type="text/javascript"><!--
+google_ad_client = "ca-pub-5660005999283733";
+/* 728 x 90 - Header */
+google_ad_slot = "1841385402";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+  </div>
+</section>
+
+    <p class="text-muted credits">
+  Copyright &copy; 2014 - Felix Schulze<br>
+  <small>
+      <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>.
+  </small>
 </p>
 
+</div>
 </footer>
-  
+    <script src="/assets/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="/javascripts/modernizr-2.0.js"></script>
+
 
 <script type="text/javascript">
       var disqus_shortname = 'x2on';
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://x2on.de/2010/12/06/smime-on-ios-with-openssl-iphoneipad/';
-        var disqus_url = 'http://x2on.de/2010/12/06/smime-on-ios-with-openssl-iphoneipad/';
+        var disqus_identifier = 'http://x2on.github.com/2010/12/06/smime-on-ios-with-openssl-iphoneipad/';
+        var disqus_url = 'http://x2on.github.com/2010/12/06/smime-on-ios-with-openssl-iphoneipad/';
         var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      dsq.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + disqus_shortname + '.disqus.com/' + disqus_script;
       (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     }());
 </script>
 
 
-
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) {return;}
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
 
 
 
@@ -362,7 +411,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
       var twitterWidgets = document.createElement('script');
       twitterWidgets.type = 'text/javascript';
       twitterWidgets.async = true;
-      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
       document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
     })();
   </script>
@@ -371,5 +420,5 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 
 
 
-</body>
+  </body>
 </html>

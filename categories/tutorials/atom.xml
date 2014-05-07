@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Tutorials | x2on.de]]></title>
   <link href="http://x2on.github.com/categories/tutorials/atom.xml" rel="self"/>
   <link href="http://x2on.github.com/"/>
-  <updated>2014-05-06T08:04:56+02:00</updated>
+  <updated>2014-05-07T15:55:09+02:00</updated>
   <id>http://x2on.github.com/</id>
   <author>
     <name><![CDATA[Felix Schulze]]></name>
@@ -87,7 +87,7 @@ If all works SuperTux.app should be in the dist folder.</p>
 <!-- more -->
 
 
-<p>I also build a version for download if you don't want to build it: <a href="http://www.x2on.de/2012/01/29/supertux-0-3-3-for-mac-os-x-lion-download/">SuperTux 0.3.3 for Mac OS X Lion</a></p>
+<p>I also build a version for download if you don&rsquo;t want to build it: <a href="http://www.x2on.de/2012/01/29/supertux-0-3-3-for-mac-os-x-lion-download/">SuperTux 0.3.3 for Mac OS X Lion</a></p>
 
 <h4>Prerequisites</h4>
 
@@ -131,7 +131,7 @@ If all works SuperTux.app should be in the dist folder.</p>
     <id>http://x2on.github.com/2011/04/23/tutorial-redmine-with-git-and-gitosis-on-ubuntu-11-04</id>
     <content type="html"><![CDATA[<p>This is a tutorial for installing redmine on Ubuntu 11.04 with Git integration, managed by Gitosis and a redmine gitosis plugin.</p>
 
-<p>It’s based on my last tutorial about installing redmine ob Ubuntu 8.04: http://www.x2on.de/2010/10/30/tutorial-redmine-with-svn-git-and-gitosis-on-ubuntu-8-04/</p>
+<p>It’s based on my last tutorial about installing redmine ob Ubuntu 8.04: <a href="http://www.x2on.de/2010/10/30/tutorial-redmine-with-svn-git-and-gitosis-on-ubuntu-8-04/">http://www.x2on.de/2010/10/30/tutorial-redmine-with-svn-git-and-gitosis-on-ubuntu-8-04/</a></p>
 
 <!--more-->
 
@@ -207,7 +207,7 @@ Test redmine
 <code>bash
 ruby script/server webrick -e production
 </code>
-Now you can check http://my_domain.com:3000 if everything works</p>
+Now you can check <a href="http://my_domain.com:3000">http://my_domain.com:3000</a> if everything works</p>
 
 <ol>
 <li><p>Apache Integration
@@ -238,14 +238,11 @@ nano /etc/apache2/sites-available/my_domain
 <p> PassengerDefaultUser www-data
  RailsEnv production
  RailsBaseURI /redmine
- SetEnv X_DEBIAN_SITEID "default"
- <Directory /var/www/redmine/public></p>
-
-<pre><code> Order allow,deny
- Allow from all
-</code></pre>
-
-<p> </Directory>
+ SetEnv X_DEBIAN_SITEID &ldquo;default&rdquo;
+ <Directory /var/www/redmine/public>
+     Order allow,deny
+     Allow from all
+ </Directory>
 </VirtualHost>
 <code>
 </code>bash
@@ -312,16 +309,16 @@ Change xdissent.com to my_domain.</li>
 <p>Have fun!</p>
 
 <p>Source:
-http://brantinteractive.com/2007/02/16/getting-the-mysql-gem-installed-on-ubuntu/
-http://www.redmine.org/wiki/1/RedmineInstall
-http://wiki.ousli.org/index.php/Redmine_in_Ubuntu_Jaunty_9.04
-http://www.redmine.org/wiki/1/HowTo_Install_Redmine_in_Ubuntu
-http://www.redmine.org/wiki/redmine/Repositories_access_control_with_apache_mod_dav_svn_and_mod_perl
-http://xdissent.com/2010/05/04/github-clone-with-redmine/
-http://dev.remarkablewit.com/redmine/projects/dev-server/wiki
-https://github.com/xdissent/redmine_gitosis
-http://www.redmine.org/issues/2525
-http://wiki.ubuntuusers.de/acl</p>
+<a href="http://brantinteractive.com/2007/02/16/getting-the-mysql-gem-installed-on-ubuntu/">http://brantinteractive.com/2007/02/16/getting-the-mysql-gem-installed-on-ubuntu/</a>
+<a href="http://www.redmine.org/wiki/1/RedmineInstall">http://www.redmine.org/wiki/1/RedmineInstall</a>
+<a href="http://wiki.ousli.org/index.php/Redmine_in_Ubuntu_Jaunty_9.04">http://wiki.ousli.org/index.php/Redmine_in_Ubuntu_Jaunty_9.04</a>
+<a href="http://www.redmine.org/wiki/1/HowTo_Install_Redmine_in_Ubuntu">http://www.redmine.org/wiki/1/HowTo_Install_Redmine_in_Ubuntu</a>
+<a href="http://www.redmine.org/wiki/redmine/Repositories_access_control_with_apache_mod_dav_svn_and_mod_perl">http://www.redmine.org/wiki/redmine/Repositories_access_control_with_apache_mod_dav_svn_and_mod_perl</a>
+<a href="http://xdissent.com/2010/05/04/github-clone-with-redmine/">http://xdissent.com/2010/05/04/github-clone-with-redmine/</a>
+<a href="http://dev.remarkablewit.com/redmine/projects/dev-server/wiki">http://dev.remarkablewit.com/redmine/projects/dev-server/wiki</a>
+<a href="https://github.com/xdissent/redmine_gitosis">https://github.com/xdissent/redmine_gitosis</a>
+<a href="http://www.redmine.org/issues/2525">http://www.redmine.org/issues/2525</a>
+<a href="http://wiki.ubuntuusers.de/acl">http://wiki.ubuntuusers.de/acl</a></p>
 ]]></content>
   </entry>
   

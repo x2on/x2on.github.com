@@ -4,7 +4,7 @@
   <title><![CDATA[x2on.de]]></title>
   <link href="http://x2on.github.com/atom.xml" rel="self"/>
   <link href="http://x2on.github.com/"/>
-  <updated>2014-05-06T08:04:56+02:00</updated>
+  <updated>2014-05-07T15:55:09+02:00</updated>
   <id>http://x2on.github.com/</id>
   <author>
     <name><![CDATA[Felix Schulze]]></name>
@@ -83,7 +83,7 @@
 
 <p>Have a look at my slides from the <a href="http://www.b-mobile.info/2013/01/14/b-mobile-v-loc-at-yoc/">B-Mobile</a> event in January 2013 for a short introduction:</p>
 
-<script async class="speakerdeck-embed" data-id="e55533b04b7d0130e2a022000a9f1069" data-ratio="1.33333333333333" src="http://x2on.github.com//speakerdeck.com/assets/embed.js"></script>
+<script async class="speakerdeck-embed" data-id="e55533b04b7d0130e2a022000a9f1069" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
 
 ]]></content>
   </entry>
@@ -222,7 +222,7 @@
 <!--more-->
 
 
-<p>Download (Intel - 69,3MB): <a href="http://www.x2on.de/wp-content/uploads/2012/01/SuperTux_0.3.3_Lion.app.zip">SuperTux 0.3.3.zip</a></p>
+<p>Download (Intel &ndash; 69,3MB): <a href="http://www.x2on.de/wp-content/uploads/2012/01/SuperTux_0.3.3_Lion.app.zip">SuperTux 0.3.3.zip</a></p>
 ]]></content>
   </entry>
   
@@ -236,7 +236,7 @@
 <!-- more -->
 
 
-<p>I also build a version for download if you don&#8217;t want to build it: <a href="http://www.x2on.de/2012/01/29/supertux-0-3-3-for-mac-os-x-lion-download/">SuperTux 0.3.3 for Mac OS X Lion</a></p>
+<p>I also build a version for download if you don&rsquo;t want to build it: <a href="http://www.x2on.de/2012/01/29/supertux-0-3-3-for-mac-os-x-lion-download/">SuperTux 0.3.3 for Mac OS X Lion</a></p>
 
 <h4>Prerequisites</h4>
 
@@ -336,7 +336,7 @@
     <id>http://x2on.github.com/2011/04/23/tutorial-redmine-with-git-and-gitosis-on-ubuntu-11-04</id>
     <content type="html"><![CDATA[<p>This is a tutorial for installing redmine on Ubuntu 11.04 with Git integration, managed by Gitosis and a redmine gitosis plugin.</p>
 
-<p>It’s based on my last tutorial about installing redmine ob Ubuntu 8.04: http://www.x2on.de/2010/10/30/tutorial-redmine-with-svn-git-and-gitosis-on-ubuntu-8-04/</p>
+<p>It’s based on my last tutorial about installing redmine ob Ubuntu 8.04: <a href="http://www.x2on.de/2010/10/30/tutorial-redmine-with-svn-git-and-gitosis-on-ubuntu-8-04/">http://www.x2on.de/2010/10/30/tutorial-redmine-with-svn-git-and-gitosis-on-ubuntu-8-04/</a></p>
 
 <!--more-->
 
@@ -469,7 +469,7 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>Now you can check http://my_domain.com:3000 if everything works</p>
+<p>Now you can check <a href="http://my_domain.com:3000">http://my_domain.com:3000</a> if everything works</p>
 
 <ol>
 <li>Apache Integration
@@ -646,16 +646,16 @@ Change xdissent.com to my_domain.</p>
 <p>Have fun!</p>
 
 <p>Source:
-http://brantinteractive.com/2007/02/16/getting-the-mysql-gem-installed-on-ubuntu/
-http://www.redmine.org/wiki/1/RedmineInstall
-http://wiki.ousli.org/index.php/Redmine_in_Ubuntu_Jaunty_9.04
-http://www.redmine.org/wiki/1/HowTo_Install_Redmine_in_Ubuntu
-http://www.redmine.org/wiki/redmine/Repositories_access_control_with_apache_mod_dav_svn_and_mod_perl
-http://xdissent.com/2010/05/04/github-clone-with-redmine/
-http://dev.remarkablewit.com/redmine/projects/dev-server/wiki
-https://github.com/xdissent/redmine_gitosis
-http://www.redmine.org/issues/2525
-http://wiki.ubuntuusers.de/acl</p>
+<a href="http://brantinteractive.com/2007/02/16/getting-the-mysql-gem-installed-on-ubuntu/">http://brantinteractive.com/2007/02/16/getting-the-mysql-gem-installed-on-ubuntu/</a>
+<a href="http://www.redmine.org/wiki/1/RedmineInstall">http://www.redmine.org/wiki/1/RedmineInstall</a>
+<a href="http://wiki.ousli.org/index.php/Redmine_in_Ubuntu_Jaunty_9.04">http://wiki.ousli.org/index.php/Redmine_in_Ubuntu_Jaunty_9.04</a>
+<a href="http://www.redmine.org/wiki/1/HowTo_Install_Redmine_in_Ubuntu">http://www.redmine.org/wiki/1/HowTo_Install_Redmine_in_Ubuntu</a>
+<a href="http://www.redmine.org/wiki/redmine/Repositories_access_control_with_apache_mod_dav_svn_and_mod_perl">http://www.redmine.org/wiki/redmine/Repositories_access_control_with_apache_mod_dav_svn_and_mod_perl</a>
+<a href="http://xdissent.com/2010/05/04/github-clone-with-redmine/">http://xdissent.com/2010/05/04/github-clone-with-redmine/</a>
+<a href="http://dev.remarkablewit.com/redmine/projects/dev-server/wiki">http://dev.remarkablewit.com/redmine/projects/dev-server/wiki</a>
+<a href="https://github.com/xdissent/redmine_gitosis">https://github.com/xdissent/redmine_gitosis</a>
+<a href="http://www.redmine.org/issues/2525">http://www.redmine.org/issues/2525</a>
+<a href="http://wiki.ubuntuusers.de/acl">http://wiki.ubuntuusers.de/acl</a></p>
 ]]></content>
   </entry>
   
@@ -686,14 +686,14 @@ You can also download the precompiled PolarSSL-library (0.14.3).</p>
     <link href="http://x2on.github.com/2011/04/01/secure-mail-beta-test-smime-on-ios-with-openssl/"/>
     <updated>2011-04-01T15:57:24+02:00</updated>
     <id>http://x2on.github.com/2011/04/01/secure-mail-beta-test-smime-on-ios-with-openssl</id>
-    <content type="html"><![CDATA[<p>Im searching some people how want&#8217;s to test Secure-Mail App.</p>
+    <content type="html"><![CDATA[<p>Im searching some people how want&rsquo;s to test Secure-Mail App.</p>
 
 <p>With Secure-Mail you can read S/MIME encrypted mails directly from Mail.app and send encrypted S/MIME mails with SMTP.</p>
 
 <!--more-->
 
 
-<p>Please send me an email with some details about you, and why you wan&#8217;t test the beta.</p>
+<p>Please send me an email with some details about you, and why you wan&rsquo;t test the beta.</p>
 
 <p><strong>2011-04-13: UPDATE #1:</strong> The Beta-Test is running now. At this time no new beta-testers are invited. Thanks for your help.</p>
 
@@ -846,7 +846,7 @@ SDKVERSION=&quot;4.2&quot;                                                      
 #                                                                         #
 ###########################################################################
 #                                                                         #
-# Don't change anything under this line!                                  #
+# Don&#39;t change anything under this line!                                  #
 #                                                                         #
 ###########################################################################
 
@@ -948,7 +948,7 @@ echo &quot;Building done.&quot;
     <link href="http://x2on.github.com/2010/12/06/smime-on-ios-with-openssl-iphoneipad/"/>
     <updated>2010-12-06T09:52:25+01:00</updated>
     <id>http://x2on.github.com/2010/12/06/smime-on-ios-with-openssl-iphoneipad</id>
-    <content type="html"><![CDATA[<p>Whenever I receive an encrypted e-mail, I can&#8217;t read it on my iPhone. So i write a little app that can do it ;)</p>
+    <content type="html"><![CDATA[<p>Whenever I receive an encrypted e-mail, I can&rsquo;t read it on my iPhone. So i write a little app that can do it ;)</p>
 
 <!--more-->
 
@@ -957,9 +957,9 @@ echo &quot;Building done.&quot;
 
 <p><strong>UPDATE #1 (09.12.2010):</strong> New screenshots from current development build</p>
 
-<p><strong>UPDATE #2 (01.02.2011):</strong> The app is finished - But the encryption export is not really easy - stay tuned&#8230;</p>
+<p><strong>UPDATE #2 (01.02.2011):</strong> The app is finished &ndash; But the encryption export is not really easy &ndash; stay tuned&hellip;</p>
 
-<p><strong>UPDATE #3 (16.02.2011):</strong> So finally i got my ERN-Number with SNAP-R from BIS. Registered the app in iTunes Connect and working on some bugfixes and improvements. Stay tuned&#8230;</p>
+<p><strong>UPDATE #3 (16.02.2011):</strong> So finally i got my ERN-Number with SNAP-R from BIS. Registered the app in iTunes Connect and working on some bugfixes and improvements. Stay tuned&hellip;</p>
 
 <p><strong>UPDATE #4 (01.04.2011):</strong> Looking for Beta-tester: <a href="http://www.x2on.de/2011/04/01/secure-mail-beta-test-smime-on-ios-with-openssl/">http://www.x2on.de/2011/04/01/secure-mail-beta-test-smime-on-ios-with-openssl/</a></p>
 

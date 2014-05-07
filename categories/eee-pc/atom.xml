@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Eee-PC | x2on.de]]></title>
   <link href="http://x2on.github.com/categories/eee-pc/atom.xml" rel="self"/>
   <link href="http://x2on.github.com/"/>
-  <updated>2014-05-06T08:04:56+02:00</updated>
+  <updated>2014-05-07T15:55:09+02:00</updated>
   <id>http://x2on.github.com/</id>
   <author>
     <name><![CDATA[Felix Schulze]]></name>
@@ -18,7 +18,7 @@
     <link href="http://x2on.github.com/2009/11/30/eee-pc-1005ha-ubuntu-karmic-sondertasten-perfomance/"/>
     <updated>2009-11-30T22:54:16+01:00</updated>
     <id>http://x2on.github.com/2009/11/30/eee-pc-1005ha-ubuntu-karmic-sondertasten-perfomance</id>
-    <content type="html"><![CDATA[<p>Ubuntu 9.10 Karmic läuft auf dem Eee-PC 1005HA "out of the box" ziemlich rund. Um die letzten Feinheiten zum laufen zu bekommen (Sondertasten, Performance/Laufzeit-Tunning) gibt es Tool eee-control.</p>
+    <content type="html"><![CDATA[<p>Ubuntu 9.10 Karmic läuft auf dem Eee-PC 1005HA &ldquo;out of the box&rdquo; ziemlich rund. Um die letzten Feinheiten zum laufen zu bekommen (Sondertasten, Performance/Laufzeit-Tunning) gibt es Tool eee-control.</p>
 
 <blockquote><p>Abhilfe schafft hier ein neues Freeware-Tool namens <a href="http://greg.geekmind.org/eee-control/">Eee-Control</a>. Über die Task-Leiste anwählbar, ermöglicht es das Untertakten der CPU zur Akku-Schonung ebenso wie die Belegung der Hotkeys, eine Änderung der Displayhelligkeit sowie die (De-)aktivierung von Bluetooth, WLAN, Webcam, Touchpad und Kartenlesegerät. (Quelle: <a href="http://www.einfach-eee.de/eee-pc-software/eee-control-eee-manager-fuer-linux/">http://www.einfach-eee.de/eee-pc-software/eee-control-eee-manager-fuer-linux/</a>)</p></blockquote>
 
@@ -159,41 +159,41 @@ chmod +x skypeinstall
 <p><strong>XP-CD vorbereiten</strong> (am Windows-Rechner):</p>
 
 <ol>
-<li><p>Kompletten Inhalt der XP-CD auf die Festplatte kopieren</p></li>
-<li><p>XP3eSD-Utility starten</p></li>
-<li><p>XP-Dateien auswählen</p></li>
-<li><p>Auf Create klicken</p></li>
-<li><p>Erstelltes ISO-Image als CD brennen</p></li>
+<li><p> Kompletten Inhalt der XP-CD auf die Festplatte kopieren</p></li>
+<li><p> XP3eSD-Utility starten</p></li>
+<li><p> XP-Dateien auswählen</p></li>
+<li><p> Auf Create klicken</p></li>
+<li><p> Erstelltes ISO-Image als CD brennen</p></li>
 </ol>
 
 
 <p><strong>Windows XP installieren:</strong></p>
 
 <ol>
-<li><p>Eee-PC starten und F2 drücken</p></li>
-<li><p>In Advanced auf IDE Configuration gehen</p></li>
-<li><p>Bei IDE-Master Enter drücken</p></li>
-<li><p>auf Not Installed stellen</p></li>
-<li><p>Mit F10 abspeichern</p></li>
-<li><p>Eee-PC neustarten und XP-CD einlegen</p></li>
-<li><p>Beim Starten ESC drücken</p></li>
-<li><p>Externes CD-Rom Laufwerk auswählen</p></li>
-<li><p>XP auf C: installieren (sollte der 5 Eintrag von oben sein)</p></li>
-<li><p>Als NTFS formatieren</p></li>
-<li><p>Bei der Installation kommen mehrere Abfragen ob Treiber installiert werden sollen, alle mit Ja beantworten (das sind die gepatchen Treiber des XP3eSD-Utility)</p></li>
-<li><p>Bei jedem Neustart mit ESC wieder das CD-Rom auswählen (oder Bootreihenfolge ändern)</p></li>
-<li><p>Es kann sein das das Setup nicht 100 Prozent durchläuft, das macht aber nichts.</p></li>
-<li><p>Beim ersten Start kann es passieren das nur ein Administrator-Konto da ist und beim einloggen ein Fehler wegen der Auslagerungsdatei kommt, einfach ignorieren!</p></li>
-<li><p>Treiber-CD von Asus einlegen und alle Treiber automatisch installieren (4 Neustarts nötig)</p></li>
-<li><p>XP-CD einlegen und Setup erneut starten</p></li>
-<li><p>Im ersten Bild auf Enter drücken und dann R für eine Reperatur</p></li>
-<li><p>Die Windows-Installation reparieren (nochmal Seriennummer eingeben und alles andere.)</p></li>
-<li><p>Neustarten und fertig! XP läuft nun von der externen Festplatte</p></li>
-<li><p>Zum Schluß noch die Interne Festplatte im Bios wieder einschalten...</p></li>
+<li><p> Eee-PC starten und F2 drücken</p></li>
+<li><p> In Advanced auf IDE Configuration gehen</p></li>
+<li><p> Bei IDE-Master Enter drücken</p></li>
+<li><p> auf Not Installed stellen</p></li>
+<li><p> Mit F10 abspeichern</p></li>
+<li><p> Eee-PC neustarten und XP-CD einlegen</p></li>
+<li><p> Beim Starten ESC drücken</p></li>
+<li><p> Externes CD-Rom Laufwerk auswählen</p></li>
+<li><p> XP auf C: installieren (sollte der 5 Eintrag von oben sein)</p></li>
+<li><p>. Als NTFS formatieren</p></li>
+<li><p>. Bei der Installation kommen mehrere Abfragen ob Treiber installiert werden sollen, alle mit Ja beantworten (das sind die gepatchen Treiber des XP3eSD-Utility)</p></li>
+<li><p>. Bei jedem Neustart mit ESC wieder das CD-Rom auswählen (oder Bootreihenfolge ändern)</p></li>
+<li><p>. Es kann sein das das Setup nicht 100 Prozent durchläuft, das macht aber nichts.</p></li>
+<li><p>. Beim ersten Start kann es passieren das nur ein Administrator-Konto da ist und beim einloggen ein Fehler wegen der Auslagerungsdatei kommt, einfach ignorieren!</p></li>
+<li><p>. Treiber-CD von Asus einlegen und alle Treiber automatisch installieren (4 Neustarts nötig)</p></li>
+<li><p>. XP-CD einlegen und Setup erneut starten</p></li>
+<li><p>. Im ersten Bild auf Enter drücken und dann R für eine Reperatur</p></li>
+<li><p>. Die Windows-Installation reparieren (nochmal Seriennummer eingeben und alles andere.)</p></li>
+<li><p>. Neustarten und fertig! XP läuft nun von der externen Festplatte</p></li>
+<li><p>. Zum Schluß noch die Interne Festplatte im Bios wieder einschalten&hellip;</p></li>
 </ol>
 
 
-<p>Falls beim Willkommen Screen von Windows mehrere Minuten nichts passiert Alt+Strg+Entf drücken und Windows startet normal! Dann Rechtsklick auf den Arbeitsplatz - Eigenschaften - Erweitert - Systemleistung Einstellungen - Ändern - Keine Auslagerungsdatei - Festlegen!</p>
+<p>Falls beim Willkommen Screen von Windows mehrere Minuten nichts passiert Alt+Strg+Entf drücken und Windows startet normal! Dann Rechtsklick auf den Arbeitsplatz &ndash; Eigenschaften &ndash; Erweitert &ndash; Systemleistung Einstellungen &ndash; Ändern &ndash; Keine Auslagerungsdatei &ndash; Festlegen!</p>
 
 <p>Dieser Werk oder Inhalt ist unter einer <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/de/">Creative Commons-Lizenz</a> lizenziert.</p>
 ]]></content>

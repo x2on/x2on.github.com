@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Encryption | x2on.de]]></title>
   <link href="http://x2on.github.com/categories/encryption/atom.xml" rel="self"/>
   <link href="http://x2on.github.com/"/>
-  <updated>2014-05-06T08:04:56+02:00</updated>
+  <updated>2014-05-07T15:55:09+02:00</updated>
   <id>http://x2on.github.com/</id>
   <author>
     <name><![CDATA[Felix Schulze]]></name>
@@ -102,14 +102,14 @@ You can also download the precompiled PolarSSL-library (0.14.3).</p>
     <link href="http://x2on.github.com/2011/04/01/secure-mail-beta-test-smime-on-ios-with-openssl/"/>
     <updated>2011-04-01T15:57:24+02:00</updated>
     <id>http://x2on.github.com/2011/04/01/secure-mail-beta-test-smime-on-ios-with-openssl</id>
-    <content type="html"><![CDATA[<p>Im searching some people how want's to test Secure-Mail App.</p>
+    <content type="html"><![CDATA[<p>Im searching some people how want&rsquo;s to test Secure-Mail App.</p>
 
 <p>With Secure-Mail you can read S/MIME encrypted mails directly from Mail.app and send encrypted S/MIME mails with SMTP.</p>
 
 <!--more-->
 
 
-<p>Please send me an email with some details about you, and why you wan't test the beta.</p>
+<p>Please send me an email with some details about you, and why you wan&rsquo;t test the beta.</p>
 
 <p><strong>2011-04-13: UPDATE #1:</strong> The Beta-Test is running now. At this time no new beta-testers are invited. Thanks for your help.</p>
 

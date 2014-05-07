@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Programming | x2on.de]]></title>
   <link href="http://x2on.github.com/categories/programming/atom.xml" rel="self"/>
   <link href="http://x2on.github.com/"/>
-  <updated>2014-05-06T08:04:56+02:00</updated>
+  <updated>2014-05-07T15:55:09+02:00</updated>
   <id>http://x2on.github.com/</id>
   <author>
     <name><![CDATA[Felix Schulze]]></name>
@@ -25,7 +25,7 @@
 
 <p>Have a look at my slides from the <a href="http://www.b-mobile.info/2013/01/14/b-mobile-v-loc-at-yoc/">B-Mobile</a> event in January 2013 for a short introduction:</p>
 
-<script async class="speakerdeck-embed" data-id="e55533b04b7d0130e2a022000a9f1069" data-ratio="1.33333333333333" src="http://x2on.github.com//speakerdeck.com/assets/embed.js"></script>
+<script async class="speakerdeck-embed" data-id="e55533b04b7d0130e2a022000a9f1069" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
 
 ]]></content>
   </entry>
@@ -73,8 +73,8 @@ A workaround for this is to create an <code>NSObject</code>, which implements th
 SomeDelegateMock *someDelegateMock = [SomeDelegateMock new];
 someObject.delegate = someDelegateMock;
 [someObject doSomethingToCallTheDelegate];
-STAssertTrue(someDelegateMock.someDelegateCalled, @"expected delegate should be called");
-STAssertEqualObjects(someString, @"SomeString", @"expected delegate value");
+STAssertTrue(someDelegateMock.someDelegateCalled, @&ldquo;expected delegate should be called&rdquo;);
+STAssertEqualObjects(someString, @&ldquo;SomeString&rdquo;, @&ldquo;expected delegate value&rdquo;);
 <code>``
 With this workaround you can test</code>__weak` delegates with OCMock.</p>
 ]]></content>

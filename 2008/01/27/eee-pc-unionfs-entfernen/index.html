@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
 <!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
@@ -7,9 +6,8 @@
   <meta charset="utf-8">
   <title>Eee-PC: UnionFS entfernen - x2on.de</title>
   <meta name="author" content="Felix Schulze">
-
+  <meta name="description" content="by Felix Schulze - a mobile evangelist. Tutorials for iOS, Android, Mac, Linux, iPhone and more...">
   
-  <meta name="description" content="Dieses How-To beschreibt wie man das UnionFs von seinem Eee-PC entfernt. Standardmäßig hat der Eee-PC 4 Partition, wobei die erste das Betriebssystem &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,17 +16,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://x2on.github.com/2008/01/27/eee-pc-unionfs-entfernen/">
-  <link href="/favicon.png" rel="icon">
-  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-  <script src="/javascripts/modernizr-2.0.js"></script>
-  <script src="/javascripts/ender.js"></script>
-  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link rel="canonical" href="http://x2on.github.com/2008/01/27/eee-pc-unionfs-entfernen">
+  <link href="/favicon.png" type="image/png" rel="icon">
   <link href="/atom.xml" rel="alternate" title="x2on.de" type="application/atom+xml">
-  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
-<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
 
+  <link href="/assets/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="/assets/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css">
+<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+
+
+  <script src="/javascripts/libs/jquery/jquery-2.0.3.min.js"></script>
   
   <script type="text/javascript">
     var _gaq = _gaq || [];
@@ -46,60 +43,64 @@
 
 </head>
 
-<body   >
-  <header role="banner"><hgroup>
-<div id="logo">
-  <h1><a href="/">x2on.de</a></h1>
-  
-    <h2>by Felix Schulze - a mobile evangelist. Tutorials for iOS, Android, Mac, Linux, iPhone and more...</h2>
-  
-</div>
-<div id="banner">
-<script type="text/javascript"><!--
-google_ad_client = "ca-pub-5660005999283733";
-/* 728 x 90 - Header */
-google_ad_slot = "1841385402";
-google_ad_width = 728;
-google_ad_height = 90;
-//-->
-</script>
-<script type="text/javascript"
-src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-</script>
-</div>
-</hgroup>
+  <body   >
+    <div id="wrap">
+      <header role="banner">
+        <nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">x2on.de</a>
+        </div>
 
-</header>
-  <nav role="navigation"><ul class="subscription" data-subscription="rss">
-  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
-  
-</ul>
-  
-<form action="http://google.com/search" method="get">
-  <fieldset role="search">
-    <input type="hidden" name="q" value="site:x2on.github.com" />
-    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
-  </fieldset>
-</form>
-  
-<ul class="main-navigation">
-  <li><a href="/">Blog</a></li>
-  <li><a href="/blog/archives">Archives</a></li>
-  <li><a href="/contact">Contact / Imprint</a></li>
-</ul>
-
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class="active">
+                    <a href="/">Blog</a>
+                </li>
+                <li >
+                    <a href="/blog/archives">Archives</a>
+                </li>
+                <li >
+                    <a href="/contact">Contact / Imprint</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a class="subscribe-rss" href="/atom.xml" title="subscribe via RSS">
+                        <span class="visible-xs">RSS</span>
+                        <img class="hidden-xs" src="/images/rss.png" alt="RSS">
+                    </a>
+                </li>
+                
+            </ul>
+            
+                <form class="search navbar-form navbar-right" action="http://google.com/search" method="GET">
+                    <input type="hidden" name="q" value="site:x2on.github.com">
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="q" placeholder="Search">
+                    </div>
+                </form>
+            
+        </div>
+    </div>
 </nav>
-  <div id="main">
-    <div id="content">
-      <div>
-<article class="hentry" role="article">
-  
-  <header>
+
+
+      </header>
+      <div id="main" class="container">
+        <div id="content">
+          <div class="row">
+  <div class="page-content col-md-9">
+    <article class="hentry" role="article">
+      
+  <header class="page-header">
     
-      <h1 class="entry-title">Eee-PC: UnionFS Entfernen</h1>
-    
-    
-      <p class="meta">
+      <p class="meta text-muted text-uppercase">
         
 
 
@@ -109,19 +110,27 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 
 
 
-  
 
 
-<time datetime="2008-01-27T18:08:12+01:00" pubdate data-updated="true">Jan 27<span>th</span>, 2008</time>
+
+
+<span class="glyphicon glyphicon-calendar"></span> <time datetime="2008-01-27T18:08:12+01:00" pubdate data-updated="true">Jan 27<span>th</span>, 2008</time>
         
-         | <a href="#disqus_thread">Comments</a>
+           | <a href="#disqus_thread"
+             data-disqus-identifier="http://x2on.github.com">Comments</a>
         
       </p>
+    
+    
+    <h1 class="entry-title">
+        Eee-PC: UnionFS Entfernen
+        
+    </h1>
     
   </header>
 
 
-<div class="entry-content"><p>Dieses How-To beschreibt wie man das UnionFs von seinem Eee-PC entfernt. Standardmäßig hat der Eee-PC 4 Partition, wobei die erste das Betriebssystem und zahlreiche Software enthält und nur &#8220;read-only&#8221; gemountet ist. Sobald man zum Beispiel OpenOffice updaten will, muss man um Speicherplatz zu sparen an diese erste Partition ran, ansonsten hat man die Sachen doppelt drauf (einmal die neue Version und einmal die alte).</p>
+<div class="entry-content clearfix"><p>Dieses How-To beschreibt wie man das UnionFs von seinem Eee-PC entfernt. Standardmäßig hat der Eee-PC 4 Partition, wobei die erste das Betriebssystem und zahlreiche Software enthält und nur &ldquo;read-only&rdquo; gemountet ist. Sobald man zum Beispiel OpenOffice updaten will, muss man um Speicherplatz zu sparen an diese erste Partition ran, ansonsten hat man die Sachen doppelt drauf (einmal die neue Version und einmal die alte).</p>
 
 <p><strong>Disclaimer:</strong> Ich übernehme keine Garantie für Schäden am System, Verlust von Daten oder sonst irgendwas. Jeder der diesen Schritt macht muss selber wissen ob er das Risiko eingehen will.
 <strong>DU MACHST DIE ÄNDERUNG AUF DEIN RISIKO
@@ -139,8 +148,8 @@ PartedMagic (<a href="http://partedmagic.com/downloads.html">http://partedmagic.
 <ul>
 <li><p>Eee-PC anschalten und F9-Taste mehrmals drücken bis ein Boot-Menü erscheint.</p></li>
 <li><p>e&#8221;-Taste drücken</p></li>
-<li><p>den zweiten Eintrag (&#8220;kernel&#8230;.&#8221;) auswählen</p></li>
-<li><p>erneut &#8220;e&#8221;-taste drücken</p></li>
+<li><p>den zweiten Eintrag (&ldquo;kernel&hellip;.&rdquo;) auswählen</p></li>
+<li><p>erneut &ldquo;e&rdquo;-taste drücken</p></li>
 <li><p>folgendes hinzufügen: XANDROSBOOTDEBUG=y</p></li>
 <li><p>Enter drücken</p></li>
 <li><p>B drücken</p></li>
@@ -151,33 +160,27 @@ PartedMagic (<a href="http://partedmagic.com/downloads.html">http://partedmagic.
 <h4>Rescue-Modus installieren:</h4>
 
 <ol>
-<li><p>Folgendes eingeben:</p></li>
-<li><p>mount /dev/sda1 /mnt-system</p></li>
-<li><p>vi /mnt-system/boot/grub/menu.lst</p></li>
-<li><p>&#8220;i&#8221; taste drücken (für Berabeitungsmodus)</p></li>
-<li><p>Zwischen title Normal Boot und title Perform Disk Scan folgendes hinzufügen:</p></li>
-</ol>
+<li><p> Folgendes eingeben:</p></li>
+<li><p> mount /dev/sda1 /mnt-system</p></li>
+<li><p> vi /mnt-system/boot/grub/menu.lst</p></li>
+<li><p> &ldquo;i&rdquo; taste drücken (für Berabeitungsmodus)</p></li>
+<li><p> Zwischen title Normal Boot und title Perform Disk Scan folgendes hinzufügen:</p>
 
-
-<pre><code>title Rescue Console
+<p>title Rescue Console
 root (0x80,0)
 kernel /boot/vmlinuz-2.6.21.4-eeepc quiet rw irqpoll
 root=/dev/sda1 XANDROSBOOTDEBUG=y
-initrd /boot/initramfs-eeepc.img
-</code></pre>
+initrd /boot/initramfs-eeepc.img</p></li>
+<li><p> Wichtig ist: Wenn bei den anderen Einträgen nicht 2.6.21.4 steht, unbedingt die Werte von den anderen Einträgen benutzen!</p></li>
+<li><p> fallback=2 in fallback=1 ändern</p></li>
+<li><p> ESC drücken</p></li>
+<li><p> :wq (da englisches Tastaturlayout &mdash;>Öwq)</p></li>
+<li><p>. Enter drücken</p></li>
+<li><p>.</p>
 
-<ol>
-<li><p>Wichtig ist: Wenn bei den anderen Einträgen nicht 2.6.21.4 steht, unbedingt die Werte von den anderen Einträgen benutzen!</p></li>
-<li><p>fallback=2 in fallback=1 ändern</p></li>
-<li><p>ESC drücken</p></li>
-<li><p>:wq (da englisches Tastaturlayout &#8211;>Öwq)</p></li>
-<li><p>Enter drücken</p></li>
-<li></li>
+<p>cat /mnt-system/boot/grub/menu.lst</p></li>
 </ol>
 
-
-<pre><code>cat /mnt-system/boot/grub/menu.lst
-</code></pre>
 
 <p>eingeben um zu testen ob es gespeichert wurde.</p>
 
@@ -186,29 +189,22 @@ initrd /boot/initramfs-eeepc.img
 <h4>Neues RamFs anlegen:</h4>
 
 <ol>
-<li><p>Eee-PC anschalten</p></li>
-<li><p>Lizenvertrag zustimmen + Userpasswort ausfüllen</p></li>
-<li><p>Strg+Alt+T für Terminal</p></li>
-<li></li>
-</ol>
-
-
-<pre><code>sudo bash
+<li><p> Eee-PC anschalten</p></li>
+<li><p> Lizenvertrag zustimmen + Userpasswort ausfüllen</p></li>
+<li><p> Strg+Alt+T für Terminal</p></li>
+<li><p>sudo bash
 cd /boot
 mkdirt tmp
 cd tmp
 gunzip -c ../initramfs-eeepc.img | cpio –i
-nano init
-</code></pre>
-
-<ol>
-<li><p>Zeile 18 bis 51 mit # auskommentieren
+nano init</p></li>
+<li><p> Zeile 18 bis 51 mit # auskommentieren
 Zeile 12 mount -t ext2 -o ro $ROOT /mnt-system
 in folgendes ändern:
 mount -t ext2 -o rw,noatime $ROOT /mnt</p></li>
-<li><p>Strg+x drücken</p></li>
-<li><p>ImageFile erzeugen:</p></li>
-<li><p>find | cpio -H newc -o | gzip -9 > ../initramfs-eeepc-nounionfs.img</p></li>
+<li><p> Strg+x drücken</p></li>
+<li><p> ImageFile erzeugen:</p></li>
+<li><p> find | cpio -H newc -o | gzip -9 > ../initramfs-eeepc-nounionfs.img</p></li>
 <li>Aufräumen:
 cd ..
 rm –rf tmp</li>
@@ -220,13 +216,13 @@ umount /mnt-system
 umount /mnt-user</li>
 <li>30 Sekunden waren bis alle Daten auf die Disk geschrieben wurden und dann mit Strg+Alt+Entf neustarten</li>
 <li>Wieder in den Rescue-Modus booten</li>
-<li>In der ersten Zeile (Normal boot) &#8220;e&#8221; drücken</li>
-<li>Dann der dritten Zeile (initrd&#8230;.) &#8220;e&#8221; drücken</li>
-<li>&#8220;Enter&#8221; drücken</li>
-<li>&#8220;b&#8221; drücken</li>
+<li>In der ersten Zeile (Normal boot) &ldquo;e&rdquo; drücken</li>
+<li>Dann der dritten Zeile (initrd&hellip;.) &ldquo;e&rdquo; drücken</li>
+<li>&ldquo;Enter&rdquo; drücken</li>
+<li>&ldquo;b&rdquo; drücken</li>
 <li>Nun sollte erneut der Lizensvertrag angezeigt werden</li>
 <li>Neustarten und von der Partedmagic-CD bzw. USB-Stick booten</li>
-<li>Rechtsklick auf die Leiste rechts unten und &#8220;remove&#8221; anklicken</li>
+<li>Rechtsklick auf die Leiste rechts unten und &ldquo;remove&rdquo; anklicken</li>
 <li>Konsole öffnen und fsck /dev/hdc1 eingeben</li>
 <li>Wenn nur ein paar Fehler kommen, einfach reparieren, bei sehr vielen Fehlern sollte man das System neu aufsetzen</li>
 <li>Neustarten und „normal“ booten</li>
@@ -234,14 +230,14 @@ umount /mnt-user</li>
 <li>sudo nano /boot/grub/menu.lst</li>
 <li>initrd /boot/initramfs-eeepc.img (In Zeile 17) in folgendes ändern: initrd /boot/initramfs-eeepc-nounionfs.img</li>
 <li>Strg+o, dann Strg+x</li>
-<li>Neustarten &#8211;> Das wars, nun läßt sich auch Software entfernen</li>
+<li>Neustarten &mdash;> Das wars, nun läßt sich auch Software entfernen</li>
 </ol>
 
 
 <p>Enter drücken</p>
 
 <ol>
-<li>Strg+o drücken</li>
+<li> Strg+o drücken</li>
 </ol>
 
 
@@ -253,7 +249,7 @@ umount /mnt-user</li>
 
 <ol>
 <li>Zweite Partition (hdc2) löschen</li>
-<li>Erste Partition auswählen und auf &#8220;Resize&#8221; klicken und auf maximale Größe ziehen</li>
+<li>Erste Partition auswählen und auf &ldquo;Resize&rdquo; klicken und auf maximale Größe ziehen</li>
 <li>Apply drücken</li>
 <li>Fertig</li>
 </ol>
@@ -261,32 +257,34 @@ umount /mnt-user</li>
 
 <p>Quellen:</p>
 
-<p>http://wiki.eeeuser.com/howto:removeunionfs</p>
+<p><a href="http://wiki.eeeuser.com/howto:removeunionfs">http://wiki.eeeuser.com/howto:removeunionfs</a></p>
 </div>
 
 
-  <footer>
-    <p class="meta">
-      
+      <footer>
+        <p class="meta text-muted">
+          
   
 
-<span class="byline author vcard">Posted by <span class="fn">Felix Schulze</span></span>
+<span class="glyphicon glyphicon-user"></span> <span class="byline author vcard">Posted by <span class="fn">Felix Schulze</span></span>
 
-      
-
-
+          
 
 
 
 
 
 
-  
 
 
-<time datetime="2008-01-27T18:08:12+01:00" pubdate data-updated="true">Jan 27<span>th</span>, 2008</time>
-      
 
+
+
+
+<span class="glyphicon glyphicon-calendar"></span> <time datetime="2008-01-27T18:08:12+01:00" pubdate data-updated="true">Jan 27<span>th</span>, 2008</time>
+          
+
+<span class="glyphicon glyphicon-tags"></span>&nbsp;
 <span class="categories">
   
     <a class='category' href='/categories/linux/'>Linux</a>, <a class='category' href='/categories/tutorials/'>Tutorials</a>
@@ -294,34 +292,37 @@ umount /mnt-user</li>
 </span>
 
 
-    </p>
-    
-      <div class="sharing">
+        </p>
+        
+          <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://x2on.github.com/2008/01/27/eee-pc-unionfs-entfernen/" data-via="x2on" data-counturl="http://x2on.github.com/2008/01/27/eee-pc-unionfs-entfernen/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://x2on.github.com/2008/01/27/eee-pc-unionfs-entfernen/" data-via="x2on" data-counturl="http://x2on.github.com/2008/01/27/eee-pc-unionfs-entfernen/" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>
   
   
-    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
-  
 </div>
 
-    
-    <p class="meta">
-      
-        <a class="basic-alignment left" href="/2007/10/03/canon-ip3000-an-fritzbox-3170-im-netzwerk-unter-macos-x/" title="Previous Post: Canon iP3000 an FritzBox 3170 im Netzwerk unter MacOS X">&laquo; Canon iP3000 an FritzBox 3170 im Netzwerk unter MacOS X</a>
-      
-      
-        <a class="basic-alignment right" href="/2008/01/27/eee-pc-gprs-uber-bluetooth-pocketpc/" title="Next Post: Eee-PC: GPRS über Bluetooth-PocketPC">Eee-PC: GPRS über Bluetooth-PocketPC &raquo;</a>
-      
-    </p>
-  </footer>
-</article>
-<section>
-	<h1>Sponsor</h1>
-	<div><script type="text/javascript"><!--
+        
+        
+          <ul class="meta text-muted pager">
+            
+            <li class="previous"><a href="/2007/10/03/canon-ip3000-an-fritzbox-3170-im-netzwerk-unter-macos-x/" title="Previous Post: Canon iP3000 an FritzBox 3170 im Netzwerk unter MacOS X">&laquo; Canon iP3000 an FritzBox 3170 im Netzwerk unter MacOS X</a></li>
+            
+            
+            <li class="next"><a href="/2008/01/27/eee-pc-gprs-uber-bluetooth-pocketpc/" title="Next Post: Eee-PC: GPRS über Bluetooth-PocketPC">Eee-PC: GPRS über Bluetooth-PocketPC &raquo;</a></li>
+            
+          </ul>
+        
+      </footer>
+    </article>
+    <section class="panel panel-default">
+   <div class="panel-heading">
+    <h3 class="panel-title">Sponsor</h3>
+  </div>
+  <div id="sponsor-footer">
+<script type="text/javascript"><!--
 google_ad_client = "ca-pub-5660005999283733";
 /* 728x90 - Comments */
 google_ad_slot = "3318118605";
@@ -331,77 +332,94 @@ google_ad_height = 90;
 </script>
 <script type="text/javascript"
 src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-</script></div>
+</script>
+  </div>
 </section>
-
-  <section>
-    <h1>Comments</h1>
-    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    
+      <section>
+        <h1>Comments</h1>
+        <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </div>
-  </section>
+      </section>
+    
+  </div>
 
-</div>
-
-<aside class="sidebar">
   
-    <section>
-  <h1>Recent Posts</h1>
-  <ul id="recent_posts">
+  <aside class="sidebar col-md-3">
     
-      <li class="post">
-        <a href="/2013/04/25/tutorial-building-supertux-0-3-3-on-mac-os-x-mountain-lion/">Tutorial: Building SuperTux 0.3.3 on Mac OS X Mountain Lion</a>
-      </li>
+      <section class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Recent Posts</h3>
+  </div>
+  
+  <div id="recent_posts" class="list-group">
     
-      <li class="post">
-        <a href="/2013/01/24/why-you-should-use-continuous-integration-for-ios-development/">Why you should use Continuous Integration for iOS Development?</a>
-      </li>
+    <a class="list-group-item " href="/2013/04/25/tutorial-building-supertux-0-3-3-on-mac-os-x-mountain-lion/">Tutorial: Building SuperTux 0.3.3 on Mac OS X Mountain Lion</a>
     
-      <li class="post">
-        <a href="/2012/07/11/weak-delegate-and-ocmock/">Weak delegate and OCMock</a>
-      </li>
+    <a class="list-group-item " href="/2013/01/24/why-you-should-use-continuous-integration-for-ios-development/">Why You Should Use Continuous Integration for iOS Development?</a>
     
-      <li class="post">
-        <a href="/2012/06/01/simple-share-for-ios-a-drop-in-library-for-social-share/">simple-share for iOS - A drop-in library for social share</a>
-      </li>
+    <a class="list-group-item " href="/2012/07/11/weak-delegate-and-ocmock/">Weak Delegate and OCMock</a>
     
-      <li class="post">
-        <a href="/2012/02/21/ios-libaries-cyrius-sasl-libetpan-expat-sksmtpmessage/">iOS-Libaries: cyrius-sasl, libetpan, expat, sksmtpmessage</a>
-      </li>
+    <a class="list-group-item " href="/2012/06/01/simple-share-for-ios-a-drop-in-library-for-social-share/">Simple-share for iOS - a Drop-in Library for Social Share</a>
     
-  </ul>
+    <a class="list-group-item " href="/2012/02/21/ios-libaries-cyrius-sasl-libetpan-expat-sksmtpmessage/">iOS-Libaries: Cyrius-sasl, Libetpan, Expat, Sksmtpmessage</a>
+    
+  </div>
 </section>
 
-<section>
-  <h1>Latest Tweets</h1>
-  <ul id="tweets">
-    <li class="loading">Status updating...</li>
-  </ul>
+<section class="panel panel-default clearfix">
+  <div class="panel-heading">
+      <h3 class="panel-title">GitHub Repos</h3>
+  </div>
+  <div class="list-group" id="gh_repos">
+    <p class="loading">Status updating...</p>
+  </div>
+  
+    <div class="gh-profile-link pull-right text-muted">
+      <a href="https://github.com/x2on">@x2on</a> on GitHub
+    </div>
+  
   <script type="text/javascript">
-    $.domReady(function(){
-      getTwitterFeed("x2on", 0, false);
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'x2on',
+            count: 4,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
     });
   </script>
-  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
-  
-    <a href="http://twitter.com/x2on" class="twitter-follow-button" data-show-count="false">Follow @x2on</a>
-  
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
 </section>
 
 
 
-<section class="googleplus googleplus-hidden">
-  <h1>
-    <a href="https://plus.google.com/100175380008710629075?rel=author">
-      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
-      Google+
-    </a>
-  </h1>
+
+<section class="googleplus googleplus-hidden panel panel-default">
+  <div class="panel-body">
+    <h1>
+      <a href="https://plus.google.com/100175380008710629075?rel=author">
+        <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
+        Google+
+      </a>
+    </h1>
+  </div>
 </section>
 
 
-<section>
-  <h1>Sponsor</h1>
-  <div id="sponsor"><script type="text/javascript"><!--
+<section class="panel panel-default">
+   <div class="panel-heading">
+    <h3 class="panel-title">Sponsor</h3>
+  </div>
+  <div id="sponsor-sidebar"><script type="text/javascript"><!--
 google_ad_client = "ca-pub-5660005999283733";
 /* 160x600 - Sidebar */
 google_ad_slot = "9364652207";
@@ -413,46 +431,64 @@ google_ad_height = 600;
 src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 </script></div>
 </section>
+    
+  </aside>
   
-</aside>
+</div>
 
-
+        </div>
+      </div>
     </div>
+    <footer role="contentinfo"><div class="container">
+    <section class="panel panel-default">
+   <div class="panel-heading">
+    <h3 class="panel-title">Sponsor</h3>
   </div>
-  <footer role="contentinfo"><p>
-  Copyright &copy; 2014 - Felix Schulze -
-  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+  <div id="sponsor-footer">
+  <script type="text/javascript"><!--
+google_ad_client = "ca-pub-5660005999283733";
+/* 728 x 90 - Header */
+google_ad_slot = "1841385402";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+  </div>
+</section>
+
+    <p class="text-muted credits">
+  Copyright &copy; 2014 - Felix Schulze<br>
+  <small>
+      <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>.
+  </small>
 </p>
 
+</div>
 </footer>
-  
+    <script src="/assets/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="/javascripts/modernizr-2.0.js"></script>
+
 
 <script type="text/javascript">
       var disqus_shortname = 'x2on';
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://x2on.de/2008/01/27/eee-pc-unionfs-entfernen/';
-        var disqus_url = 'http://x2on.de/2008/01/27/eee-pc-unionfs-entfernen/';
+        var disqus_identifier = 'http://x2on.github.com/2008/01/27/eee-pc-unionfs-entfernen/';
+        var disqus_url = 'http://x2on.github.com/2008/01/27/eee-pc-unionfs-entfernen/';
         var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      dsq.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + disqus_shortname + '.disqus.com/' + disqus_script;
       (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     }());
 </script>
 
 
-
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) {return;}
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
 
 
 
@@ -471,7 +507,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
       var twitterWidgets = document.createElement('script');
       twitterWidgets.type = 'text/javascript';
       twitterWidgets.async = true;
-      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
       document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
     })();
   </script>
@@ -480,5 +516,5 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 
 
 
-</body>
+  </body>
 </html>

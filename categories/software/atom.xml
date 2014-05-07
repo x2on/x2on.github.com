@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Software | x2on.de]]></title>
   <link href="http://x2on.github.com/categories/software/atom.xml" rel="self"/>
   <link href="http://x2on.github.com/"/>
-  <updated>2014-05-06T08:04:56+02:00</updated>
+  <updated>2014-05-07T15:55:09+02:00</updated>
   <id>http://x2on.github.com/</id>
   <author>
     <name><![CDATA[Felix Schulze]]></name>
@@ -119,7 +119,7 @@ If all works SuperTux.app should be in the dist folder.</p>
 <!--more-->
 
 
-<p>Download (Intel - 69,3MB): <a href="http://www.x2on.de/wp-content/uploads/2012/01/SuperTux_0.3.3_Lion.app.zip">SuperTux 0.3.3.zip</a></p>
+<p>Download (Intel &ndash; 69,3MB): <a href="http://www.x2on.de/wp-content/uploads/2012/01/SuperTux_0.3.3_Lion.app.zip">SuperTux 0.3.3.zip</a></p>
 ]]></content>
   </entry>
   
@@ -133,7 +133,7 @@ If all works SuperTux.app should be in the dist folder.</p>
 <!-- more -->
 
 
-<p>I also build a version for download if you don't want to build it: <a href="http://www.x2on.de/2012/01/29/supertux-0-3-3-for-mac-os-x-lion-download/">SuperTux 0.3.3 for Mac OS X Lion</a></p>
+<p>I also build a version for download if you don&rsquo;t want to build it: <a href="http://www.x2on.de/2012/01/29/supertux-0-3-3-for-mac-os-x-lion-download/">SuperTux 0.3.3 for Mac OS X Lion</a></p>
 
 <h4>Prerequisites</h4>
 

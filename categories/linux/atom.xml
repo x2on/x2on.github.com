@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Linux | x2on.de]]></title>
   <link href="http://x2on.github.com/categories/linux/atom.xml" rel="self"/>
   <link href="http://x2on.github.com/"/>
-  <updated>2014-05-06T08:04:56+02:00</updated>
+  <updated>2014-05-07T15:55:09+02:00</updated>
   <id>http://x2on.github.com/</id>
   <author>
     <name><![CDATA[Felix Schulze]]></name>
@@ -20,7 +20,7 @@
     <id>http://x2on.github.com/2011/04/23/tutorial-redmine-with-git-and-gitosis-on-ubuntu-11-04</id>
     <content type="html"><![CDATA[<p>This is a tutorial for installing redmine on Ubuntu 11.04 with Git integration, managed by Gitosis and a redmine gitosis plugin.</p>
 
-<p>It’s based on my last tutorial about installing redmine ob Ubuntu 8.04: http://www.x2on.de/2010/10/30/tutorial-redmine-with-svn-git-and-gitosis-on-ubuntu-8-04/</p>
+<p>It’s based on my last tutorial about installing redmine ob Ubuntu 8.04: <a href="http://www.x2on.de/2010/10/30/tutorial-redmine-with-svn-git-and-gitosis-on-ubuntu-8-04/">http://www.x2on.de/2010/10/30/tutorial-redmine-with-svn-git-and-gitosis-on-ubuntu-8-04/</a></p>
 
 <!--more-->
 
@@ -96,7 +96,7 @@ Test redmine
 <code>bash
 ruby script/server webrick -e production
 </code>
-Now you can check http://my_domain.com:3000 if everything works</p>
+Now you can check <a href="http://my_domain.com:3000">http://my_domain.com:3000</a> if everything works</p>
 
 <ol>
 <li><p>Apache Integration
@@ -127,14 +127,11 @@ nano /etc/apache2/sites-available/my_domain
 <p> PassengerDefaultUser www-data
  RailsEnv production
  RailsBaseURI /redmine
- SetEnv X_DEBIAN_SITEID "default"
- <Directory /var/www/redmine/public></p>
-
-<pre><code> Order allow,deny
- Allow from all
-</code></pre>
-
-<p> </Directory>
+ SetEnv X_DEBIAN_SITEID &ldquo;default&rdquo;
+ <Directory /var/www/redmine/public>
+     Order allow,deny
+     Allow from all
+ </Directory>
 </VirtualHost>
 <code>
 </code>bash
@@ -201,16 +198,16 @@ Change xdissent.com to my_domain.</li>
 <p>Have fun!</p>
 
 <p>Source:
-http://brantinteractive.com/2007/02/16/getting-the-mysql-gem-installed-on-ubuntu/
-http://www.redmine.org/wiki/1/RedmineInstall
-http://wiki.ousli.org/index.php/Redmine_in_Ubuntu_Jaunty_9.04
-http://www.redmine.org/wiki/1/HowTo_Install_Redmine_in_Ubuntu
-http://www.redmine.org/wiki/redmine/Repositories_access_control_with_apache_mod_dav_svn_and_mod_perl
-http://xdissent.com/2010/05/04/github-clone-with-redmine/
-http://dev.remarkablewit.com/redmine/projects/dev-server/wiki
-https://github.com/xdissent/redmine_gitosis
-http://www.redmine.org/issues/2525
-http://wiki.ubuntuusers.de/acl</p>
+<a href="http://brantinteractive.com/2007/02/16/getting-the-mysql-gem-installed-on-ubuntu/">http://brantinteractive.com/2007/02/16/getting-the-mysql-gem-installed-on-ubuntu/</a>
+<a href="http://www.redmine.org/wiki/1/RedmineInstall">http://www.redmine.org/wiki/1/RedmineInstall</a>
+<a href="http://wiki.ousli.org/index.php/Redmine_in_Ubuntu_Jaunty_9.04">http://wiki.ousli.org/index.php/Redmine_in_Ubuntu_Jaunty_9.04</a>
+<a href="http://www.redmine.org/wiki/1/HowTo_Install_Redmine_in_Ubuntu">http://www.redmine.org/wiki/1/HowTo_Install_Redmine_in_Ubuntu</a>
+<a href="http://www.redmine.org/wiki/redmine/Repositories_access_control_with_apache_mod_dav_svn_and_mod_perl">http://www.redmine.org/wiki/redmine/Repositories_access_control_with_apache_mod_dav_svn_and_mod_perl</a>
+<a href="http://xdissent.com/2010/05/04/github-clone-with-redmine/">http://xdissent.com/2010/05/04/github-clone-with-redmine/</a>
+<a href="http://dev.remarkablewit.com/redmine/projects/dev-server/wiki">http://dev.remarkablewit.com/redmine/projects/dev-server/wiki</a>
+<a href="https://github.com/xdissent/redmine_gitosis">https://github.com/xdissent/redmine_gitosis</a>
+<a href="http://www.redmine.org/issues/2525">http://www.redmine.org/issues/2525</a>
+<a href="http://wiki.ubuntuusers.de/acl">http://wiki.ubuntuusers.de/acl</a></p>
 ]]></content>
   </entry>
   
@@ -224,7 +221,7 @@ http://wiki.ubuntuusers.de/acl</p>
 <!--more-->
 
 
-<p>UPDATE #1 - 2011-04-23: New Tutorial for Redmine with Git and Gitosis on Ubuntu 11.04:<a href="http://www.x2on.de/2011/04/23/tutorial-redmine-with-git-and-gitosis-on-ubuntu-11-04/">http://www.x2on.de/2011/04/23/tutorial-redmine-with-git-and-gitosis-on-ubuntu-11-04/</a></p>
+<p>UPDATE #1 &ndash; 2011-04-23: New Tutorial for Redmine with Git and Gitosis on Ubuntu 11.04:<a href="http://www.x2on.de/2011/04/23/tutorial-redmine-with-git-and-gitosis-on-ubuntu-11-04/">http://www.x2on.de/2011/04/23/tutorial-redmine-with-git-and-gitosis-on-ubuntu-11-04/</a></p>
 
 <h2>1. Install redmine</h2>
 
@@ -245,8 +242,8 @@ Create database</p>
 mysql -u root -p</p>
 
 <p>$> create database redmine character set utf8;
-$> create user 'redmine'@'localhost' identified by 'my_password';
-$> grant all privileges on redmine.* to 'redmine'@'localhost';
+$> create user &lsquo;redmine&rsquo;@&lsquo;localhost&rsquo; identified by &lsquo;my_password&rsquo;;
+$> grant all privileges on redmine.* to &lsquo;redmine&rsquo;@&lsquo;localhost&rsquo;;
 ```</p>
 
 <p>Configure Database Settings</p>
@@ -304,7 +301,7 @@ RAILS_ENV=production rake redmine:load_default_data
 ruby script/server webrick -e production
 </code></p>
 
-<p>Now you can check http://my_domain.com:3000 if everything works</p>
+<p>Now you can check <a href="http://my_domain.com:3000">http://my_domain.com:3000</a> if everything works</p>
 
 <h2>2. Apache Integration</h2>
 
@@ -338,7 +335,7 @@ ServerName my_domain.com</p>
 
 <p>DocumentRoot /var/www/redmine/public</p>
 
-<p>ServerAdmin user@example.com
+<p>ServerAdmin <a href="&#109;&#x61;&#x69;&#108;&#116;&#111;&#58;&#x75;&#x73;&#101;&#114;&#x40;&#101;&#120;&#97;&#x6d;&#112;&#108;&#101;&#x2e;&#x63;&#111;&#109;">&#117;&#115;&#x65;&#114;&#64;&#101;&#x78;&#97;&#109;&#112;&#x6c;&#101;&#46;&#x63;&#x6f;&#109;</a>
 LogLevel warn
 ErrorLog /var/log/apache2/redmine_error
 CustomLog /var/log/apache2/redmine_access combined</p>
@@ -426,7 +423,7 @@ chown -R www-data:www-data /var/repos
 chmod 0750 /var/repos/svn
 </code></p>
 
-<p>Go to Administration - Settings - Repositories on your redmine site and enable "WS for repository management". Then generate an API key.</p>
+<p>Go to Administration &ndash; Settings &ndash; Repositories on your redmine site and enable &ldquo;WS for repository management&rdquo;. Then generate an API key.</p>
 
 <p>Test the automatic generation:</p>
 
@@ -576,11 +573,11 @@ sudo make install
     <updated>2010-01-14T22:19:13+01:00</updated>
     <id>http://x2on.github.com/2010/01/14/11-surf-stick-zte-mf110-unter-ubuntu-9-10</id>
     <content type="html"><![CDATA[<p>Um den 1&amp;1 Surf-Stick (ZTE MF110) auch unter Ubuntu 9.10 benutzen zu können, muss der USB-Modus des Sticks umgeschaltet werden. Dieser läuft standardmäßig als Filesystem und nicht als UMTS-Stick.
-Ein Tool namens "USB_Modeswitch" schafft hierbei Abhilfe.</p>
+Ein Tool namens &ldquo;USB_Modeswitch&rdquo; schafft hierbei Abhilfe.</p>
 
-<p><strong>UPDATE 01.02.2010 - 13:20:</strong> Durch eine neue Version von usb_modeswitch haben sich die Befehle leicht verändert. Die Anleitung habe ich angepasst. (Sollte vorher bereits eine ältere Version installiert worden sein, so muss diese mit "sudo make uninstall" entfernt werden)</p>
+<p><strong>UPDATE 01.02.2010 &ndash; 13:20:</strong> Durch eine neue Version von usb_modeswitch haben sich die Befehle leicht verändert. Die Anleitung habe ich angepasst. (Sollte vorher bereits eine ältere Version installiert worden sein, so muss diese mit &ldquo;sudo make uninstall&rdquo; entfernt werden)</p>
 
-<p><strong>UPDATE 26.04.2011 - 21:32:</strong> Update to modeswitch 1.1.7.</p>
+<p><strong>UPDATE 26.04.2011 &ndash; 21:32:</strong> Update to modeswitch 1.1.7.</p>
 
 <p><strong>Anleitung:</strong></p>
 
@@ -603,7 +600,7 @@ sudo make install
     <link href="http://x2on.github.com/2009/11/30/eee-pc-1005ha-ubuntu-karmic-sondertasten-perfomance/"/>
     <updated>2009-11-30T22:54:16+01:00</updated>
     <id>http://x2on.github.com/2009/11/30/eee-pc-1005ha-ubuntu-karmic-sondertasten-perfomance</id>
-    <content type="html"><![CDATA[<p>Ubuntu 9.10 Karmic läuft auf dem Eee-PC 1005HA "out of the box" ziemlich rund. Um die letzten Feinheiten zum laufen zu bekommen (Sondertasten, Performance/Laufzeit-Tunning) gibt es Tool eee-control.</p>
+    <content type="html"><![CDATA[<p>Ubuntu 9.10 Karmic läuft auf dem Eee-PC 1005HA &ldquo;out of the box&rdquo; ziemlich rund. Um die letzten Feinheiten zum laufen zu bekommen (Sondertasten, Performance/Laufzeit-Tunning) gibt es Tool eee-control.</p>
 
 <blockquote><p>Abhilfe schafft hier ein neues Freeware-Tool namens <a href="http://greg.geekmind.org/eee-control/">Eee-Control</a>. Über die Task-Leiste anwählbar, ermöglicht es das Untertakten der CPU zur Akku-Schonung ebenso wie die Belegung der Hotkeys, eine Änderung der Displayhelligkeit sowie die (De-)aktivierung von Bluetooth, WLAN, Webcam, Touchpad und Kartenlesegerät. (Quelle: <a href="http://www.einfach-eee.de/eee-pc-software/eee-control-eee-manager-fuer-linux/">http://www.einfach-eee.de/eee-pc-software/eee-control-eee-manager-fuer-linux/</a>)</p></blockquote>
 

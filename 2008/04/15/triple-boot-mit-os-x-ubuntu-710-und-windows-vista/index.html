@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
 <!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
@@ -7,9 +6,8 @@
   <meta charset="utf-8">
   <title>Triple Boot mit OS X, Ubuntu 7.10 und Windows Vista - x2on.de</title>
   <meta name="author" content="Felix Schulze">
-
+  <meta name="description" content="by Felix Schulze - a mobile evangelist. Tutorials for iOS, Android, Mac, Linux, iPhone and more...">
   
-  <meta name="description" content="Dieses Tutorial richtet sich an alle die auf ihrem MacBook Pro neben OS X 10.5 noch Windows Vista SP1 und Ubuntu 7.10 Linux installieren wollen. (sog &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,17 +16,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://x2on.github.com/2008/04/15/triple-boot-mit-os-x-ubuntu-710-und-windows-vista/">
-  <link href="/favicon.png" rel="icon">
-  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-  <script src="/javascripts/modernizr-2.0.js"></script>
-  <script src="/javascripts/ender.js"></script>
-  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link rel="canonical" href="http://x2on.github.com/2008/04/15/triple-boot-mit-os-x-ubuntu-710-und-windows-vista">
+  <link href="/favicon.png" type="image/png" rel="icon">
   <link href="/atom.xml" rel="alternate" title="x2on.de" type="application/atom+xml">
-  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
-<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
 
+  <link href="/assets/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="/assets/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css">
+<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+
+
+  <script src="/javascripts/libs/jquery/jquery-2.0.3.min.js"></script>
   
   <script type="text/javascript">
     var _gaq = _gaq || [];
@@ -46,60 +43,64 @@
 
 </head>
 
-<body   >
-  <header role="banner"><hgroup>
-<div id="logo">
-  <h1><a href="/">x2on.de</a></h1>
-  
-    <h2>by Felix Schulze - a mobile evangelist. Tutorials for iOS, Android, Mac, Linux, iPhone and more...</h2>
-  
-</div>
-<div id="banner">
-<script type="text/javascript"><!--
-google_ad_client = "ca-pub-5660005999283733";
-/* 728 x 90 - Header */
-google_ad_slot = "1841385402";
-google_ad_width = 728;
-google_ad_height = 90;
-//-->
-</script>
-<script type="text/javascript"
-src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-</script>
-</div>
-</hgroup>
+  <body   >
+    <div id="wrap">
+      <header role="banner">
+        <nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">x2on.de</a>
+        </div>
 
-</header>
-  <nav role="navigation"><ul class="subscription" data-subscription="rss">
-  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
-  
-</ul>
-  
-<form action="http://google.com/search" method="get">
-  <fieldset role="search">
-    <input type="hidden" name="q" value="site:x2on.github.com" />
-    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
-  </fieldset>
-</form>
-  
-<ul class="main-navigation">
-  <li><a href="/">Blog</a></li>
-  <li><a href="/blog/archives">Archives</a></li>
-  <li><a href="/contact">Contact / Imprint</a></li>
-</ul>
-
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class="active">
+                    <a href="/">Blog</a>
+                </li>
+                <li >
+                    <a href="/blog/archives">Archives</a>
+                </li>
+                <li >
+                    <a href="/contact">Contact / Imprint</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a class="subscribe-rss" href="/atom.xml" title="subscribe via RSS">
+                        <span class="visible-xs">RSS</span>
+                        <img class="hidden-xs" src="/images/rss.png" alt="RSS">
+                    </a>
+                </li>
+                
+            </ul>
+            
+                <form class="search navbar-form navbar-right" action="http://google.com/search" method="GET">
+                    <input type="hidden" name="q" value="site:x2on.github.com">
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="q" placeholder="Search">
+                    </div>
+                </form>
+            
+        </div>
+    </div>
 </nav>
-  <div id="main">
-    <div id="content">
-      <div>
-<article class="hentry" role="article">
-  
-  <header>
+
+
+      </header>
+      <div id="main" class="container">
+        <div id="content">
+          <div class="row">
+  <div class="page-content col-md-9">
+    <article class="hentry" role="article">
+      
+  <header class="page-header">
     
-      <h1 class="entry-title">Triple Boot Mit OS X, Ubuntu 7.10 Und Windows Vista</h1>
-    
-    
-      <p class="meta">
+      <p class="meta text-muted text-uppercase">
         
 
 
@@ -109,19 +110,27 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 
 
 
-  
 
 
-<time datetime="2008-04-15T11:39:23+02:00" pubdate data-updated="true">Apr 15<span>th</span>, 2008</time>
+
+
+<span class="glyphicon glyphicon-calendar"></span> <time datetime="2008-04-15T11:39:23+02:00" pubdate data-updated="true">Apr 15<span>th</span>, 2008</time>
         
-         | <a href="#disqus_thread">Comments</a>
+           | <a href="#disqus_thread"
+             data-disqus-identifier="http://x2on.github.com">Comments</a>
         
       </p>
+    
+    
+    <h1 class="entry-title">
+        Triple Boot Mit OS X, Ubuntu 7.10 Und Windows Vista
+        
+    </h1>
     
   </header>
 
 
-<div class="entry-content"><p>Dieses Tutorial richtet sich an alle die auf ihrem MacBook Pro neben OS X 10.5 noch Windows Vista SP1 und Ubuntu 7.10 Linux installieren wollen. (sog. Triple Boot)</p>
+<div class="entry-content clearfix"><p>Dieses Tutorial richtet sich an alle die auf ihrem MacBook Pro neben OS X 10.5 noch Windows Vista SP1 und Ubuntu 7.10 Linux installieren wollen. (sog. Triple Boot)</p>
 
 <!--more-->
 
@@ -142,117 +151,111 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 <p><strong>2. MacOS X Partition verkleinern:</strong></p>
 
 <ol>
-<li>Festplatten-Dienstprogramm starten</li>
-<li>Festplatte auswählen</li>
-<li>Auf Partitionieren klicken</li>
-<li>Mit &#8220;+&#8221; zwei neue Partitionen anlegen und bei Format &#8220;Mac OS X Extended (Journaled)&#8221; auswählen</li>
-<li>Auf Anwenden klicken</li>
-<li>Nun die letzte Partition als &#8220;Windows NT Dateisystem&#8221; formatieren und als Namen &#8220;Windows&#8221; eingeben</li>
+<li> Festplatten-Dienstprogramm starten</li>
+<li> Festplatte auswählen</li>
+<li> Auf Partitionieren klicken</li>
+<li> Mit &ldquo;+&rdquo; zwei neue Partitionen anlegen und bei Format &ldquo;Mac OS X Extended (Journaled)&rdquo; auswählen</li>
+<li> Auf Anwenden klicken</li>
+<li> Nun die letzte Partition als &ldquo;Windows NT Dateisystem&rdquo; formatieren und als Namen &ldquo;Windows&rdquo; eingeben</li>
 </ol>
 
 
 <p><strong>4. rEFIT installieren:</strong></p>
 
 <ol>
-<li>rEFIT herunterladen: <a href="http://refit.sourceforge.net/">http://refit.sourceforge.net/</a></li>
-<li>Bei der Installation auf Anpassen klicken und die Linux-Treiber mit installieren</li>
+<li> rEFIT herunterladen: <a href="http://refit.sourceforge.net/">http://refit.sourceforge.net/</a></li>
+<li> Bei der Installation auf Anpassen klicken und die Linux-Treiber mit installieren</li>
 </ol>
 
 
 <p><strong>5. Ubuntu installieren:</strong></p>
 
 <ol>
-<li>Von der Ubuntu-CD booten</li>
-<li>F2 drücken für die Sprachauswahl</li>
-<li>Nach kurzer Zeit startet die Ubuntu-Live Version</li>
-<li>Auf dem Desktop auf installieren klicken</li>
-<li>Setup mit gewünschten Einstellung bis zum Punkt &#8220;Partitionieren&#8221; durchlaufen</li>
-<li>Bei &#8220;Partitionieren&#8221; Manuell auswählen und auf Weiter klicken</li>
-<li>Hier die vorhin erstellte Paritition für Linux auswählen (bei mir /dev/sda3)</li>
-<li>auf Edit Parition klicken</li>
-<li>Ext 3 auswählen</li>
-<li>/ auswählen</li>
-<li>Auf Ok klicken</li>
-<li>Einen Hacken bei &#8220;Format&#8221; machen</li>
-<li>Weiter bis zur Übersicht</li>
-<li>Auf Advanced klicken</li>
-<li>(hd0) löschen und auf OK Klicken</li>
-<li>nochmal auf Advanced klicken</li>
-<li>in /dev/sda3 (siehe Punkt 7) ändern</li>
-<li>Auf &#8220;Installieren&#8221; klicken</li>
-<li>Nach der Installation neustarten</li>
+<li> Von der Ubuntu-CD booten</li>
+<li> F2 drücken für die Sprachauswahl</li>
+<li> Nach kurzer Zeit startet die Ubuntu-Live Version</li>
+<li> Auf dem Desktop auf installieren klicken</li>
+<li> Setup mit gewünschten Einstellung bis zum Punkt &ldquo;Partitionieren&rdquo; durchlaufen</li>
+<li> Bei &ldquo;Partitionieren&rdquo; Manuell auswählen und auf Weiter klicken</li>
+<li> Hier die vorhin erstellte Paritition für Linux auswählen (bei mir /dev/sda3)</li>
+<li> auf Edit Parition klicken</li>
+<li> Ext 3 auswählen</li>
+<li>. / auswählen</li>
+<li>. Auf Ok klicken</li>
+<li>. Einen Hacken bei &ldquo;Format&rdquo; machen</li>
+<li>. Weiter bis zur Übersicht</li>
+<li>. Auf Advanced klicken</li>
+<li>. (hd0) löschen und auf OK Klicken</li>
+<li>. nochmal auf Advanced klicken</li>
+<li>. in /dev/sda3 (siehe Punkt 7) ändern</li>
+<li>. Auf &ldquo;Installieren&rdquo; klicken</li>
+<li>. Nach der Installation neustarten</li>
 </ol>
 
 
 <p><strong>7. Ubuntu Boot einrichten:</strong></p>
 
 <ol>
-<li>Von der Ubuntu-Live CD booten</li>
-<li>Auf System &#8211;> Administration &#8211;> GNOME Partition Editior klicken</li>
-<li>Rechtsklick auf /dev/sd3</li>
-<li>Haken bei boot machen</li>
-<li>Kann sein das der GNOME Partition Editor dabei abstürzt, sollte trotzdem funktionieren</li>
-<li>Falls es danach beim ersten booten hängen bleibt einfach nochmal neustarten</li>
+<li> Von der Ubuntu-Live CD booten</li>
+<li> Auf System &mdash;> Administration &mdash;> GNOME Partition Editior klicken</li>
+<li> Rechtsklick auf /dev/sd3</li>
+<li> Haken bei boot machen</li>
+<li> Kann sein das der GNOME Partition Editor dabei abstürzt, sollte trotzdem funktionieren</li>
+<li> Falls es danach beim ersten booten hängen bleibt einfach nochmal neustarten</li>
 </ol>
 
 
 <p><strong>5. Windows installieren:</strong></p>
 
 <ol>
-<li>Vista-DVD einlegen und beim booten auswählen</li>
-<li>Bei der Installation die letzte Partition (Windows) formatieren und auswählen</li>
-<li>Nach der Installation das SP1 installieren</li>
-<li>BootCamp Treiber in Windows installieren</li>
-<li>Laufwerk C umbennen in Windows (oder beliebigen Namen)</li>
+<li> Vista-DVD einlegen und beim booten auswählen</li>
+<li> Bei der Installation die letzte Partition (Windows) formatieren und auswählen</li>
+<li> Nach der Installation das SP1 installieren</li>
+<li> BootCamp Treiber in Windows installieren</li>
+<li> Laufwerk C umbennen in Windows (oder beliebigen Namen)</li>
 </ol>
 
 
 <p><strong>6. Ubuntu einrichten:</strong></p>
 
-<p>Beim MacBook Pro muss nun der W-LAN Treiber installiert werden, da dieser nicht standardmäßig funktioniert. Für die Grafik sollte der Restricted Treiber &#8220;nvidia-glx&#8221; aktiviert werden.</p>
+<p>Beim MacBook Pro muss nun der W-LAN Treiber installiert werden, da dieser nicht standardmäßig funktioniert. Für die Grafik sollte der Restricted Treiber &ldquo;nvidia-glx&rdquo; aktiviert werden.</p>
 
 <ol>
-<li>Ubuntu updaten:</li>
-</ol>
+<li><p> Ubuntu updaten:</p>
 
-
-<pre><code>sudo apt-get update
-sudo apt-get upgrade
-</code></pre>
-
-<ol>
-<li>Ubuntu neustarten</li>
-<li>Wlan einrichten:</li>
-<li>Terminal öffnen und folgendes eingeben
+<p>sudo apt-get update
+sudo apt-get upgrade</p></li>
+<li><p> Ubuntu neustarten</p></li>
+<li> Wlan einrichten:</li>
+<li> Terminal öffnen und folgendes eingeben
 <code>bash
 wget http://www.x2on.de/dl/mbpinstaller
 chmod +x mbpinstaller
 ./mbpinstaller
 </code></li>
-<li>Optional: Touchpad bei Eingabe temporär ausschalten</li>
+<li><p> Optional: Touchpad bei Eingabe temporär ausschalten</p>
+
+<ol>
+<li>Öffne ein Terminal
+Öffne die xorg.conf mit</li>
 </ol>
 
 
-<pre><code>1. Öffne ein Terminal
-</code></pre>
-
-<p>Öffne die xorg.conf mit</p>
-
-<pre><code>`sudo gedit /etc/X11/xorg.conf`
-
-2. In der Synaptics Touchpad Sektion folgende Zeile hinzufügen
-3. `Option "SHMConfig" "on"`
-4. X mit (Ctrl+Alt+Backspace) neustarten
-5. System --&gt; Einstellungen --&gt; Sitzungen öffnen
-6. Einen Neuen Eintrag hinzufügen:
-7. `syndaemon -t -d`
-8. Nun sollte das Touchpad bei einer Tastatureingabe 2 Sekunden das Tippen deaktiviert sein.
-</code></pre>
+<p>  <code>sudo gedit /etc/X11/xorg.conf</code></p>
 
 <ol>
-<li>Optional: rEFIT Icon ändern:
-Die Icons beim Start des Mac&#8217;s können beliebig verändert werden.
-Diese sind im Ordner /efi/refit/icons abgelegt.</li>
+<li> In der Synaptics Touchpad Sektion folgende Zeile hinzufügen</li>
+<li> <code>Option "SHMConfig" "on"</code></li>
+<li> X mit (Ctrl+Alt+Backspace) neustarten</li>
+<li> System &mdash;> Einstellungen &mdash;> Sitzungen öffnen</li>
+<li> Einen Neuen Eintrag hinzufügen:</li>
+<li> <code>syndaemon -t -d</code></li>
+<li><p> Nun sollte das Touchpad bei einer Tastatureingabe 2 Sekunden das Tippen deaktiviert sein.</p></li>
+<li><p>Optional: rEFIT Icon ändern:
+Die Icons beim Start des Mac&rsquo;s können beliebig verändert werden.
+Diese sind im Ordner /efi/refit/icons abgelegt.</p></li>
+</ol>
+</li>
 </ol>
 
 
@@ -268,28 +271,30 @@ Diese sind im Ordner /efi/refit/icons abgelegt.</li>
 </div>
 
 
-  <footer>
-    <p class="meta">
-      
+      <footer>
+        <p class="meta text-muted">
+          
   
 
-<span class="byline author vcard">Posted by <span class="fn">Felix Schulze</span></span>
+<span class="glyphicon glyphicon-user"></span> <span class="byline author vcard">Posted by <span class="fn">Felix Schulze</span></span>
 
-      
-
-
+          
 
 
 
 
 
 
-  
 
 
-<time datetime="2008-04-15T11:39:23+02:00" pubdate data-updated="true">Apr 15<span>th</span>, 2008</time>
-      
 
+
+
+
+<span class="glyphicon glyphicon-calendar"></span> <time datetime="2008-04-15T11:39:23+02:00" pubdate data-updated="true">Apr 15<span>th</span>, 2008</time>
+          
+
+<span class="glyphicon glyphicon-tags"></span>&nbsp;
 <span class="categories">
   
     <a class='category' href='/categories/linux/'>Linux</a>, <a class='category' href='/categories/mac/'>Mac</a>, <a class='category' href='/categories/tutorials/'>Tutorials</a>, <a class='category' href='/categories/windows/'>Windows</a>
@@ -297,34 +302,37 @@ Diese sind im Ordner /efi/refit/icons abgelegt.</li>
 </span>
 
 
-    </p>
-    
-      <div class="sharing">
+        </p>
+        
+          <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://x2on.github.com/2008/04/15/triple-boot-mit-os-x-ubuntu-710-und-windows-vista/" data-via="x2on" data-counturl="http://x2on.github.com/2008/04/15/triple-boot-mit-os-x-ubuntu-710-und-windows-vista/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://x2on.github.com/2008/04/15/triple-boot-mit-os-x-ubuntu-710-und-windows-vista/" data-via="x2on" data-counturl="http://x2on.github.com/2008/04/15/triple-boot-mit-os-x-ubuntu-710-und-windows-vista/" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>
   
   
-    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
-  
 </div>
 
-    
-    <p class="meta">
-      
-        <a class="basic-alignment left" href="/2008/03/27/mac-os-x-adressbuch-in-thunderbird-integrieren/" title="Previous Post: Mac OS X Adressbuch in Thunderbird integrieren">&laquo; Mac OS X Adressbuch in Thunderbird integrieren</a>
-      
-      
-        <a class="basic-alignment right" href="/2008/04/15/xampp-apache2-mit-integriertem-tomcat6-unter-mac-os-x/" title="Next Post: XAMPP Apache2 mit integriertem Tomcat6 unter Mac OS X">XAMPP Apache2 mit integriertem Tomcat6 unter Mac OS X &raquo;</a>
-      
-    </p>
-  </footer>
-</article>
-<section>
-	<h1>Sponsor</h1>
-	<div><script type="text/javascript"><!--
+        
+        
+          <ul class="meta text-muted pager">
+            
+            <li class="previous"><a href="/2008/03/27/mac-os-x-adressbuch-in-thunderbird-integrieren/" title="Previous Post: Mac OS X Adressbuch in Thunderbird integrieren">&laquo; Mac OS X Adressbuch in Thunderbird integrieren</a></li>
+            
+            
+            <li class="next"><a href="/2008/04/15/xampp-apache2-mit-integriertem-tomcat6-unter-mac-os-x/" title="Next Post: XAMPP Apache2 mit integriertem Tomcat6 unter Mac OS X">XAMPP Apache2 mit integriertem Tomcat6 unter Mac OS X &raquo;</a></li>
+            
+          </ul>
+        
+      </footer>
+    </article>
+    <section class="panel panel-default">
+   <div class="panel-heading">
+    <h3 class="panel-title">Sponsor</h3>
+  </div>
+  <div id="sponsor-footer">
+<script type="text/javascript"><!--
 google_ad_client = "ca-pub-5660005999283733";
 /* 728x90 - Comments */
 google_ad_slot = "3318118605";
@@ -334,77 +342,94 @@ google_ad_height = 90;
 </script>
 <script type="text/javascript"
 src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-</script></div>
+</script>
+  </div>
 </section>
-
-  <section>
-    <h1>Comments</h1>
-    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    
+      <section>
+        <h1>Comments</h1>
+        <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </div>
-  </section>
+      </section>
+    
+  </div>
 
-</div>
-
-<aside class="sidebar">
   
-    <section>
-  <h1>Recent Posts</h1>
-  <ul id="recent_posts">
+  <aside class="sidebar col-md-3">
     
-      <li class="post">
-        <a href="/2013/04/25/tutorial-building-supertux-0-3-3-on-mac-os-x-mountain-lion/">Tutorial: Building SuperTux 0.3.3 on Mac OS X Mountain Lion</a>
-      </li>
+      <section class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Recent Posts</h3>
+  </div>
+  
+  <div id="recent_posts" class="list-group">
     
-      <li class="post">
-        <a href="/2013/01/24/why-you-should-use-continuous-integration-for-ios-development/">Why you should use Continuous Integration for iOS Development?</a>
-      </li>
+    <a class="list-group-item " href="/2013/04/25/tutorial-building-supertux-0-3-3-on-mac-os-x-mountain-lion/">Tutorial: Building SuperTux 0.3.3 on Mac OS X Mountain Lion</a>
     
-      <li class="post">
-        <a href="/2012/07/11/weak-delegate-and-ocmock/">Weak delegate and OCMock</a>
-      </li>
+    <a class="list-group-item " href="/2013/01/24/why-you-should-use-continuous-integration-for-ios-development/">Why You Should Use Continuous Integration for iOS Development?</a>
     
-      <li class="post">
-        <a href="/2012/06/01/simple-share-for-ios-a-drop-in-library-for-social-share/">simple-share for iOS - A drop-in library for social share</a>
-      </li>
+    <a class="list-group-item " href="/2012/07/11/weak-delegate-and-ocmock/">Weak Delegate and OCMock</a>
     
-      <li class="post">
-        <a href="/2012/02/21/ios-libaries-cyrius-sasl-libetpan-expat-sksmtpmessage/">iOS-Libaries: cyrius-sasl, libetpan, expat, sksmtpmessage</a>
-      </li>
+    <a class="list-group-item " href="/2012/06/01/simple-share-for-ios-a-drop-in-library-for-social-share/">Simple-share for iOS - a Drop-in Library for Social Share</a>
     
-  </ul>
+    <a class="list-group-item " href="/2012/02/21/ios-libaries-cyrius-sasl-libetpan-expat-sksmtpmessage/">iOS-Libaries: Cyrius-sasl, Libetpan, Expat, Sksmtpmessage</a>
+    
+  </div>
 </section>
 
-<section>
-  <h1>Latest Tweets</h1>
-  <ul id="tweets">
-    <li class="loading">Status updating...</li>
-  </ul>
+<section class="panel panel-default clearfix">
+  <div class="panel-heading">
+      <h3 class="panel-title">GitHub Repos</h3>
+  </div>
+  <div class="list-group" id="gh_repos">
+    <p class="loading">Status updating...</p>
+  </div>
+  
+    <div class="gh-profile-link pull-right text-muted">
+      <a href="https://github.com/x2on">@x2on</a> on GitHub
+    </div>
+  
   <script type="text/javascript">
-    $.domReady(function(){
-      getTwitterFeed("x2on", 0, false);
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'x2on',
+            count: 4,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
     });
   </script>
-  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
-  
-    <a href="http://twitter.com/x2on" class="twitter-follow-button" data-show-count="false">Follow @x2on</a>
-  
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
 </section>
 
 
 
-<section class="googleplus googleplus-hidden">
-  <h1>
-    <a href="https://plus.google.com/100175380008710629075?rel=author">
-      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
-      Google+
-    </a>
-  </h1>
+
+<section class="googleplus googleplus-hidden panel panel-default">
+  <div class="panel-body">
+    <h1>
+      <a href="https://plus.google.com/100175380008710629075?rel=author">
+        <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
+        Google+
+      </a>
+    </h1>
+  </div>
 </section>
 
 
-<section>
-  <h1>Sponsor</h1>
-  <div id="sponsor"><script type="text/javascript"><!--
+<section class="panel panel-default">
+   <div class="panel-heading">
+    <h3 class="panel-title">Sponsor</h3>
+  </div>
+  <div id="sponsor-sidebar"><script type="text/javascript"><!--
 google_ad_client = "ca-pub-5660005999283733";
 /* 160x600 - Sidebar */
 google_ad_slot = "9364652207";
@@ -416,46 +441,64 @@ google_ad_height = 600;
 src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 </script></div>
 </section>
+    
+  </aside>
   
-</aside>
+</div>
 
-
+        </div>
+      </div>
     </div>
+    <footer role="contentinfo"><div class="container">
+    <section class="panel panel-default">
+   <div class="panel-heading">
+    <h3 class="panel-title">Sponsor</h3>
   </div>
-  <footer role="contentinfo"><p>
-  Copyright &copy; 2014 - Felix Schulze -
-  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+  <div id="sponsor-footer">
+  <script type="text/javascript"><!--
+google_ad_client = "ca-pub-5660005999283733";
+/* 728 x 90 - Header */
+google_ad_slot = "1841385402";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+  </div>
+</section>
+
+    <p class="text-muted credits">
+  Copyright &copy; 2014 - Felix Schulze<br>
+  <small>
+      <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>.
+  </small>
 </p>
 
+</div>
 </footer>
-  
+    <script src="/assets/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="/javascripts/modernizr-2.0.js"></script>
+
 
 <script type="text/javascript">
       var disqus_shortname = 'x2on';
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://x2on.de/2008/04/15/triple-boot-mit-os-x-ubuntu-710-und-windows-vista/';
-        var disqus_url = 'http://x2on.de/2008/04/15/triple-boot-mit-os-x-ubuntu-710-und-windows-vista/';
+        var disqus_identifier = 'http://x2on.github.com/2008/04/15/triple-boot-mit-os-x-ubuntu-710-und-windows-vista/';
+        var disqus_url = 'http://x2on.github.com/2008/04/15/triple-boot-mit-os-x-ubuntu-710-und-windows-vista/';
         var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      dsq.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + disqus_shortname + '.disqus.com/' + disqus_script;
       (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     }());
 </script>
 
 
-
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) {return;}
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
 
 
 
@@ -474,7 +517,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
       var twitterWidgets = document.createElement('script');
       twitterWidgets.type = 'text/javascript';
       twitterWidgets.async = true;
-      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
       document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
     })();
   </script>
@@ -483,5 +526,5 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 
 
 
-</body>
+  </body>
 </html>

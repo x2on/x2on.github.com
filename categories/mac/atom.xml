@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Mac | x2on.de]]></title>
   <link href="http://x2on.github.com/categories/mac/atom.xml" rel="self"/>
   <link href="http://x2on.github.com/"/>
-  <updated>2014-05-06T08:04:56+02:00</updated>
+  <updated>2014-05-07T15:55:09+02:00</updated>
   <id>http://x2on.github.com/</id>
   <author>
     <name><![CDATA[Felix Schulze]]></name>
@@ -70,7 +70,7 @@ If all works SuperTux.app should be in the dist folder.</p>
 <!--more-->
 
 
-<p>Download (Intel - 69,3MB): <a href="http://www.x2on.de/wp-content/uploads/2012/01/SuperTux_0.3.3_Lion.app.zip">SuperTux 0.3.3.zip</a></p>
+<p>Download (Intel &ndash; 69,3MB): <a href="http://www.x2on.de/wp-content/uploads/2012/01/SuperTux_0.3.3_Lion.app.zip">SuperTux 0.3.3.zip</a></p>
 ]]></content>
   </entry>
   
@@ -84,7 +84,7 @@ If all works SuperTux.app should be in the dist folder.</p>
 <!-- more -->
 
 
-<p>I also build a version for download if you don't want to build it: <a href="http://www.x2on.de/2012/01/29/supertux-0-3-3-for-mac-os-x-lion-download/">SuperTux 0.3.3 for Mac OS X Lion</a></p>
+<p>I also build a version for download if you don&rsquo;t want to build it: <a href="http://www.x2on.de/2012/01/29/supertux-0-3-3-for-mac-os-x-lion-download/">SuperTux 0.3.3 for Mac OS X Lion</a></p>
 
 <h4>Prerequisites</h4>
 
@@ -140,7 +140,7 @@ If all works SuperTux.app should be in the dist folder.</p>
     <link href="http://x2on.github.com/2010/12/06/smime-on-ios-with-openssl-iphoneipad/"/>
     <updated>2010-12-06T09:52:25+01:00</updated>
     <id>http://x2on.github.com/2010/12/06/smime-on-ios-with-openssl-iphoneipad</id>
-    <content type="html"><![CDATA[<p>Whenever I receive an encrypted e-mail, I can't read it on my iPhone. So i write a little app that can do it ;)</p>
+    <content type="html"><![CDATA[<p>Whenever I receive an encrypted e-mail, I can&rsquo;t read it on my iPhone. So i write a little app that can do it ;)</p>
 
 <!--more-->
 
@@ -149,9 +149,9 @@ If all works SuperTux.app should be in the dist folder.</p>
 
 <p><strong>UPDATE #1 (09.12.2010):</strong> New screenshots from current development build</p>
 
-<p><strong>UPDATE #2 (01.02.2011):</strong> The app is finished - But the encryption export is not really easy - stay tuned...</p>
+<p><strong>UPDATE #2 (01.02.2011):</strong> The app is finished &ndash; But the encryption export is not really easy &ndash; stay tuned&hellip;</p>
 
-<p><strong>UPDATE #3 (16.02.2011):</strong> So finally i got my ERN-Number with SNAP-R from BIS. Registered the app in iTunes Connect and working on some bugfixes and improvements. Stay tuned...</p>
+<p><strong>UPDATE #3 (16.02.2011):</strong> So finally i got my ERN-Number with SNAP-R from BIS. Registered the app in iTunes Connect and working on some bugfixes and improvements. Stay tuned&hellip;</p>
 
 <p><strong>UPDATE #4 (01.04.2011):</strong> Looking for Beta-tester: <a href="http://www.x2on.de/2011/04/01/secure-mail-beta-test-smime-on-ios-with-openssl/">http://www.x2on.de/2011/04/01/secure-mail-beta-test-smime-on-ios-with-openssl/</a></p>
 

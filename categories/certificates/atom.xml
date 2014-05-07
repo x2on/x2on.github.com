@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Certificates | x2on.de]]></title>
   <link href="http://x2on.github.com/categories/certificates/atom.xml" rel="self"/>
   <link href="http://x2on.github.com/"/>
-  <updated>2014-05-06T08:04:56+02:00</updated>
+  <updated>2014-05-07T15:55:09+02:00</updated>
   <id>http://x2on.github.com/</id>
   <author>
     <name><![CDATA[Felix Schulze]]></name>
@@ -18,14 +18,14 @@
     <link href="http://x2on.github.com/2011/04/01/secure-mail-beta-test-smime-on-ios-with-openssl/"/>
     <updated>2011-04-01T15:57:24+02:00</updated>
     <id>http://x2on.github.com/2011/04/01/secure-mail-beta-test-smime-on-ios-with-openssl</id>
-    <content type="html"><![CDATA[<p>Im searching some people how want's to test Secure-Mail App.</p>
+    <content type="html"><![CDATA[<p>Im searching some people how want&rsquo;s to test Secure-Mail App.</p>
 
 <p>With Secure-Mail you can read S/MIME encrypted mails directly from Mail.app and send encrypted S/MIME mails with SMTP.</p>
 
 <!--more-->
 
 
-<p>Please send me an email with some details about you, and why you wan't test the beta.</p>
+<p>Please send me an email with some details about you, and why you wan&rsquo;t test the beta.</p>
 
 <p><strong>2011-04-13: UPDATE #1:</strong> The Beta-Test is running now. At this time no new beta-testers are invited. Thanks for your help.</p>
 
@@ -81,7 +81,7 @@ SDKVERSION=&quot;4.2&quot;														  #
 #																		  #
 ###########################################################################
 #																		  #
-# Don't change anything under this line!								  #
+# Don&#39;t change anything under this line!								  #
 #																		  #
 ###########################################################################
 
@@ -181,7 +181,7 @@ echo &quot;Building done.&quot;
     <link href="http://x2on.github.com/2010/12/06/smime-on-ios-with-openssl-iphoneipad/"/>
     <updated>2010-12-06T09:52:25+01:00</updated>
     <id>http://x2on.github.com/2010/12/06/smime-on-ios-with-openssl-iphoneipad</id>
-    <content type="html"><![CDATA[<p>Whenever I receive an encrypted e-mail, I can't read it on my iPhone. So i write a little app that can do it ;)</p>
+    <content type="html"><![CDATA[<p>Whenever I receive an encrypted e-mail, I can&rsquo;t read it on my iPhone. So i write a little app that can do it ;)</p>
 
 <!--more-->
 
@@ -190,9 +190,9 @@ echo &quot;Building done.&quot;
 
 <p><strong>UPDATE #1 (09.12.2010):</strong> New screenshots from current development build</p>
 
-<p><strong>UPDATE #2 (01.02.2011):</strong> The app is finished - But the encryption export is not really easy - stay tuned...</p>
+<p><strong>UPDATE #2 (01.02.2011):</strong> The app is finished &ndash; But the encryption export is not really easy &ndash; stay tuned&hellip;</p>
 
-<p><strong>UPDATE #3 (16.02.2011):</strong> So finally i got my ERN-Number with SNAP-R from BIS. Registered the app in iTunes Connect and working on some bugfixes and improvements. Stay tuned...</p>
+<p><strong>UPDATE #3 (16.02.2011):</strong> So finally i got my ERN-Number with SNAP-R from BIS. Registered the app in iTunes Connect and working on some bugfixes and improvements. Stay tuned&hellip;</p>
 
 <p><strong>UPDATE #4 (01.04.2011):</strong> Looking for Beta-tester: <a href="http://www.x2on.de/2011/04/01/secure-mail-beta-test-smime-on-ios-with-openssl/">http://www.x2on.de/2011/04/01/secure-mail-beta-test-smime-on-ios-with-openssl/</a></p>
 

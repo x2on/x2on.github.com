@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Windows | x2on.de]]></title>
   <link href="http://x2on.github.com/categories/windows/atom.xml" rel="self"/>
   <link href="http://x2on.github.com/"/>
-  <updated>2014-05-06T08:04:56+02:00</updated>
+  <updated>2014-05-07T15:55:09+02:00</updated>
   <id>http://x2on.github.com/</id>
   <author>
     <name><![CDATA[Felix Schulze]]></name>
@@ -61,117 +61,111 @@
 <p><strong>2. MacOS X Partition verkleinern:</strong></p>
 
 <ol>
-<li>Festplatten-Dienstprogramm starten</li>
-<li>Festplatte auswählen</li>
-<li>Auf Partitionieren klicken</li>
-<li>Mit "+" zwei neue Partitionen anlegen und bei Format "Mac OS X Extended (Journaled)" auswählen</li>
-<li>Auf Anwenden klicken</li>
-<li>Nun die letzte Partition als "Windows NT Dateisystem" formatieren und als Namen "Windows" eingeben</li>
+<li> Festplatten-Dienstprogramm starten</li>
+<li> Festplatte auswählen</li>
+<li> Auf Partitionieren klicken</li>
+<li> Mit &ldquo;+&rdquo; zwei neue Partitionen anlegen und bei Format &ldquo;Mac OS X Extended (Journaled)&rdquo; auswählen</li>
+<li> Auf Anwenden klicken</li>
+<li> Nun die letzte Partition als &ldquo;Windows NT Dateisystem&rdquo; formatieren und als Namen &ldquo;Windows&rdquo; eingeben</li>
 </ol>
 
 
 <p><strong>4. rEFIT installieren:</strong></p>
 
 <ol>
-<li>rEFIT herunterladen: <a href="http://refit.sourceforge.net/">http://refit.sourceforge.net/</a></li>
-<li>Bei der Installation auf Anpassen klicken und die Linux-Treiber mit installieren</li>
+<li> rEFIT herunterladen: <a href="http://refit.sourceforge.net/">http://refit.sourceforge.net/</a></li>
+<li> Bei der Installation auf Anpassen klicken und die Linux-Treiber mit installieren</li>
 </ol>
 
 
 <p><strong>5. Ubuntu installieren:</strong></p>
 
 <ol>
-<li>Von der Ubuntu-CD booten</li>
-<li>F2 drücken für die Sprachauswahl</li>
-<li>Nach kurzer Zeit startet die Ubuntu-Live Version</li>
-<li>Auf dem Desktop auf installieren klicken</li>
-<li>Setup mit gewünschten Einstellung bis zum Punkt "Partitionieren" durchlaufen</li>
-<li>Bei "Partitionieren" Manuell auswählen und auf Weiter klicken</li>
-<li>Hier die vorhin erstellte Paritition für Linux auswählen (bei mir /dev/sda3)</li>
-<li>auf Edit Parition klicken</li>
-<li>Ext 3 auswählen</li>
-<li>/ auswählen</li>
-<li>Auf Ok klicken</li>
-<li>Einen Hacken bei "Format" machen</li>
-<li>Weiter bis zur Übersicht</li>
-<li>Auf Advanced klicken</li>
-<li>(hd0) löschen und auf OK Klicken</li>
-<li>nochmal auf Advanced klicken</li>
-<li>in /dev/sda3 (siehe Punkt 7) ändern</li>
-<li>Auf "Installieren" klicken</li>
-<li>Nach der Installation neustarten</li>
+<li> Von der Ubuntu-CD booten</li>
+<li> F2 drücken für die Sprachauswahl</li>
+<li> Nach kurzer Zeit startet die Ubuntu-Live Version</li>
+<li> Auf dem Desktop auf installieren klicken</li>
+<li> Setup mit gewünschten Einstellung bis zum Punkt &ldquo;Partitionieren&rdquo; durchlaufen</li>
+<li> Bei &ldquo;Partitionieren&rdquo; Manuell auswählen und auf Weiter klicken</li>
+<li> Hier die vorhin erstellte Paritition für Linux auswählen (bei mir /dev/sda3)</li>
+<li> auf Edit Parition klicken</li>
+<li> Ext 3 auswählen</li>
+<li>. / auswählen</li>
+<li>. Auf Ok klicken</li>
+<li>. Einen Hacken bei &ldquo;Format&rdquo; machen</li>
+<li>. Weiter bis zur Übersicht</li>
+<li>. Auf Advanced klicken</li>
+<li>. (hd0) löschen und auf OK Klicken</li>
+<li>. nochmal auf Advanced klicken</li>
+<li>. in /dev/sda3 (siehe Punkt 7) ändern</li>
+<li>. Auf &ldquo;Installieren&rdquo; klicken</li>
+<li>. Nach der Installation neustarten</li>
 </ol>
 
 
 <p><strong>7. Ubuntu Boot einrichten:</strong></p>
 
 <ol>
-<li>Von der Ubuntu-Live CD booten</li>
-<li>Auf System --> Administration --> GNOME Partition Editior klicken</li>
-<li>Rechtsklick auf /dev/sd3</li>
-<li>Haken bei boot machen</li>
-<li>Kann sein das der GNOME Partition Editor dabei abstürzt, sollte trotzdem funktionieren</li>
-<li>Falls es danach beim ersten booten hängen bleibt einfach nochmal neustarten</li>
+<li> Von der Ubuntu-Live CD booten</li>
+<li> Auf System &mdash;> Administration &mdash;> GNOME Partition Editior klicken</li>
+<li> Rechtsklick auf /dev/sd3</li>
+<li> Haken bei boot machen</li>
+<li> Kann sein das der GNOME Partition Editor dabei abstürzt, sollte trotzdem funktionieren</li>
+<li> Falls es danach beim ersten booten hängen bleibt einfach nochmal neustarten</li>
 </ol>
 
 
 <p><strong>5. Windows installieren:</strong></p>
 
 <ol>
-<li>Vista-DVD einlegen und beim booten auswählen</li>
-<li>Bei der Installation die letzte Partition (Windows) formatieren und auswählen</li>
-<li>Nach der Installation das SP1 installieren</li>
-<li>BootCamp Treiber in Windows installieren</li>
-<li>Laufwerk C umbennen in Windows (oder beliebigen Namen)</li>
+<li> Vista-DVD einlegen und beim booten auswählen</li>
+<li> Bei der Installation die letzte Partition (Windows) formatieren und auswählen</li>
+<li> Nach der Installation das SP1 installieren</li>
+<li> BootCamp Treiber in Windows installieren</li>
+<li> Laufwerk C umbennen in Windows (oder beliebigen Namen)</li>
 </ol>
 
 
 <p><strong>6. Ubuntu einrichten:</strong></p>
 
-<p>Beim MacBook Pro muss nun der W-LAN Treiber installiert werden, da dieser nicht standardmäßig funktioniert. Für die Grafik sollte der Restricted Treiber "nvidia-glx" aktiviert werden.</p>
+<p>Beim MacBook Pro muss nun der W-LAN Treiber installiert werden, da dieser nicht standardmäßig funktioniert. Für die Grafik sollte der Restricted Treiber &ldquo;nvidia-glx&rdquo; aktiviert werden.</p>
 
 <ol>
-<li>Ubuntu updaten:</li>
-</ol>
+<li><p> Ubuntu updaten:</p>
 
-
-<pre><code>sudo apt-get update
-sudo apt-get upgrade
-</code></pre>
-
-<ol>
-<li>Ubuntu neustarten</li>
-<li>Wlan einrichten:</li>
-<li>Terminal öffnen und folgendes eingeben
+<p>sudo apt-get update
+sudo apt-get upgrade</p></li>
+<li><p> Ubuntu neustarten</p></li>
+<li> Wlan einrichten:</li>
+<li> Terminal öffnen und folgendes eingeben
 <code>bash
 wget http://www.x2on.de/dl/mbpinstaller
 chmod +x mbpinstaller
 ./mbpinstaller
 </code></li>
-<li>Optional: Touchpad bei Eingabe temporär ausschalten</li>
+<li><p> Optional: Touchpad bei Eingabe temporär ausschalten</p>
+
+<ol>
+<li>Öffne ein Terminal
+Öffne die xorg.conf mit</li>
 </ol>
 
 
-<pre><code>1. Öffne ein Terminal
-</code></pre>
-
-<p>Öffne die xorg.conf mit</p>
-
-<pre><code>`sudo gedit /etc/X11/xorg.conf`
-
-2. In der Synaptics Touchpad Sektion folgende Zeile hinzufügen
-3. `Option "SHMConfig" "on"`
-4. X mit (Ctrl+Alt+Backspace) neustarten
-5. System --&gt; Einstellungen --&gt; Sitzungen öffnen
-6. Einen Neuen Eintrag hinzufügen:
-7. `syndaemon -t -d`
-8. Nun sollte das Touchpad bei einer Tastatureingabe 2 Sekunden das Tippen deaktiviert sein.
-</code></pre>
+<p>  <code>sudo gedit /etc/X11/xorg.conf</code></p>
 
 <ol>
-<li>Optional: rEFIT Icon ändern:
-Die Icons beim Start des Mac's können beliebig verändert werden.
-Diese sind im Ordner /efi/refit/icons abgelegt.</li>
+<li> In der Synaptics Touchpad Sektion folgende Zeile hinzufügen</li>
+<li> <code>Option "SHMConfig" "on"</code></li>
+<li> X mit (Ctrl+Alt+Backspace) neustarten</li>
+<li> System &mdash;> Einstellungen &mdash;> Sitzungen öffnen</li>
+<li> Einen Neuen Eintrag hinzufügen:</li>
+<li> <code>syndaemon -t -d</code></li>
+<li><p> Nun sollte das Touchpad bei einer Tastatureingabe 2 Sekunden das Tippen deaktiviert sein.</p></li>
+<li><p>Optional: rEFIT Icon ändern:
+Die Icons beim Start des Mac&rsquo;s können beliebig verändert werden.
+Diese sind im Ordner /efi/refit/icons abgelegt.</p></li>
+</ol>
+</li>
 </ol>
 
 
@@ -214,41 +208,41 @@ Diese sind im Ordner /efi/refit/icons abgelegt.</li>
 <p><strong>XP-CD vorbereiten</strong> (am Windows-Rechner):</p>
 
 <ol>
-<li><p>Kompletten Inhalt der XP-CD auf die Festplatte kopieren</p></li>
-<li><p>XP3eSD-Utility starten</p></li>
-<li><p>XP-Dateien auswählen</p></li>
-<li><p>Auf Create klicken</p></li>
-<li><p>Erstelltes ISO-Image als CD brennen</p></li>
+<li><p> Kompletten Inhalt der XP-CD auf die Festplatte kopieren</p></li>
+<li><p> XP3eSD-Utility starten</p></li>
+<li><p> XP-Dateien auswählen</p></li>
+<li><p> Auf Create klicken</p></li>
+<li><p> Erstelltes ISO-Image als CD brennen</p></li>
 </ol>
 
 
 <p><strong>Windows XP installieren:</strong></p>
 
 <ol>
-<li><p>Eee-PC starten und F2 drücken</p></li>
-<li><p>In Advanced auf IDE Configuration gehen</p></li>
-<li><p>Bei IDE-Master Enter drücken</p></li>
-<li><p>auf Not Installed stellen</p></li>
-<li><p>Mit F10 abspeichern</p></li>
-<li><p>Eee-PC neustarten und XP-CD einlegen</p></li>
-<li><p>Beim Starten ESC drücken</p></li>
-<li><p>Externes CD-Rom Laufwerk auswählen</p></li>
-<li><p>XP auf C: installieren (sollte der 5 Eintrag von oben sein)</p></li>
-<li><p>Als NTFS formatieren</p></li>
-<li><p>Bei der Installation kommen mehrere Abfragen ob Treiber installiert werden sollen, alle mit Ja beantworten (das sind die gepatchen Treiber des XP3eSD-Utility)</p></li>
-<li><p>Bei jedem Neustart mit ESC wieder das CD-Rom auswählen (oder Bootreihenfolge ändern)</p></li>
-<li><p>Es kann sein das das Setup nicht 100 Prozent durchläuft, das macht aber nichts.</p></li>
-<li><p>Beim ersten Start kann es passieren das nur ein Administrator-Konto da ist und beim einloggen ein Fehler wegen der Auslagerungsdatei kommt, einfach ignorieren!</p></li>
-<li><p>Treiber-CD von Asus einlegen und alle Treiber automatisch installieren (4 Neustarts nötig)</p></li>
-<li><p>XP-CD einlegen und Setup erneut starten</p></li>
-<li><p>Im ersten Bild auf Enter drücken und dann R für eine Reperatur</p></li>
-<li><p>Die Windows-Installation reparieren (nochmal Seriennummer eingeben und alles andere.)</p></li>
-<li><p>Neustarten und fertig! XP läuft nun von der externen Festplatte</p></li>
-<li><p>Zum Schluß noch die Interne Festplatte im Bios wieder einschalten...</p></li>
+<li><p> Eee-PC starten und F2 drücken</p></li>
+<li><p> In Advanced auf IDE Configuration gehen</p></li>
+<li><p> Bei IDE-Master Enter drücken</p></li>
+<li><p> auf Not Installed stellen</p></li>
+<li><p> Mit F10 abspeichern</p></li>
+<li><p> Eee-PC neustarten und XP-CD einlegen</p></li>
+<li><p> Beim Starten ESC drücken</p></li>
+<li><p> Externes CD-Rom Laufwerk auswählen</p></li>
+<li><p> XP auf C: installieren (sollte der 5 Eintrag von oben sein)</p></li>
+<li><p>. Als NTFS formatieren</p></li>
+<li><p>. Bei der Installation kommen mehrere Abfragen ob Treiber installiert werden sollen, alle mit Ja beantworten (das sind die gepatchen Treiber des XP3eSD-Utility)</p></li>
+<li><p>. Bei jedem Neustart mit ESC wieder das CD-Rom auswählen (oder Bootreihenfolge ändern)</p></li>
+<li><p>. Es kann sein das das Setup nicht 100 Prozent durchläuft, das macht aber nichts.</p></li>
+<li><p>. Beim ersten Start kann es passieren das nur ein Administrator-Konto da ist und beim einloggen ein Fehler wegen der Auslagerungsdatei kommt, einfach ignorieren!</p></li>
+<li><p>. Treiber-CD von Asus einlegen und alle Treiber automatisch installieren (4 Neustarts nötig)</p></li>
+<li><p>. XP-CD einlegen und Setup erneut starten</p></li>
+<li><p>. Im ersten Bild auf Enter drücken und dann R für eine Reperatur</p></li>
+<li><p>. Die Windows-Installation reparieren (nochmal Seriennummer eingeben und alles andere.)</p></li>
+<li><p>. Neustarten und fertig! XP läuft nun von der externen Festplatte</p></li>
+<li><p>. Zum Schluß noch die Interne Festplatte im Bios wieder einschalten&hellip;</p></li>
 </ol>
 
 
-<p>Falls beim Willkommen Screen von Windows mehrere Minuten nichts passiert Alt+Strg+Entf drücken und Windows startet normal! Dann Rechtsklick auf den Arbeitsplatz - Eigenschaften - Erweitert - Systemleistung Einstellungen - Ändern - Keine Auslagerungsdatei - Festlegen!</p>
+<p>Falls beim Willkommen Screen von Windows mehrere Minuten nichts passiert Alt+Strg+Entf drücken und Windows startet normal! Dann Rechtsklick auf den Arbeitsplatz &ndash; Eigenschaften &ndash; Erweitert &ndash; Systemleistung Einstellungen &ndash; Ändern &ndash; Keine Auslagerungsdatei &ndash; Festlegen!</p>
 
 <p>Dieser Werk oder Inhalt ist unter einer <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/de/">Creative Commons-Lizenz</a> lizenziert.</p>
 ]]></content>
@@ -261,7 +255,7 @@ Diese sind im Ordner /efi/refit/icons abgelegt.</li>
     <id>http://x2on.github.com/2007/07/31/triple-boot-mit-os-x-ubuntu-704-und-windows-vista</id>
     <content type="html"><![CDATA[<p>Dieses Tutorial richtet sich an alle die auf ihrem MacBook neben OS X 10.4 noch Windows Vista und Ubuntu 7.04 Linux installieren wollen. (sog. Triple Boot)</p>
 
-<p>Grundsätzlich ist dies mittels rEFIT möglich, man muss an manchen stellen ein bisschen tricksen. Leider habe ich es nicht geschafft meine OS X Partition zu verkleinern und daraus 3 Partitionen zu machen, deswegen habe ich mich entschieden mit einer kompletten Neuinstallation anzufangen. Es sollte aber auch ohne dieser funktionieren (mittels resizeVolume...). Falls Fehler vorhanden sind oder Anregungen, schreibt mir bitte eine Mail oder eine PM, dann kann ich das ausprobieren und mit einbauen.</p>
+<p>Grundsätzlich ist dies mittels rEFIT möglich, man muss an manchen stellen ein bisschen tricksen. Leider habe ich es nicht geschafft meine OS X Partition zu verkleinern und daraus 3 Partitionen zu machen, deswegen habe ich mich entschieden mit einer kompletten Neuinstallation anzufangen. Es sollte aber auch ohne dieser funktionieren (mittels resizeVolume&hellip;). Falls Fehler vorhanden sind oder Anregungen, schreibt mir bitte eine Mail oder eine PM, dann kann ich das ausprobieren und mit einbauen.</p>
 
 <!--more-->
 
@@ -284,10 +278,10 @@ Diese sind im Ordner /efi/refit/icons abgelegt.</li>
 <p><strong>2. MacOS X Installtion:</strong></p>
 
 <ol>
-<li>MacOS X DVD einlegen und beim booten "c" Tastet gedrückt halten.</li>
-<li>Sprache auswählen</li>
-<li>Festplattendienstprogramm starten</li>
-<li>Hier musst du 3 Partitionen erstellen:
+<li> MacOS X DVD einlegen und beim booten &ldquo;c&rdquo; Tastet gedrückt halten.</li>
+<li> Sprache auswählen</li>
+<li> Festplattendienstprogramm starten</li>
+<li> Hier musst du 3 Partitionen erstellen:
 
 <ol>
 <li>MacOSX</li>
@@ -295,7 +289,7 @@ Diese sind im Ordner /efi/refit/icons abgelegt.</li>
 <li>Windows (MS Filesystem)</li>
 </ol>
 </li>
-<li>Danach ganz normal OS X installieren (auf der ersten Partition).</li>
+<li> Danach ganz normal OS X installieren (auf der ersten Partition).</li>
 </ol>
 
 
@@ -304,54 +298,54 @@ Diese sind im Ordner /efi/refit/icons abgelegt.</li>
 <p><strong>4. rEFIT installieren:</strong></p>
 
 <ol>
-<li>rEFIT herunterladen: <a href="http://refit.sourceforge.net/">http://refit.sourceforge.net/</a></li>
-<li>Bei der Installation auf Anpassen klicken und die Linux-Treiber mit installieren</li>
+<li> rEFIT herunterladen: <a href="http://refit.sourceforge.net/">http://refit.sourceforge.net/</a></li>
+<li> Bei der Installation auf Anpassen klicken und die Linux-Treiber mit installieren</li>
 </ol>
 
 
 <p><strong>5. Windows installieren:</strong></p>
 
 <ol>
-<li>Vista-DVD einlegen und beim booten auswählen</li>
-<li>Bei der Installation die letzte Partition (Windows) formatieren und auswählen</li>
-<li>Beim ersten Neustart die Windows-DVD auswerfen und die Ubuntu 7.04 CD einlegen</li>
+<li> Vista-DVD einlegen und beim booten auswählen</li>
+<li> Bei der Installation die letzte Partition (Windows) formatieren und auswählen</li>
+<li> Beim ersten Neustart die Windows-DVD auswerfen und die Ubuntu 7.04 CD einlegen</li>
 </ol>
 
 
 <p><strong>6. Ubuntu installieren:</strong></p>
 
 <ol>
-<li>Von der Ubuntu-CD booten</li>
-<li>F2 drücken für die Sprachauswahl</li>
-<li>F6 drücken und <code>lpj=8000000</code> eintippen</li>
-<li>Enter drücken</li>
-<li>Nach kurzer Zeit startet die Ubuntu-Live Version</li>
-<li>Auf dem Desktop auf installieren klicken</li>
-<li>Setup mit gewünschten Einstellung bis zum Punkt "Partitionieren" durchlaufen</li>
-<li>Bei "Partitionieren" Manuell auswählen und auf Weiter klicken</li>
-<li>disk0s3 auswählen</li>
-<li>auf Edit Parition klicken</li>
-<li>Ext 3 auswählen</li>
-<li>/ auswählen</li>
-<li>Auf Ok klicken</li>
-<li>Weiter bis zur Übersicht</li>
-<li>Auf Advanced klicken</li>
-<li>(hd0) löschen und auf OK Klicken</li>
-<li>nochmal auf Advanced klicken</li>
-<li>in /dev/sda3 ändern</li>
-<li>Auf "Installieren" klicken</li>
-<li>Nach der Installation neustarten</li>
+<li> Von der Ubuntu-CD booten</li>
+<li> F2 drücken für die Sprachauswahl</li>
+<li> F6 drücken und <code>lpj=8000000</code> eintippen</li>
+<li> Enter drücken</li>
+<li> Nach kurzer Zeit startet die Ubuntu-Live Version</li>
+<li> Auf dem Desktop auf installieren klicken</li>
+<li> Setup mit gewünschten Einstellung bis zum Punkt &ldquo;Partitionieren&rdquo; durchlaufen</li>
+<li> Bei &ldquo;Partitionieren&rdquo; Manuell auswählen und auf Weiter klicken</li>
+<li> disk0s3 auswählen</li>
+<li>. auf Edit Parition klicken</li>
+<li>. Ext 3 auswählen</li>
+<li>. / auswählen</li>
+<li>. Auf Ok klicken</li>
+<li>. Weiter bis zur Übersicht</li>
+<li>. Auf Advanced klicken</li>
+<li>. (hd0) löschen und auf OK Klicken</li>
+<li>. nochmal auf Advanced klicken</li>
+<li>. in /dev/sda3 ändern</li>
+<li>. Auf &ldquo;Installieren&rdquo; klicken</li>
+<li>. Nach der Installation neustarten</li>
 </ol>
 
 
 <p><strong>7. Ubuntu Boot einrichten:</strong></p>
 
 <ol>
-<li>Von der Ubuntu-Live CD booten (wieder mit lpj=8000000)</li>
-<li>Auf System --> Administration --> GNOME Partition Editior klicken</li>
-<li>Rechtsklick auf /dev/sd3</li>
-<li>Haken bei boot machen</li>
-<li>Falls es danach beim ersten booten hängen bleibt einfach nochmal neustarten</li>
+<li> Von der Ubuntu-Live CD booten (wieder mit lpj=8000000)</li>
+<li> Auf System &mdash;> Administration &mdash;> GNOME Partition Editior klicken</li>
+<li> Rechtsklick auf /dev/sd3</li>
+<li> Haken bei boot machen</li>
+<li> Falls es danach beim ersten booten hängen bleibt einfach nochmal neustarten</li>
 </ol>
 
 
@@ -382,17 +376,17 @@ Diese sind im Ordner /efi/refit/icons abgelegt.</li>
 <li>sudo gedit /etc/X11/xorg.conf</li>
 <li>Dort sind ein paar Änderungen notwendig:</li>
 <li>Folgende Zeile in der" Synaptics Touchpad Sektion"</li>
-<li>Option "SendCoreEvents" "true"</li>
+<li>Option &ldquo;SendCoreEvents&rdquo; &ldquo;true&rdquo;</li>
 <li>in folgendes ändern:</li>
-<li>Option "CorePointer"</li>
+<li>Option &ldquo;CorePointer&rdquo;</li>
 <li>Eine weiter Änderung:</li>
-<li>InputDevice "Configured Mouse"</li>
+<li>InputDevice &ldquo;Configured Mouse&rdquo;</li>
 <li>am Ende der Datei in folgendes ändern:</li>
-<li>InputDevice "Configured Mouse" "SendCoreEvents"</li>
+<li>InputDevice &ldquo;Configured Mouse&rdquo; &ldquo;SendCoreEvents&rdquo;</li>
 <li>Die letzte Änderung in dieser Datei:</li>
-<li>InputDevice "Synaptics Touchpad"</li>
+<li>InputDevice &ldquo;Synaptics Touchpad&rdquo;</li>
 <li>vor die veränderte
-"InputDevice "Configured Mouse" "SendCoreEvents""
+&ldquo;InputDevice "Configured Mouse&rdquo; &ldquo;SendCoreEvents&rdquo;&ldquo;
 verschieben</li>
 <li>Abspeichern</li>
 <li>Links-Klick mit einem Finger, Mittel-Klick mit zwei Fingern und Rechts-Klick mit drei Fingern!</li>
@@ -400,21 +394,21 @@ verschieben</li>
 Beryl stellt zahlreiche grafische Effekte für die Fenster zur Verfügung (unter anderem Expose)</li>
 <li>Terminal öffnen:</li>
 <li>sudo apt-get -y install beryl emerald-themes berly-manager</li>
-<li>Über "Anwendungen --> Systemwerkzeuge --> Beryl Manager --> Beryl Einstellungen --> Shortcuts --> Screen Edges"
+<li>Über &ldquo;Anwendungen &mdash;> Systemwerkzeuge &mdash;> Beryl Manager &mdash;> Beryl Einstellungen &mdash;> Shortcuts &mdash;> Screen Edges&rdquo;
 lassen sich wie beim Mac aktive Ecken festlegen.</li>
 <li>Optional: Touchpad bei Eingabe temporär ausschalten</li>
 <li>Öffne ein Terminal</li>
 <li>Öffne die xorg.conf mit
 sudo gedit /etc/X11/xorg.conf</li>
 <li>In der Synaptics Touchpad Sektion folgende Zeile hinzufügen</li>
-<li>Option "SHMConfig" "on"</li>
+<li>Option &ldquo;SHMConfig&rdquo; &ldquo;on&rdquo;</li>
 <li>X mit (Ctrl+Alt+Backspace) neustarten</li>
-<li>System --> Einstellungen --> Sitzungen öffnen</li>
+<li>System &mdash;> Einstellungen &mdash;> Sitzungen öffnen</li>
 <li>Einen Neuen Eintrag hinzufügen:</li>
 <li>syndaemon -t -d</li>
 <li>Nun sollte das Touchpad bei einer Tastatureingabe 2 Sekunden das Tippen deaktiviert sein.</li>
 <li>Optional: rEFIT Icon ändern:
-Die Icons beim Start des Mac's können beliebig verändert werden.
+Die Icons beim Start des Mac&rsquo;s können beliebig verändert werden.
 Diese sind im Ordner /efi/refit/icons abgelegt.</li>
 </ol>
 
@@ -423,12 +417,12 @@ Diese sind im Ordner /efi/refit/icons abgelegt.</li>
 
 <p><strong>Quellen:</strong></p>
 
-<p>http://forum.onmac.net/showthread.php?t=2705
-https://help.ubuntu.com/community/MacBook
-http://wiki.ubuntuusers.de/MacBook
-http://wiki.ubuntuusers.de/Intel-Grafikkarten
-http://wiki.onmac.net/index.php/Triple_Boot_via_BootCamp_Ubuntu
-http://ubuntu.wordpress.com/2006/09/20/disable-touchpad-temporarily-when-typing/</p>
+<p><a href="http://forum.onmac.net/showthread.php?t=2705">http://forum.onmac.net/showthread.php?t=2705</a>
+<a href="https://help.ubuntu.com/community/MacBook">https://help.ubuntu.com/community/MacBook</a>
+<a href="http://wiki.ubuntuusers.de/MacBook">http://wiki.ubuntuusers.de/MacBook</a>
+<a href="http://wiki.ubuntuusers.de/Intel-Grafikkarten">http://wiki.ubuntuusers.de/Intel-Grafikkarten</a>
+<a href="http://wiki.onmac.net/index.php/Triple_Boot_via_BootCamp_Ubuntu">http://wiki.onmac.net/index.php/Triple_Boot_via_BootCamp_Ubuntu</a>
+<a href="http://ubuntu.wordpress.com/2006/09/20/disable-touchpad-temporarily-when-typing/">http://ubuntu.wordpress.com/2006/09/20/disable-touchpad-temporarily-when-typing/</a></p>
 ]]></content>
   </entry>
   

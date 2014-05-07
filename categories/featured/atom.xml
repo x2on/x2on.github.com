@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Featured | x2on.de]]></title>
   <link href="http://x2on.github.com/categories/featured/atom.xml" rel="self"/>
   <link href="http://x2on.github.com/"/>
-  <updated>2014-05-06T08:04:56+02:00</updated>
+  <updated>2014-05-07T15:55:09+02:00</updated>
   <id>http://x2on.github.com/</id>
   <author>
     <name><![CDATA[Felix Schulze]]></name>
@@ -171,13 +171,13 @@ make install
 <p><strong>Edit your iPhone-XCode project:</strong></p>
 
 <ul>
-<li><p>Copy the "include" folder from OpenSSL into your project-folder</p></li>
+<li><p>Copy the &ldquo;include&rdquo; folder from OpenSSL into your project-folder</p></li>
 <li><p>Copy the libcrypto<em>*.a and libss</em>*.a files into your project-folder</p></li>
 <li><p>Drag the libcrypto<em>*.a and libss</em>*.a files into your XCode Framework Folder-Tree</p></li>
-<li><p>Open the Build-Info from your "Target" (Righclick on Target - Get Info)</p></li>
+<li><p>Open the Build-Info from your &ldquo;Target&rdquo; (Righclick on Target &ndash; Get Info)</p></li>
 <li><p>Change <em>Library Search Paths</em> to</p>
 
-<p>$(inherited) "$(SRCROOT)"</p></li>
+<p>$(inherited) &ldquo;$(SRCROOT)&rdquo;</p></li>
 <li><p>Change <em>User Header Search Paths</em> to <em>include</em></p></li>
 <li><p>Activate <em>Always Search User Paths</em></p></li>
 </ul>
@@ -208,11 +208,11 @@ make install
     <updated>2010-01-14T22:19:13+01:00</updated>
     <id>http://x2on.github.com/2010/01/14/11-surf-stick-zte-mf110-unter-ubuntu-9-10</id>
     <content type="html"><![CDATA[<p>Um den 1&amp;1 Surf-Stick (ZTE MF110) auch unter Ubuntu 9.10 benutzen zu können, muss der USB-Modus des Sticks umgeschaltet werden. Dieser läuft standardmäßig als Filesystem und nicht als UMTS-Stick.
-Ein Tool namens "USB_Modeswitch" schafft hierbei Abhilfe.</p>
+Ein Tool namens &ldquo;USB_Modeswitch&rdquo; schafft hierbei Abhilfe.</p>
 
-<p><strong>UPDATE 01.02.2010 - 13:20:</strong> Durch eine neue Version von usb_modeswitch haben sich die Befehle leicht verändert. Die Anleitung habe ich angepasst. (Sollte vorher bereits eine ältere Version installiert worden sein, so muss diese mit "sudo make uninstall" entfernt werden)</p>
+<p><strong>UPDATE 01.02.2010 &ndash; 13:20:</strong> Durch eine neue Version von usb_modeswitch haben sich die Befehle leicht verändert. Die Anleitung habe ich angepasst. (Sollte vorher bereits eine ältere Version installiert worden sein, so muss diese mit &ldquo;sudo make uninstall&rdquo; entfernt werden)</p>
 
-<p><strong>UPDATE 26.04.2011 - 21:32:</strong> Update to modeswitch 1.1.7.</p>
+<p><strong>UPDATE 26.04.2011 &ndash; 21:32:</strong> Update to modeswitch 1.1.7.</p>
 
 <p><strong>Anleitung:</strong></p>
 

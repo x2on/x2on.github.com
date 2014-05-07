@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Projects | x2on.de]]></title>
   <link href="http://x2on.github.com/categories/projects/atom.xml" rel="self"/>
   <link href="http://x2on.github.com/"/>
-  <updated>2014-05-06T08:04:56+02:00</updated>
+  <updated>2014-05-07T15:55:09+02:00</updated>
   <id>http://x2on.github.com/</id>
   <author>
     <name><![CDATA[Felix Schulze]]></name>
@@ -63,14 +63,14 @@
     <link href="http://x2on.github.com/2011/04/01/secure-mail-beta-test-smime-on-ios-with-openssl/"/>
     <updated>2011-04-01T15:57:24+02:00</updated>
     <id>http://x2on.github.com/2011/04/01/secure-mail-beta-test-smime-on-ios-with-openssl</id>
-    <content type="html"><![CDATA[<p>Im searching some people how want's to test Secure-Mail App.</p>
+    <content type="html"><![CDATA[<p>Im searching some people how want&rsquo;s to test Secure-Mail App.</p>
 
 <p>With Secure-Mail you can read S/MIME encrypted mails directly from Mail.app and send encrypted S/MIME mails with SMTP.</p>
 
 <!--more-->
 
 
-<p>Please send me an email with some details about you, and why you wan't test the beta.</p>
+<p>Please send me an email with some details about you, and why you wan&rsquo;t test the beta.</p>
 
 <p><strong>2011-04-13: UPDATE #1:</strong> The Beta-Test is running now. At this time no new beta-testers are invited. Thanks for your help.</p>
 
@@ -126,7 +126,7 @@ SDKVERSION=&quot;4.2&quot;														  #
 #																		  #
 ###########################################################################
 #																		  #
-# Don't change anything under this line!								  #
+# Don&#39;t change anything under this line!								  #
 #																		  #
 ###########################################################################
 
@@ -355,13 +355,13 @@ lipo -create ../ssllibs/openssl_i386/lib/libssl.a ../ssllibs/openssl_armv6/lib/l
 
 <h4>Edit your iPhone-XCode project:</h4>
 
-<p>Copy the "include" folder from OpenSSL into your project-folder</p>
+<p>Copy the &ldquo;include&rdquo; folder from OpenSSL into your project-folder</p>
 
 <p>Copy the libcrypto.a and libssl.a files into your project-folder</p>
 
 <p>Drag the libcrypto.a and libssl.a files into your XCode Framework Folder-Tree</p>
 
-<p>Open the Build-Info from your "Target" (Righclick on Target - Get Info)</p>
+<p>Open the Build-Info from your &ldquo;Target&rdquo; (Righclick on Target &ndash; Get Info)</p>
 
 <p>Change <code>_Library Search Paths_</code> to</p>
 
