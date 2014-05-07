@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Android | x2on.de]]></title>
+  <link href="http://x2on.github.com/categories/android/atom.xml" rel="self"/>
+  <link href="http://x2on.github.com/"/>
+  <updated>2014-05-07T16:42:36+02:00</updated>
+  <id>http://x2on.github.com/</id>
+  <author>
+    <name><![CDATA[Felix Schulze]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Mobile Testing @AutoScout24 (Mobile Dev Group Munich)]]></title>
+    <link href="http://x2on.github.com/2013/11/27/mobile-dev-group-munich-mobile-testing/"/>
+    <updated>2013-11-27T19:00:00+01:00</updated>
+    <id>http://x2on.github.com/2013/11/27/mobile-dev-group-munich-mobile-testing</id>
+    <content type="html"><![CDATA[<p>On the first <a href="http://www.meetup.com/Mobile-Dev-Munich/">Mobile Dev Group Munich</a> Meetup i talked about Mobile Testing @AutoScout24. The main topics are automated testing with Android and iOS and best practices from the development at AutoScout24.</p>
+
+<!-- more -->
+
+
+
+
+<script async class="speakerdeck-embed" data-id="d76ee6803a3d013104066eed9752a111" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
+
+
+<h3>Links:</h3>
+
+<ul>
+<li><a href="https://github.com/x2on/gradle-spoon-plugin">gradle-spoon-plugin</a></li>
+<li><a href="https://github.com/x2on/gradle-hockeyapp-plugin">gradle-hockeyapp-plugin</a></li>
+<li><a href="https://github.com/AutoScout24/gradle-monkey-plugin">gradle-monkey-plugin</a></li>
+<li><a href="https://github.com/AutoScout24/ADB-Sanity-Check">ADB-Sanity-Check</a></li>
+<li><a href="https://github.com/facebook/ios-snapshot-test-case">ios-snapshot-test-case</a></li>
+<li><a href="https://github.com/x2on/gradle-cocoapods-plugin">gradle-cocoapods-plugin</a></li>
+<li><a href="https://github.com/facebook/xctool">xctool</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>

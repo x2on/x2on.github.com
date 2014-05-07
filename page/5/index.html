@@ -118,6 +118,51 @@
 
 
 
+<span class="glyphicon glyphicon-calendar"></span> <time datetime="2009-12-12T00:05:02+01:00" pubdate data-updated="true">Dec 12<span>th</span>, 2009</time>
+        
+           | <a href="/2009/12/12/snow-leopard-terminal-tricks/#disqus_thread"
+             data-disqus-identifier="http://x2on.github.com/2009/12/12/snow-leopard-terminal-tricks/">Comments</a>
+        
+      </p>
+    
+    
+      <h1 class="entry-title"><a href="/2009/12/12/snow-leopard-terminal-tricks/">Snow Leopard: Terminal Tricks</a></h1>
+    
+  </header>
+
+
+  <div class="entry-content clearfix"><p>Auch für Snow Leopard gibt es ein paar Terminal-Befehle, die nützliche Funktionen freischalten können.</p>
+
+</div>
+  
+  
+    <footer>
+      <a class="btn btn-default" rel="full-article" href="/2009/12/12/snow-leopard-terminal-tricks/">Read more &rarr;</a>
+    </footer>
+  
+
+
+        </article>
+      
+      
+        <article class="post">
+          
+  <header class="page-header">
+    
+      <p class="meta text-muted text-uppercase">
+        
+
+
+
+
+
+
+
+
+
+
+
+
 <span class="glyphicon glyphicon-calendar"></span> <time datetime="2009-12-11T23:28:21+01:00" pubdate data-updated="true">Dec 11<span>th</span>, 2009</time>
         
            | <a href="/2009/12/11/cheat-sheets-im-terminal-unter-mac/#disqus_thread"
@@ -714,74 +759,6 @@ chmod +x /etc/cron.daily/backup
 
         </article>
       
-      
-        <article class="post">
-          
-  <header class="page-header">
-    
-      <p class="meta text-muted text-uppercase">
-        
-
-
-
-
-
-
-
-
-
-
-
-
-<span class="glyphicon glyphicon-calendar"></span> <time datetime="2009-02-25T20:00:48+01:00" pubdate data-updated="true">Feb 25<span>th</span>, 2009</time>
-        
-           | <a href="/2009/02/25/latex-fusszeile-auf-jeder-seite/#disqus_thread"
-             data-disqus-identifier="http://x2on.github.com/2009/02/25/latex-fusszeile-auf-jeder-seite/">Comments</a>
-        
-      </p>
-    
-    
-      <h1 class="entry-title"><a href="/2009/02/25/latex-fusszeile-auf-jeder-seite/">LaTex: Fußzeile Auf Jeder Seite</a></h1>
-    
-  </header>
-
-
-  <div class="entry-content clearfix"><p>Mit LaTex gibt es mit dem Paket <code>fancyhdr</code> eine einfache Möglichkeit Fußzeilen zu erzeugen. Diese werden jedoch auf den Kapitel-Seiten (die über <code>chapter{Kapitelname}</code> erzeugt werden) nicht angezeigt, da LaTex hier automatisch <code>thispagestyle{plain}</code> aufruft. Damit aber auch auf diesen Seiten eine Fusszeile angezeigt wird, muss man den Plain-Styl überschreiben:</p>
-
-<div><script src='https://gist.github.com/4659299.js'></script>
-<noscript><pre><code>%Kopf- und Fußzeile
-usepackage{fancyhdr}
-pagestyle{fancy}
-fancyhf{}
-
-%Kopfzeile mittig mit Kaptilname
-fancyhead[C]{nouppercase{leftmark}}
-%Linie oben
-renewcommand{headrulewidth}{0.5pt}
-
-%Fußzeile links bzw. innen
-fancyfoot[L]{Text muss hier stehen}
-%Fußzeile mittig (Seitennummer)
-fancyfoot[C]{thepage}
-%Linie unten
-renewcommand{footrulewidth}{0.5pt}
-
-% Fußzeile auf jeder Seite - auch Kapitel und Inhaltsverzeichnis
-fancypagestyle{plain}{%
-   fancyhf{}%
-   fancyhead[C]{} %Kapitelname ausblenden
-   fancyfoot[L]{Text muss hier stehen}
-   renewcommand{headrulewidth}{0.0pt} %obere Linie ausblenden
-   fancyfoot[C]{thepage}
-}</code></pre></noscript></div>
-
-</div>
-  
-  
-
-
-        </article>
-      
     </div>
 
     <ul class="pager">
@@ -805,6 +782,8 @@ fancypagestyle{plain}{%
   
   <div id="recent_posts" class="list-group">
     
+    <a class="list-group-item " href="/2013/11/27/mobile-dev-group-munich-mobile-testing/">Mobile Testing @AutoScout24 (Mobile Dev Group Munich)</a>
+    
     <a class="list-group-item " href="/2013/09/26/ios-backward-compatibility-podcast/">Podcast: iOS Backward Compatibility</a>
     
     <a class="list-group-item " href="/2013/04/25/tutorial-building-supertux-0-3-3-on-mac-os-x-mountain-lion/">Tutorial: Building SuperTux 0.3.3 on Mac OS X Mountain Lion</a>
@@ -812,8 +791,6 @@ fancypagestyle{plain}{%
     <a class="list-group-item " href="/2013/01/24/why-you-should-use-continuous-integration-for-ios-development/">Why You Should Use Continuous Integration for iOS Development?</a>
     
     <a class="list-group-item " href="/2012/07/11/weak-delegate-and-ocmock/">Weak Delegate and OCMock</a>
-    
-    <a class="list-group-item " href="/2012/06/01/simple-share-for-ios-a-drop-in-library-for-social-share/">Simple-share for iOS - a Drop-in Library for Social Share</a>
     
   </div>
 </section>

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Linux | x2on.de]]></title>
   <link href="http://x2on.github.com/categories/linux/atom.xml" rel="self"/>
   <link href="http://x2on.github.com/"/>
-  <updated>2014-05-07T16:29:56+02:00</updated>
+  <updated>2014-05-07T16:42:36+02:00</updated>
   <id>http://x2on.github.com/</id>
   <author>
     <name><![CDATA[Felix Schulze]]></name>
@@ -335,7 +335,7 @@ ServerName my_domain.com</p>
 
 <p>DocumentRoot /var/www/redmine/public</p>
 
-<p>ServerAdmin <a href="&#x6d;&#x61;&#x69;&#x6c;&#116;&#x6f;&#x3a;&#x75;&#x73;&#x65;&#x72;&#64;&#101;&#120;&#x61;&#109;&#112;&#x6c;&#x65;&#x2e;&#x63;&#111;&#x6d;">&#117;&#115;&#x65;&#x72;&#64;&#x65;&#x78;&#97;&#109;&#112;&#108;&#101;&#46;&#x63;&#x6f;&#x6d;</a>
+<p>ServerAdmin <a href="&#x6d;&#x61;&#x69;&#108;&#116;&#111;&#58;&#x75;&#115;&#x65;&#x72;&#x40;&#101;&#x78;&#x61;&#109;&#112;&#x6c;&#101;&#46;&#x63;&#x6f;&#109;">&#x75;&#x73;&#101;&#114;&#x40;&#101;&#120;&#x61;&#x6d;&#x70;&#x6c;&#x65;&#x2e;&#x63;&#x6f;&#x6d;</a>
 LogLevel warn
 ErrorLog /var/log/apache2/redmine_error
 CustomLog /var/log/apache2/redmine_access combined</p>

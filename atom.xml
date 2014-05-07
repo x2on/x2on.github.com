@@ -4,7 +4,7 @@
   <title><![CDATA[x2on.de]]></title>
   <link href="http://x2on.github.com/atom.xml" rel="self"/>
   <link href="http://x2on.github.com/"/>
-  <updated>2014-05-07T16:29:56+02:00</updated>
+  <updated>2014-05-07T16:42:20+02:00</updated>
   <id>http://x2on.github.com/</id>
   <author>
     <name><![CDATA[Felix Schulze]]></name>
@@ -12,6 +12,36 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Mobile Testing @AutoScout24 (Mobile Dev Group Munich)]]></title>
+    <link href="http://x2on.github.com/2013/11/27/mobile-dev-group-munich-mobile-testing/"/>
+    <updated>2013-11-27T19:00:00+01:00</updated>
+    <id>http://x2on.github.com/2013/11/27/mobile-dev-group-munich-mobile-testing</id>
+    <content type="html"><![CDATA[<p>On the first <a href="http://www.meetup.com/Mobile-Dev-Munich/">Mobile Dev Group Munich</a> Meetup i talked about Mobile Testing @AutoScout24. The main topics are automated testing with Android and iOS and best practices from the development at AutoScout24.</p>
+
+<!-- more -->
+
+
+
+
+<script async class="speakerdeck-embed" data-id="d76ee6803a3d013104066eed9752a111" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
+
+
+<h3>Links:</h3>
+
+<ul>
+<li><a href="https://github.com/x2on/gradle-spoon-plugin">gradle-spoon-plugin</a></li>
+<li><a href="https://github.com/x2on/gradle-hockeyapp-plugin">gradle-hockeyapp-plugin</a></li>
+<li><a href="https://github.com/AutoScout24/gradle-monkey-plugin">gradle-monkey-plugin</a></li>
+<li><a href="https://github.com/AutoScout24/ADB-Sanity-Check">ADB-Sanity-Check</a></li>
+<li><a href="https://github.com/facebook/ios-snapshot-test-case">ios-snapshot-test-case</a></li>
+<li><a href="https://github.com/x2on/gradle-cocoapods-plugin">gradle-cocoapods-plugin</a></li>
+<li><a href="https://github.com/facebook/xctool">xctool</a></li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Podcast: iOS backward compatibility]]></title>
@@ -24,6 +54,11 @@
 
 
 <p>Get it here (german): <a href="http://uisprech.de/1">http://uisprech.de/1</a></p>
+
+<p>And some slides from my talk at <a href="http://mobiletechcon.de/2013/">MobileTech Conference 2013</a> in Berlin:</p>
+
+<script async class="speakerdeck-embed" data-id="53b67ba0f76401308b7e0abe9a78d4ca" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
+
 ]]></content>
   </entry>
   
@@ -954,46 +989,6 @@ echo &quot;Building done.&quot;
 
 
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[S/MIME on iOS with OpenSSL (iPhone/iPad) (UPDATE #6)]]></title>
-    <link href="http://x2on.github.com/2010/12/06/smime-on-ios-with-openssl-iphoneipad/"/>
-    <updated>2010-12-06T09:52:25+01:00</updated>
-    <id>http://x2on.github.com/2010/12/06/smime-on-ios-with-openssl-iphoneipad</id>
-    <content type="html"><![CDATA[<p>Whenever I receive an encrypted e-mail, I can&rsquo;t read it on my iPhone. So i write a little app that can do it ;)</p>
-
-<!--more-->
-
-
-<p>I used my OpenSSL-for-iOS Library (<a href="http://www.x2on.de/2010/07/13/tutorial-iphone-app-with-compiled-openssl-1-0-0a-library/">http://www.x2on.de/2010/07/13/tutorial-iphone-app-with-compiled-openssl-1-0-0a-library/</a>) and registered the P7M-Files from S/MIME for my app. So i can open the encrypted files directly from the iOS mail app and decrypt it with my key.</p>
-
-<p><strong>UPDATE #1 (09.12.2010):</strong> New screenshots from current development build</p>
-
-<p><strong>UPDATE #2 (01.02.2011):</strong> The app is finished &ndash; But the encryption export is not really easy &ndash; stay tuned&hellip;</p>
-
-<p><strong>UPDATE #3 (16.02.2011):</strong> So finally i got my ERN-Number with SNAP-R from BIS. Registered the app in iTunes Connect and working on some bugfixes and improvements. Stay tuned&hellip;</p>
-
-<p><strong>UPDATE #4 (01.04.2011):</strong> Looking for Beta-tester: <a href="http://www.x2on.de/2011/04/01/secure-mail-beta-test-smime-on-ios-with-openssl/">http://www.x2on.de/2011/04/01/secure-mail-beta-test-smime-on-ios-with-openssl/</a></p>
-
-<p><strong>UPDATE #5 (24.04.2011):</strong> Waiting for review: <a href="http://www.x2on.de/2011/04/24/secure-mail-waiting-for-review/">http://www.x2on.de/2011/04/24/secure-mail-waiting-for-review/</a></p>
-
-<p><strong>UPDATE #6 (28.04.2011):</strong> The App is now ready for download: <a href="http://www.x2on.de/2011/04/28/secure-mail-is-ready-for-download-on-apple-app-store/">http://www.x2on.de/2011/04/28/secure-mail-is-ready-for-download-on-apple-app-store/</a></p>
-
-<p>So next steps are:</p>
-
-<ul>
-<li>GUI (Done)</li>
-<li>Key-Management (Done)</li>
-<li>Encryption (Done)</li>
-<li>Decryption (Done)</li>
-<li>Check Signature (Not sure if possible at moment)</li>
-<li>Sign messages (In the future)</li>
-</ul>
-
-
-<p><a href="http://www.x2on.de/wp-content/uploads/2010/12/Screen2.png"><img src="http://www.x2on.de/wp-content/uploads/2010/12/Screen2-159x300.png" alt="" /></a><a href="http://www.x2on.de/wp-content/uploads/2010/12/Screen1.png"><img src="http://www.x2on.de/wp-content/uploads/2010/12/Screen1-159x300.png" alt="" /></a></p>
 ]]></content>
   </entry>
   

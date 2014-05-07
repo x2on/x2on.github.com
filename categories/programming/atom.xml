@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Programming | x2on.de]]></title>
   <link href="http://x2on.github.com/categories/programming/atom.xml" rel="self"/>
   <link href="http://x2on.github.com/"/>
-  <updated>2014-05-07T16:29:56+02:00</updated>
+  <updated>2014-05-07T16:42:36+02:00</updated>
   <id>http://x2on.github.com/</id>
   <author>
     <name><![CDATA[Felix Schulze]]></name>
@@ -12,6 +12,36 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Mobile Testing @AutoScout24 (Mobile Dev Group Munich)]]></title>
+    <link href="http://x2on.github.com/2013/11/27/mobile-dev-group-munich-mobile-testing/"/>
+    <updated>2013-11-27T19:00:00+01:00</updated>
+    <id>http://x2on.github.com/2013/11/27/mobile-dev-group-munich-mobile-testing</id>
+    <content type="html"><![CDATA[<p>On the first <a href="http://www.meetup.com/Mobile-Dev-Munich/">Mobile Dev Group Munich</a> Meetup i talked about Mobile Testing @AutoScout24. The main topics are automated testing with Android and iOS and best practices from the development at AutoScout24.</p>
+
+<!-- more -->
+
+
+
+
+<script async class="speakerdeck-embed" data-id="d76ee6803a3d013104066eed9752a111" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
+
+
+<h3>Links:</h3>
+
+<ul>
+<li><a href="https://github.com/x2on/gradle-spoon-plugin">gradle-spoon-plugin</a></li>
+<li><a href="https://github.com/x2on/gradle-hockeyapp-plugin">gradle-hockeyapp-plugin</a></li>
+<li><a href="https://github.com/AutoScout24/gradle-monkey-plugin">gradle-monkey-plugin</a></li>
+<li><a href="https://github.com/AutoScout24/ADB-Sanity-Check">ADB-Sanity-Check</a></li>
+<li><a href="https://github.com/facebook/ios-snapshot-test-case">ios-snapshot-test-case</a></li>
+<li><a href="https://github.com/x2on/gradle-cocoapods-plugin">gradle-cocoapods-plugin</a></li>
+<li><a href="https://github.com/facebook/xctool">xctool</a></li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Podcast: iOS backward compatibility]]></title>
@@ -24,6 +54,11 @@
 
 
 <p>Get it here (german): <a href="http://uisprech.de/1">http://uisprech.de/1</a></p>
+
+<p>And some slides from my talk at <a href="http://mobiletechcon.de/2013/">MobileTech Conference 2013</a> in Berlin:</p>
+
+<script async class="speakerdeck-embed" data-id="53b67ba0f76401308b7e0abe9a78d4ca" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
+
 ]]></content>
   </entry>
   
@@ -123,23 +158,6 @@ With this workaround you can test</code>__weak` delegates with OCMock.</p>
 <p><a href="https://github.com/x2on/simple-share-ios">https://github.com/x2on/simple-share-ios</a></p>
 
 <p>The project also includes a iOS demo application.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[iOS-Libaries: cyrius-sasl, libetpan, expat, sksmtpmessage]]></title>
-    <link href="http://x2on.github.com/2012/02/21/ios-libaries-cyrius-sasl-libetpan-expat-sksmtpmessage/"/>
-    <updated>2012-02-21T17:33:58+01:00</updated>
-    <id>http://x2on.github.com/2012/02/21/ios-libaries-cyrius-sasl-libetpan-expat-sksmtpmessage</id>
-    <content type="html"><![CDATA[<p>I published some scripts and modifications to build the following libraries for the iOS-SDK:</p>
-
-<ul>
-<li>cyrius-sasl: <a href="https://github.com/x2on/cyrus-sasl-ios">https://github.com/x2on/cyrus-sasl-ios</a></li>
-<li>expat: <a href="https://github.com/x2on/expat-ios">https://github.com/x2on/expat-ios</a></li>
-<li>libetpan: <a href="https://github.com/x2on/libetpan">https://github.com/x2on/libetpan</a></li>
-<li>sksmtpmessage: <a href="https://github.com/x2on/skpsmtpmessage">https://github.com/x2on/skpsmtpmessage</a></li>
-</ul>
-
 ]]></content>
   </entry>
   

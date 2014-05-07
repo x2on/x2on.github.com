@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Podcast | x2on.de]]></title>
   <link href="http://x2on.github.com/categories/podcast/atom.xml" rel="self"/>
   <link href="http://x2on.github.com/"/>
-  <updated>2014-05-07T16:29:56+02:00</updated>
+  <updated>2014-05-07T16:42:36+02:00</updated>
   <id>http://x2on.github.com/</id>
   <author>
     <name><![CDATA[Felix Schulze]]></name>
@@ -24,6 +24,11 @@
 
 
 <p>Get it here (german): <a href="http://uisprech.de/1">http://uisprech.de/1</a></p>
+
+<p>And some slides from my talk at <a href="http://mobiletechcon.de/2013/">MobileTech Conference 2013</a> in Berlin:</p>
+
+<script async class="speakerdeck-embed" data-id="53b67ba0f76401308b7e0abe9a78d4ca" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
+
 ]]></content>
   </entry>
   
