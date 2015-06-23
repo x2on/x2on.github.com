@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>x2on.de</title>
+    <description>by Felix Schulze - a mobile evangelist. Tutorials for iOS, Android, Mac, Linux, iPhone and more...</description>
+    <link>http://x2on.github.com/</link>
+    <atom:link href="http://x2on.github.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Tue, 23 Jun 2015 23:22:04 +0200</pubDate>
+    <lastBuildDate>Tue, 23 Jun 2015 23:22:04 +0200</lastBuildDate>
+    <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Mobile Testing @AutoScout24 (Mobile Dev Group Munich)</title>
+        <description>&lt;p&gt;On the first &lt;a href=&quot;http://www.meetup.com/Mobile-Dev-Munich/&quot;&gt;Mobile Dev Group Munich&lt;/a&gt; Meetup i talked about Mobile Testing @AutoScout24. The main topics are automated testing with Android and iOS and best practices from the development at AutoScout24.&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;script async=&quot;&quot; class=&quot;speakerdeck-embed&quot; data-id=&quot;d76ee6803a3d013104066eed9752a111&quot; data-ratio=&quot;1.33333333333333&quot; src=&quot;//speakerdeck.com/assets/embed.js&quot;&gt;&lt;/script&gt;
+
+&lt;h3 id=&quot;links&quot;&gt;Links:&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/x2on/gradle-spoon-plugin&quot;&gt;gradle-spoon-plugin&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/x2on/gradle-hockeyapp-plugin&quot;&gt;gradle-hockeyapp-plugin&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/AutoScout24/gradle-monkey-plugin&quot;&gt;gradle-monkey-plugin&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/AutoScout24/ADB-Sanity-Check&quot;&gt;ADB-Sanity-Check&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/facebook/ios-snapshot-test-case&quot;&gt;ios-snapshot-test-case&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/x2on/gradle-cocoapods-plugin&quot;&gt;gradle-cocoapods-plugin&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/facebook/xctool&quot;&gt;xctool&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Wed, 27 Nov 2013 19:00:00 +0100</pubDate>
+        <link>http://x2on.github.com/2013/11/27/mobile-dev-group-munich-mobile-testing/</link>
+        <guid isPermaLink="true">http://x2on.github.com/2013/11/27/mobile-dev-group-munich-mobile-testing/</guid>
+        
+        <category>Apple</category>
+        
+        <category>Android</category>
+        
+        <category>iOS</category>
+        
+        <category>iPhone</category>
+        
+        
+        <category>ios</category>
+        
+        <category>android</category>
+        
+        <category>ipad</category>
+        
+        <category>iphone</category>
+        
+        <category>programming</category>
+        
+        <category>software</category>
+        
+      </item>
+    
+      <item>
+        <title>Podcast: iOS backward compatibility</title>
+        <description>&lt;p&gt;&lt;a href=&quot;http://heikobehrens.net/&quot;&gt;Heiko Behrens&lt;/a&gt; released his first podcast on UISprech talking with me about techniques for iOS development to check for versions, weak-linking, wrappers and adapters, various open-source libraries, approaches such as method swizzling and testing of compatibility.&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;p&gt;Get it here (german): &lt;a href=&quot;http://uisprech.de/1&quot;&gt;http://uisprech.de/1&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;And some slides from my talk at &lt;a href=&quot;http://mobiletechcon.de/2013/&quot;&gt;MobileTech Conference 2013&lt;/a&gt; in Berlin:&lt;/p&gt;
+
+&lt;script async=&quot;&quot; class=&quot;speakerdeck-embed&quot; data-id=&quot;53b67ba0f76401308b7e0abe9a78d4ca&quot; data-ratio=&quot;1.33333333333333&quot; src=&quot;//speakerdeck.com/assets/embed.js&quot;&gt;&lt;/script&gt;
+
+</description>
+        <pubDate>Thu, 26 Sep 2013 21:34:45 +0200</pubDate>
+        <link>http://x2on.github.com/2013/09/26/ios-backward-compatibility-podcast/</link>
+        <guid isPermaLink="true">http://x2on.github.com/2013/09/26/ios-backward-compatibility-podcast/</guid>
+        
+        <category>Apple</category>
+        
+        <category>iOS</category>
+        
+        <category>iPhone</category>
+        
+        
+        <category>podcast</category>
+        
+        <category>ios</category>
+        
+        <category>ipad</category>
+        
+        <category>iphone</category>
+        
+        <category>programming</category>
+        
+        <category>software</category>
+        
+      </item>
+    
+      <item>
+        <title>Tutorial: Building SuperTux 0.3.3 on Mac OS X Mountain Lion</title>
+        <description>&lt;p&gt;Regarding to my tutorial for building &lt;a href=&quot;http://x2on.de/2012/01/28/tutorial-building-supertux-0-3-3-on-mac-os-x-lion/&quot;&gt;SuperTux 0.3.3 on Mac OS X Lion&lt;/a&gt; i updated the tutorial for Mac OS X Mountain Lion.&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;h4 id=&quot;prerequisites&quot;&gt;Prerequisites&lt;/h4&gt;
+
+&lt;p&gt;Install HomeBrew:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;ruby -e &lt;span class=&quot;s2&quot;&gt;&amp;quot;$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)&amp;quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Install &lt;a href=&quot;http://itunes.apple.com/us/app/xcode/id497799835?ls=1&amp;amp;mt=12&quot;&gt;Xcode&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Install needed requirements:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;brew install cmake libvorbis physfs glew sdl sdl_image boost&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;build-supertux&quot;&gt;Build SuperTux&lt;/h4&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;git clone https://code.google.com/p/supertux/
+&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;supertux
+mkdir dist
+mkdir build &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;build
+cmake .. -DCMAKE_INSTALL_PREFIX&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;../dist/ -DCMAKE_BUILD_TYPE&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;RELEASE
+make install&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;If all works SuperTux.app should be in the dist folder.&lt;/p&gt;
+
+&lt;h4 id=&quot;links&quot;&gt;Links:&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;HomeBrew: &lt;a href=&quot;https://github.com/mxcl/homebrew&quot;&gt;https://github.com/mxcl/homebrew&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;SuperTux: &lt;a href=&quot;http://supertux.lethargik.org/wiki/Main_Page&quot;&gt;http://supertux.lethargik.org/wiki/Main_Page&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;SuperTux Sourcecode: &lt;a href=&quot;https://code.google.com/p/supertux/&quot;&gt;https://code.google.com/p/supertux/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Thu, 25 Apr 2013 21:34:45 +0200</pubDate>
+        <link>http://x2on.github.com/2013/04/25/tutorial-building-supertux-0-3-3-on-mac-os-x-mountain-lion/</link>
+        <guid isPermaLink="true">http://x2on.github.com/2013/04/25/tutorial-building-supertux-0-3-3-on-mac-os-x-mountain-lion/</guid>
+        
+        <category>Apple</category>
+        
+        <category>Mac</category>
+        
+        <category>OS X</category>
+        
+        <category>SuperTux</category>
+        
+        
+        <category>mac</category>
+        
+        <category>software</category>
+        
+        <category>tutorials</category>
+        
+      </item>
+    
+      <item>
+        <title>Why you should use Continuous Integration for iOS Development?</title>
+        <description>&lt;p&gt;&lt;strong&gt;Because every change in your code can break your app!&lt;/strong&gt;
+&lt;!-- more --&gt;&lt;/p&gt;
+
+&lt;p&gt;Have a look at my slides from the &lt;a href=&quot;http://www.b-mobile.info/2013/01/14/b-mobile-v-loc-at-yoc/&quot;&gt;B-Mobile&lt;/a&gt; event in January 2013 for a short introduction:&lt;/p&gt;
+
+&lt;script async=&quot;&quot; class=&quot;speakerdeck-embed&quot; data-id=&quot;e55533b04b7d0130e2a022000a9f1069&quot; data-ratio=&quot;1.33333333333333&quot; src=&quot;//speakerdeck.com/assets/embed.js&quot;&gt;&lt;/script&gt;
+
+</description>
+        <pubDate>Thu, 24 Jan 2013 22:34:00 +0100</pubDate>
+        <link>http://x2on.github.com/2013/01/24/why-you-should-use-continuous-integration-for-ios-development/</link>
+        <guid isPermaLink="true">http://x2on.github.com/2013/01/24/why-you-should-use-continuous-integration-for-ios-development/</guid>
+        
+        <category>Apple</category>
+        
+        <category>iOS</category>
+        
+        <category>iPhone</category>
+        
+        <category>Testing</category>
+        
+        <category>Objective-C</category>
+        
+        <category>Continuous Integration</category>
+        
+        
+        <category>ios</category>
+        
+        <category>ipad</category>
+        
+        <category>iphone</category>
+        
+        <category>programming</category>
+        
+      </item>
+    
+      <item>
+        <title>Weak delegate and OCMock</title>
+        <description>&lt;p&gt;If you switch your Objective-C project to ARC or start a new project based on ARC you could use &lt;code&gt;__weak&lt;/code&gt; delegates. But if you try to mock them with OCMock, it fails.
+&lt;!-- more --&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-objective-c&quot; data-lang=&quot;objective-c&quot;&gt;&lt;span class=&quot;n&quot;&gt;objective&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Normal&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Delegate&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Mock&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;with&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;OCMock&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;no&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;__weak&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;id&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;someDelegateMock&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;OCMockObject&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;mockForProtocol&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:@&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;protocol&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;SomeWeakDelegate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)];&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;someDelegateMock&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;expect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;someDelegateCall&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;@&amp;quot;SomeString&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;someObject&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;delegate&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;someDelegateMock&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;someObject&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;doSomethingWhichShouldCallTheDelegate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;STAssertNoThrow&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;someDelegateMock&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;verify&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;@&amp;quot;expected delegate should be called&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;A workaround for this is to create an &lt;code&gt;NSObject&lt;/code&gt;, which implements the &lt;code&gt;__weak&lt;/code&gt; delegate and use some properties to verify:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-objective-c&quot; data-lang=&quot;objective-c&quot;&gt;&lt;span class=&quot;n&quot;&gt;objective&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Delegate&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Mock&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;weak&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;delegate&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;@interface&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;SomeDelegateMock&lt;/span&gt; : &lt;span class=&quot;bp&quot;&gt;NSObject&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;SomeWeakDelegate&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;@property&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;nonatomic&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;assign&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;BOOL&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;someDelegateCalled&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;@property&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;nonatomic&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;strong&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;NSString&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;someString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;@end&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;@implementation&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;SomeDelegateMock&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;@synthesize&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;someDelegateCalled&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_someDelegateCalled&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;@synthesize&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;someString&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_someString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;p&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;someDelegateCall:&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;NSString&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;aString&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;someDelegateCalled&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;YES&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;someString&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;aString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;@end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Objective-c Usage of the Delegate Mock&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-objective-c&quot; data-lang=&quot;objective-c&quot;&gt;&lt;span class=&quot;n&quot;&gt;SomeDelegateMock&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;someDelegateMock&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;SomeDelegateMock&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;someObject&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;delegate&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;someDelegateMock&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;someObject&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;doSomethingToCallTheDelegate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;STAssertTrue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;someDelegateMock&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;someDelegateCalled&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;@&amp;quot;expected delegate should be called&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;STAssertEqualObjects&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;someString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;@&amp;quot;SomeString&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;@&amp;quot;expected delegate value&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;With this workaround you can test &lt;code&gt;__weak&lt;/code&gt; delegates with OCMock.&lt;/p&gt;
+
+</description>
+        <pubDate>Wed, 11 Jul 2012 17:09:00 +0200</pubDate>
+        <link>http://x2on.github.com/2012/07/11/weak-delegate-and-ocmock/</link>
+        <guid isPermaLink="true">http://x2on.github.com/2012/07/11/weak-delegate-and-ocmock/</guid>
+        
+        <category>Apple</category>
+        
+        <category>iOS</category>
+        
+        <category>iPhone</category>
+        
+        <category>Testing</category>
+        
+        <category>Objective-C</category>
+        
+        <category>OCMock</category>
+        
+        <category>ARC</category>
+        
+        
+        <category>ios</category>
+        
+        <category>ipad</category>
+        
+        <category>iphone</category>
+        
+        <category>programming</category>
+        
+      </item>
+    
+      <item>
+        <title>simple-share for iOS - A drop-in library for social share</title>
+        <description>&lt;p&gt;There are a lot of social share libraries like &lt;a href=&quot;http://getsharekit.com/&quot;&gt;ShareKit&lt;/a&gt;, but for my case they where too complicated to integrate or too big for my project. So i decided to build my own share library.&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;p&gt;The current version supports:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Facebook&lt;/li&gt;
+  &lt;li&gt;Twitter (iOS 5)&lt;/li&gt;
+  &lt;li&gt;Mail&lt;/li&gt;
+  &lt;li&gt;Open in Safari&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The  static-library is very small and uses the original &lt;a href=&quot;https://github.com/facebook/facebook-ios-sdk&quot;&gt;facebook-for-ios&lt;/a&gt; sdk from facebook.&lt;/p&gt;
+
+&lt;p&gt;For JSON it uses &lt;a href=&quot;https://github.com/johnezang/JSONKit&quot;&gt;JSONKit&lt;/a&gt; instead of &lt;a href=&quot;https://github.com/stig/json-framework&quot;&gt;SBJSON&lt;/a&gt; (with a little wrapper for the facebook-ios-sdk).&lt;/p&gt;
+
+&lt;p&gt;The library is licensed under Apache License 2.0 and you can get the source here:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/x2on/simple-share-ios&quot;&gt;https://github.com/x2on/simple-share-ios&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The project also includes a iOS demo application.&lt;/p&gt;
+</description>
+        <pubDate>Fri, 01 Jun 2012 20:19:30 +0200</pubDate>
+        <link>http://x2on.github.com/2012/06/01/simple-share-for-ios-a-drop-in-library-for-social-share/</link>
+        <guid isPermaLink="true">http://x2on.github.com/2012/06/01/simple-share-for-ios-a-drop-in-library-for-social-share/</guid>
+        
+        <category>Apple</category>
+        
+        <category>Facebook</category>
+        
+        <category>iOS</category>
+        
+        <category>iPhone</category>
+        
+        <category>library</category>
+        
+        <category>Objective-C</category>
+        
+        <category>Share</category>
+        
+        <category>simple-share</category>
+        
+        <category>Twitter</category>
+        
+        <category>XCode</category>
+        
+        
+        <category>ios</category>
+        
+        <category>ipad</category>
+        
+        <category>iphone</category>
+        
+        <category>programming</category>
+        
+        <category>software</category>
+        
+      </item>
+    
+      <item>
+        <title>iOS-Libaries: cyrius-sasl, libetpan, expat, sksmtpmessage</title>
+        <description>&lt;p&gt;I published some scripts and modifications to build the following libraries for the iOS-SDK:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;cyrius-sasl: &lt;a href=&quot;https://github.com/x2on/cyrus-sasl-ios&quot;&gt;https://github.com/x2on/cyrus-sasl-ios&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;expat: &lt;a href=&quot;https://github.com/x2on/expat-ios&quot;&gt;https://github.com/x2on/expat-ios&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;libetpan: &lt;a href=&quot;https://github.com/x2on/libetpan&quot;&gt;https://github.com/x2on/libetpan&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;sksmtpmessage: &lt;a href=&quot;https://github.com/x2on/skpsmtpmessage&quot;&gt;https://github.com/x2on/skpsmtpmessage&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Tue, 21 Feb 2012 17:33:58 +0100</pubDate>
+        <link>http://x2on.github.com/2012/02/21/ios-libaries-cyrius-sasl-libetpan-expat-sksmtpmessage/</link>
+        <guid isPermaLink="true">http://x2on.github.com/2012/02/21/ios-libaries-cyrius-sasl-libetpan-expat-sksmtpmessage/</guid>
+        
+        <category>Apple</category>
+        
+        <category>Encryption</category>
+        
+        <category>iOS</category>
+        
+        <category>iPhone</category>
+        
+        <category>Objective-C</category>
+        
+        <category>X.509</category>
+        
+        <category>XCode</category>
+        
+        
+        <category>encryption</category>
+        
+        <category>ios</category>
+        
+        <category>ipad</category>
+        
+        <category>iphone</category>
+        
+        <category>programming</category>
+        
+        <category>software</category>
+        
+        <category>tutorials</category>
+        
+      </item>
+    
+      <item>
+        <title>SuperTux 0.3.3 for Mac OS X Lion Download</title>
+        <description>&lt;p&gt;If you like to play SuperTux here is the newest version for Mac OS X Lion build from the sourcecode (regarding to my tutorial &lt;a href=&quot;http://www.x2on.de/2012/01/28/tutorial-building-supertux-0-3-3-on-mac-os-x-lion/&quot;&gt;Building SuperTux 0.3.3 on Mac OS X Lion&lt;/a&gt;)
+&lt;!--more--&gt;
+Download (Intel - 69,3MB): &lt;a href=&quot;http://www.x2on.de/wp-content/uploads/2012/01/SuperTux_0.3.3_Lion.app.zip&quot;&gt;SuperTux 0.3.3.zip&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sun, 29 Jan 2012 10:03:54 +0100</pubDate>
+        <link>http://x2on.github.com/2012/01/29/supertux-0-3-3-for-mac-os-x-lion-download/</link>
+        <guid isPermaLink="true">http://x2on.github.com/2012/01/29/supertux-0-3-3-for-mac-os-x-lion-download/</guid>
+        
+        <category>Apple</category>
+        
+        <category>Mac</category>
+        
+        <category>SuperTux</category>
+        
+        
+        <category>mac</category>
+        
+        <category>software</category>
+        
+      </item>
+    
+      <item>
+        <title>Tutorial: Building SuperTux 0.3.3 on Mac OS X Lion</title>
+        <description>&lt;p&gt;Regarding to my tutorial for building &lt;a href=&quot;http://www.x2on.de/2010/01/30/tutorial-building-supertux-0-3-2-svn-on-mac-os-x-snow-leopard/&quot;&gt;SuperTux 0.3.2 SVN on Mac OS X Snow Leopard&lt;/a&gt; i updated the tutorial for Mac OS X Lion and the new location from the SuperTux Sourcecode.&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;p&gt;I also build a version for download if you don’t want to build it: &lt;a href=&quot;http://www.x2on.de/2012/01/29/supertux-0-3-3-for-mac-os-x-lion-download/&quot;&gt;SuperTux 0.3.3 for Mac OS X Lion&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;prerequisites&quot;&gt;Prerequisites&lt;/h4&gt;
+
+&lt;p&gt;Install HomeBrew:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;/usr/bin/ruby -e &lt;span class=&quot;s2&quot;&gt;&amp;quot;$(/usr/bin/curl -fksSL https://raw.github.com/mxcl/homebrew/master/Library/Contributions/install_homebrew.rb)&amp;quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Install needed requirements:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;brew install libvorbis physfs glew sdl sdl_image boost&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;build-supertux&quot;&gt;Build SuperTux&lt;/h4&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;git clone https://code.google.com/p/supertux/
+&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;supertux
+mkdir dist
+mkdir build &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;build
+cmake .. -DCMAKE_INSTALL_PREFIX&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;../dist/ -DCMAKE_BUILD_TYPE&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;RELEASE
+make install&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;If all works SuperTux.app should be in the dist folder.&lt;/p&gt;
+
+&lt;h4 id=&quot;links&quot;&gt;Links:&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;HomeBrew: &lt;a href=&quot;https://github.com/mxcl/homebrew&quot;&gt;https://github.com/mxcl/homebrew&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;SuperTux: &lt;a href=&quot;http://supertux.lethargik.org/wiki/Main_Page&quot;&gt;http://supertux.lethargik.org/wiki/Main_Page&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;SuperTux Sourcecode: &lt;a href=&quot;https://code.google.com/p/supertux/&quot;&gt;https://code.google.com/p/supertux/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Sat, 28 Jan 2012 17:43:45 +0100</pubDate>
+        <link>http://x2on.github.com/2012/01/28/tutorial-building-supertux-0-3-3-on-mac-os-x-lion/</link>
+        <guid isPermaLink="true">http://x2on.github.com/2012/01/28/tutorial-building-supertux-0-3-3-on-mac-os-x-lion/</guid>
+        
+        <category>Apple</category>
+        
+        <category>Mac</category>
+        
+        <category>OS X</category>
+        
+        <category>SuperTux</category>
+        
+        
+        <category>mac</category>
+        
+        <category>software</category>
+        
+        <category>tutorials</category>
+        
+      </item>
+    
+      <item>
+        <title>Secure-Mail is ready for download on Apple App Store</title>
+        <description>&lt;p&gt;Secure-Mail is now ready for purchase on Apple App Store! The review process was sucessfully!&lt;/p&gt;
+
+&lt;p&gt;With Secure-Mail you can read and write email encrypted with S/MIME (Secure/Multipurpose Internet Mail Extensions) on iOS (iPhone, iPad and iPod Touch).&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;You can find more details at &lt;a href=&quot;http://www.secure-mail.me&quot;&gt;www.secure-mail.me&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Direct link to Secure-Mail on App Store: &lt;a href=&quot;http://itunes.apple.com/us/app/secure-mail/id420919054?mt=8&amp;amp;ls=1#&quot;&gt;Secure-Mail App&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;&lt;a href=&quot;/images/2011-04-28-secure-mail-is-ready-for-download-on-apple-app-store/1.png&quot;&gt;&lt;img src=&quot;/images/2011-04-28-secure-mail-is-ready-for-download-on-apple-app-store/1-159x300.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;a href=&quot;/images/2011-04-28-secure-mail-is-ready-for-download-on-apple-app-store/2.png&quot;&gt;&lt;img src=&quot;/images/2011-04-28-secure-mail-is-ready-for-download-on-apple-app-store/2-159x300.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;a href=&quot;/images/2011-04-28-secure-mail-is-ready-for-download-on-apple-app-store/3.png&quot;&gt;&lt;img src=&quot;/images/2011-04-28-secure-mail-is-ready-for-download-on-apple-app-store/3-159x300.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;a href=&quot;/images/2011-04-28-secure-mail-is-ready-for-download-on-apple-app-store/4.png&quot;&gt;&lt;img src=&quot;/images/2011-04-28-secure-mail-is-ready-for-download-on-apple-app-store/4-159x300.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;a href=&quot;/images/2011-04-28-secure-mail-is-ready-for-download-on-apple-app-store/5.png&quot;&gt;&lt;img src=&quot;/images/2011-04-28-secure-mail-is-ready-for-download-on-apple-app-store/5-159x300.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Thu, 28 Apr 2011 07:29:14 +0200</pubDate>
+        <link>http://x2on.github.com/2011/04/28/secure-mail-is-ready-for-download-on-apple-app-store/</link>
+        <guid isPermaLink="true">http://x2on.github.com/2011/04/28/secure-mail-is-ready-for-download-on-apple-app-store/</guid>
+        
+        <category>Apple</category>
+        
+        <category>Encryption</category>
+        
+        <category>iPhone</category>
+        
+        <category>Objective-C</category>
+        
+        <category>OpenSSL</category>
+        
+        <category>S/MIME</category>
+        
+        <category>SSL</category>
+        
+        <category>X.509</category>
+        
+        
+        <category>encryption</category>
+        
+        <category>ios</category>
+        
+        <category>ipad</category>
+        
+        <category>iphone</category>
+        
+        <category>projects</category>
+        
+        <category>software</category>
+        
+      </item>
+    
+  </channel>
+</rss>

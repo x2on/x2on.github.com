@@ -1,4 +1,2 @@
 User-agent: *
-Disallow: 
-
-Sitemap: http://x2on.github.com/sitemap.xml 
+Disallow: contact.html
