@@ -74,7 +74,7 @@
     <p>If you switch your Objective-C project to ARC or start a new project based on ARC you could use <code>__weak</code> delegates. But if you try to mock them with OCMock, it fails.
 <!-- more --></p>
 
-<div class="highlight"><pre><code class="language-objective-c" data-lang="objective-c"><span class="n">objective</span><span class="o">-</span><span class="n">c</span> <span class="n">Normal</span> <span class="n">Delegate</span> <span class="n">Mock</span> <span class="n">with</span> <span class="n">OCMock</span> <span class="p">(</span><span class="n">no</span> <span class="k">__weak</span><span class="p">)</span>
+<div class="highlight"><pre><code class="language-objective-c" data-lang="objective-c"><span class="n">Normal</span> <span class="n">Delegate</span> <span class="n">Mock</span> <span class="n">with</span> <span class="n">OCMock</span> <span class="p">(</span><span class="n">no</span> <span class="k">__weak</span><span class="p">)</span>
 <span class="kt">id</span> <span class="n">someDelegateMock</span> <span class="o">=</span> <span class="p">[</span><span class="n">OCMockObject</span> <span class="nl">mockForProtocol</span><span class="p">:@</span><span class="n">protocol</span><span class="p">(</span><span class="n">SomeWeakDelegate</span><span class="p">)];</span>
 <span class="p">[[</span><span class="n">someDelegateMock</span> <span class="n">expect</span><span class="p">]</span> <span class="nl">someDelegateCall</span><span class="p">:</span><span class="s">@&quot;SomeString&quot;</span><span class="p">]</span>
 <span class="n">someObject</span><span class="p">.</span><span class="n">delegate</span> <span class="o">=</span> <span class="n">someDelegateMock</span><span class="p">;</span>
@@ -83,7 +83,7 @@
 
 <p>A workaround for this is to create an <code>NSObject</code>, which implements the <code>__weak</code> delegate and use some properties to verify:</p>
 
-<div class="highlight"><pre><code class="language-objective-c" data-lang="objective-c"><span class="n">objective</span><span class="o">-</span><span class="n">c</span> <span class="n">Delegate</span> <span class="n">Mock</span> <span class="k">for</span> <span class="k">weak</span> <span class="n">delegate</span>
+<div class="highlight"><pre><code class="language-objective-c" data-lang="objective-c"><span class="n">Delegate</span> <span class="n">Mock</span> <span class="k">for</span> <span class="k">weak</span> <span class="n">delegate</span>
 <span class="k">@interface</span> <span class="nc">SomeDelegateMock</span> : <span class="bp">NSObject</span><span class="o">&lt;</span><span class="n">SomeWeakDelegate</span><span class="o">&gt;</span>
 <span class="k">@property</span> <span class="p">(</span><span class="k">nonatomic</span><span class="p">,</span> <span class="k">assign</span><span class="p">)</span> <span class="kt">BOOL</span> <span class="n">someDelegateCalled</span><span class="p">;</span>
 <span class="k">@property</span> <span class="p">(</span><span class="k">nonatomic</span><span class="p">,</span> <span class="k">strong</span><span class="p">)</span> <span class="bp">NSString</span> <span class="o">*</span><span class="n">someString</span><span class="p">;</span>
