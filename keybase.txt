@@ -1,0 +1,62 @@
+==================================================================
+https://keybase.io/x2on
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://x2on.de
+  * I am x2on (https://keybase.io/x2on) on keybase.
+  * I have a public key with fingerprint 8D6C 1C71 A83E FDA1 D63A  4131 6E3D CBA0 B7C3 B83F
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "0111cf69932340c53f7d0d3fd55a4f9d0466082daa3f0a8f7e834a0a371efe50dd0e0a",
+            "fingerprint": "8d6c1c71a83efda1d63a41316e3dcba0b7c3b83f",
+            "host": "keybase.io",
+            "key_id": "6e3dcba0b7c3b83f",
+            "kid": "0111cf69932340c53f7d0d3fd55a4f9d0466082daa3f0a8f7e834a0a371efe50dd0e0a",
+            "uid": "334bcb095f16652278154b2d9fb19e19",
+            "username": "x2on"
+        },
+        "service": {
+            "hostname": "x2on.de",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1443384368,
+    "expire_in": 157680000,
+    "prev": "8f2fac731c3cf76db5905769619f0835059af5f26d13aba97d8a1399b97d130c",
+    "seqno": 5,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: GnuPG v1
+
+owGtUj2LVDEUfTt+sC4ITmVnkUpwXJJ3k7xk1i8QBEFsBNshHzezcdb3xvfejrss
+21htuWBhuYKFhZWVCnY2woK1+Au0sLIXk0HBwtI0SW7OOTn3cA/PnigGw/rq8fM3
+H95eXzn+Zov7q3f4HrGN3yXjPTLD5YZbHrt+MouejAlljLkgtYYSOHUCQuWph+CF
+MDxoT7mUVJXeGAjUqFChAm6ogYphQEG9p0gNGZEQ6ym28zbWfZJVXjrmKmYUYPCG
+eQmGM2ASwTtrqK0cWAUhETebLjOSOWs6XI9NqqXLZGnvH/j/7Ht7KQfArbNUi8Ck
+FGVZKSa4Lb0OlmlkOgM7bGvzEBN6p2xqsj8iqbKIDnOouYu/Xtc9Jsq8bfrGNVup
+uNn383Hm9LvzDHqMdvKbPrGx9im9RFhg28WkPWYJ6fqY9RjnAIqDVCOCO/PY4iRm
+hKikomnlb3CRMw9lMK4C5sCFSnp7V2iaUFoyHagCQYU2QYRSegbGGl15ZRhobdOJ
+AXUkd/SobshYJJ9mmjS7OK1Nv90i2V87uHWyGA6K06cGeayKtTPn/sza7dfF0ezm
+5Qfvr937+CQ8e/ruYPDpxYWNL8WR/cy+Ls7f+PFq5XB1+PPilZffL+3/Ag==
+=hKbA
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/x2on
+
+==================================================================
+
